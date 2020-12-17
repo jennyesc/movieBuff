@@ -1,0 +1,13 @@
+@use '../base/settings' as *;
+
+//typography
+
+body, h1, h2, h3, h4, a{
+    font-family: $bodyfont;
+    color: $fontColor;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: $fontExtra;
+}
