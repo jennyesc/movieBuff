@@ -3,7 +3,7 @@
 function AppRouter() {
   return (
     <div className="App">
-      <h1>Weather App</h1>
+      <h1>The Movie Buff</h1>
     </div>
   );
 }
