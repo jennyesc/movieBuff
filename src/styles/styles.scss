@@ -1,15 +1,19 @@
-//Imports
+// Imports
 
-//Settings
+// Settings
 @use './base/reset';
 @use './base/settings';
-@use './components/body';
 @use './base/type';
 
-//Google Fonts - Import
+
+// Components
+@use './components/body';
+@use './components/header';
+
+// Google Fonts - Import
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
 
-//Functions
+// Functions
 
 

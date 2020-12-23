@@ -1,10 +1,12 @@
 //Header
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
+import logo from '../images/movieBuff.png';
 
 function Header (){
     return (
         <header>
+        
             <div className="header-top-row">
             
                     <button className="btn-main-nav">
@@ -13,10 +15,11 @@ function Header (){
                                 <span className="line"></span>
                                 <span className="line"></span>
                             </span>
+                        	
                     </button>
 
                     <picture>
-                        <img src="images/movieBuff.png" alt="The Movie Buff Logo"></img>
+                         <Link to={'/'}><img src={logo} alt="The Movie Buff Logo"></img></Link>
                     </picture>
                 
                 
@@ -34,9 +37,8 @@ function Header (){
 
                 <div className="search">
                     <form>
-
-                        <input type="image" name="submit" src="" alt="submit"></input>
-                        <input type="search" placeholder="Search for movies, tv shows, people" name="search"></input> 
+                        
+                        <input type="search" placeholder="Search for movies.." name="search"></input> 
                         
                     </form>
                 </div>
