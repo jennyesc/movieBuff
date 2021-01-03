@@ -3,5 +3,5 @@
 @use '../base/settings' as *;
 
 header {
-    background-color: rgba(73,24,48,1);  
+    background: $bgGradient;  
 }
