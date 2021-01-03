@@ -9,9 +9,11 @@ function Home() {
         <section>
             <h2>Home Page</h2>
         </section>
-        <picture>
-          <img src={poster} alt="Die hard movie poster"></img>
-        </picture>
+        <div className="movie-poster">
+           <picture>
+              <img src={poster} alt="Die hard movie poster"></img>
+            </picture>
+        </div>
       </main>
     );
   }
