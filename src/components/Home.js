@@ -6,13 +6,17 @@ import poster from '../images/diehard.jpg';
 function Home() {
     return (
       <main>
-        <section>
-            <h2>Home Page</h2>
-        </section>
+       
         <div className="movie-poster">
-           <picture>
+           
               <img src={poster} alt="Die hard movie poster"></img>
-            </picture>
+            
+          <div className="movie-description">
+              <h1>Hard Kill</h1>
+              <h2>Oct 23, 2020</h2>
+              <p>The work of billionaire tech CEO Donavan Chalmers is so valuable
+               that he hires mercenaries to protect it ...</p>
+          </div>
         </div>
       </main>
     );
