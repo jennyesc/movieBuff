@@ -6,7 +6,7 @@ import poster from '../images/diehard.jpg';
 function Home() {
     return (
       <main>
-       
+       <section>
         <div className="movie-poster">
            
               <img src={poster} alt="Die hard movie poster"></img>
@@ -18,6 +18,7 @@ function Home() {
                that he hires mercenaries to protect it ...</p>
           </div>
         </div>
+        </section>
       </main>
     );
   }

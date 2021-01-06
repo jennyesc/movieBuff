@@ -19,7 +19,7 @@ function Header (){
                     </button>
 
                     <picture>
-                         <Link to={'/'}><img src={logo} alt="The Movie Buff Logo"></img></Link>
+                         <Link to={'/'}><img className="logo" src={logo} alt="The Movie Buff Logo"></img></Link>
                     </picture>
                 
                 
