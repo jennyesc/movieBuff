@@ -6,18 +6,64 @@ import poster from '../images/diehard.jpg';
 function Home() {
     return (
       <main>
-       <section>
-        <div className="movie-poster">
-           
-              <img src={poster} alt="Die hard movie poster"></img>
+       <section className="movie-container">
+          
+          
+          <div className="movie-poster">
+              <img className="poster-image" src={poster} alt="Die hard movie poster" ></img>
             
-          <div className="movie-description">
-              <h1>Hard Kill</h1>
-              <h2>Oct 23, 2020</h2>
-              <p>The work of billionaire tech CEO Donavan Chalmers is so valuable
-               that he hires mercenaries to protect it ...</p>
+              <div className="movie-rating">
+                <p> 44%</p>
+              </div>
           </div>
-        </div>
+          
+          <div className="movie-description">
+              <h2>Hard Kill</h2>
+              <h3>Oct 23, 2020</h3>
+              <p>The work of billionaire tech CEO Donavan Chalmers is so valuable
+               that he hires ...</p>
+          </div>
+        
+        </section>
+
+        <section className="movie-container">
+          
+          
+          <div className="movie-poster">
+              <img className="poster-image" src={poster} alt="Die hard movie poster" ></img>
+            
+              <div className="movie-rating">
+                <p> 44%</p>
+              </div>
+          </div>
+          
+          <div className="movie-description">
+              <h2>Hard Kill</h2>
+              <h3>Oct 23, 2020</h3>
+              <p>The work of billionaire tech CEO Donavan Chalmers is so valuable
+               that he hires ...</p>
+          </div>
+        
+        </section>
+
+        <section className="movie-container">
+          
+          
+          <div className="movie-poster">
+              <img className="poster-image" src={poster} alt="Die hard movie poster" ></img>
+            
+              <div className="movie-rating">
+                <p> 44%</p>
+              </div>
+          </div>
+          
+          <div className="movie-description">
+              <h2>Hard Kill</h2>
+              <h3>Oct 23, 2020</h3>
+              <p>The work of billionaire tech CEO Donavan Chalmers is so valuable
+               that he hires ...</p>
+          </div>
+        
         </section>
       </main>
     );

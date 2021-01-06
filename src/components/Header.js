@@ -2,6 +2,9 @@
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
 import logo from '../images/movieBuff.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
 
 function Header (){
     return (
@@ -22,13 +25,11 @@ function Header (){
                          <Link to={'/'}><img className="logo" src={logo} alt="The Movie Buff Logo"></img></Link>
                     </picture>
                 
+
                 
                 <div className="log-in-links log-in-links-mobile">
-                    <ul>
-                        <li>
-
-                        </li>
-                    </ul>
+                
+                
                 </div>
 
                 <div className="header-row">
