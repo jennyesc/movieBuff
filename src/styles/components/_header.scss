@@ -4,9 +4,12 @@
 
 header {
     background: $bgGradient;  
-}
-.logo{
-    width: 60%; 
-    
 
+    .logo{
+    max-width: 60%; 
+    margin: auto;
+    }
+    .search{
+        display: none;
+    }
 }
