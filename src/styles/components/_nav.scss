@@ -2,9 +2,35 @@
 
 @use '../base/settings' as *;
 
-.main-nav{
-    display: none;
-    .show-nav & {
-        display: block;
+.mobile-nav{
+    display: inline;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    li{
+        align-items: justify;
+        padding-top: 15px;
+        display: inline;
+        width: 100%;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+        
+
+        a{
+            text-decoration: none;
+            font-weight: $fontBold;
+            
+            &:hover, &:focus, &:active{
+                color: $hoverColor;
+                transition: 0.04s;
+            }
+
+            
+        }      
     }
+
+
 }
+

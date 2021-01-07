@@ -3,14 +3,32 @@
 @use '../base/settings' as *;
 
 header {
-    background: $bgGradient;  
-
-    .logo{
-    max-width: 60%; 
-    margin: auto;
     
+    .header-top-row{
+        background: $bgGradient; 
+        border-bottom: 8px solid $borderPurple; 
+        display: flex;
+        justify-content: space-between;
+    
+        .logo-container{
+            .logo{
+                max-width: 200px;  
+            }
+        }
+        
+        .icons{
+            height: 100%;
+            width: 15%;
+            margin: auto;
+            margin-right: 20px;
+            font-size: 20px;
+            color: $iconColor;
+            display: flex;
+            justify-content: space-between;
+        }
     }
-    .search{
-        display: none;
-    }
+}
+
+.search{
+    display: none;
 }
