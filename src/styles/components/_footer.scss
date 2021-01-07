@@ -1,0 +1,50 @@
+//Footer
+
+@use '../base/settings' as *;
+
+footer{
+    //padding: 5px 15px 10px 15px;
+    
+    .footer-top-row{
+        padding: 5px 15px 10px 15px;
+        background-color: $borderPurple;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        
+        .logo-container{
+            //padding-right: 8px;
+            .logo{
+                max-width: 200px;  
+                
+            }
+        }
+
+        .btn{
+            background-color: $borderPurple;
+            text-transform: uppercase;
+            font-weight: $fontExtra;
+            color: $fontColor;
+            border-radius: 8px;
+            border: solid 3px $iconColor;
+            padding: 8px;
+            
+        }
+        .uppercase{
+            text-transform: uppercase;
+            color: $footerText;
+            font-weight: $fontBold;
+            font-size: 0.85rem;
+        }
+        .footer-menu{
+            color: $footerText;
+            font-weight: $fontReg;
+            font-size: 0.85rem;
+            line-height: normal;
+            margin-bottom: 8px;
+
+            
+        }
+       
+    }
+
+}
