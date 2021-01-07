@@ -3,19 +3,20 @@
 @use '../base/settings' as *;
 
 footer{
-    //padding: 5px 15px 10px 15px;
-    
+    background-color: $darkPurple;
+    border-top: 5px solid $borderPurple;
+
     .footer-top-row{
-        padding: 5px 15px 10px 15px;
-        background-color: $borderPurple;
-        display: grid;
-        grid-template-columns: 60% 40%;
+        padding: 5px 15px 0 15px;
+        display: flex;
+        flex-direction: column;
         
         .logo-container{
-            //padding-right: 8px;
+            
+            
             .logo{
-                max-width: 200px;  
-                
+                max-width: 170px;  
+                margin-top: 10px;
             }
         }
 
@@ -23,28 +24,77 @@ footer{
             background-color: $borderPurple;
             text-transform: uppercase;
             font-weight: $fontExtra;
+            font-size: 0.65rem;
             color: $fontColor;
             border-radius: 8px;
-            border: solid 3px $iconColor;
+            border: solid 2px $iconColor;
             padding: 8px;
-            
-        }
-        .uppercase{
-            text-transform: uppercase;
-            color: $footerText;
-            font-weight: $fontBold;
-            font-size: 0.85rem;
-        }
-        .footer-menu{
-            color: $footerText;
-            font-weight: $fontReg;
-            font-size: 0.85rem;
-            line-height: normal;
-            margin-bottom: 8px;
+            width: 150px;
+            margin: 10px 0;
 
+            a{
+                text-decoration: none;   
+            }
             
         }
-       
     }
+    
+    .footer-menu-container{
+        color: $footerText;
+        font-weight: $fontReg;
+        font-size: 0.85rem;
+        line-height: normal;
+        padding: 10px;
+        
+        //FOR DESKTOP SIZE
+        //display: grid;
+        //grid-template-columns: auto;
+        //grid-template-rows: auto;
+        //grid-template-areas:
+          //    "colOne colTwo colThree colFour colFive";
 
+        
+        
+        .footer-menu{
+            padding: 10px;
+            
+            .uppercase{
+                    text-transform: uppercase;
+                    color: $footerText;
+                    font-weight: $fontBold;
+                    font-size: 0.85rem;
+                    line-height: 1.5rem;
+                    
+            }
+        }
+        
+        .colOne{
+            grid-area: colOne;
+            
+        }
+
+        .colTwo{
+            grid-area: colTwo;
+        }
+
+        .colThree{
+            grid-area: colThree;
+        }
+
+        .colFour{
+            grid-area: colFour;
+        }
+
+        .colFive{
+            grid-area: colFive;
+        }
+            
+        
+    }
+    p{
+        
+        font-weight: $fontReg;
+        padding: 20px;
+        
+    }
 }

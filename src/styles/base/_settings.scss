@@ -10,7 +10,8 @@ $footerText: #a3768c;
 $iconColor: #fc007a;
 
 //Gradient
-$bgGradient: linear-gradient(0deg, rgba(73,24,48,1) 21%, rgba(114,38,76,1) 100%) no-repeat fixed center;
+$bgGradient: linear-gradient(0deg, $darkPurple 20%, rgb(135, 57, 96) 100%) no-repeat fixed center;
+$bgGradientDark: linear-gradient(0deg, $darkPurple 90%, rgb(120, 48, 84) 100%) no-repeat fixed center;
 
 
 //Typography

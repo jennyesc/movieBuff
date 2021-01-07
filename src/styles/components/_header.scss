@@ -5,8 +5,8 @@
 header {
     
     .header-top-row{
-        background: $bgGradient; 
-        border-bottom: 8px solid $borderPurple; 
+        background: $bgGradientDark; 
+        border-bottom: 5px solid $borderPurple; 
         display: flex;
         justify-content: space-between;
     
@@ -26,9 +26,10 @@ header {
             display: flex;
             justify-content: space-between;
         }
+
+        .search-box{
+            display:none;
+        }
     }
 }
 
-.search{
-    display: none;
-}

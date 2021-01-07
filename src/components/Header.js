@@ -21,20 +21,35 @@ function Header (){
 
                 
                 <div className="icons">  
-                   <i className="fa"> <FontAwesomeIcon icon="search" /> </i>
-                   <i className="fa"><FontAwesomeIcon icon="user" /></i>
-                 </div>               
-            </div>
+                    
+                    <i className="fa"> <FontAwesomeIcon icon="search" /> </i>
+                    
+                    <i className="fa"><FontAwesomeIcon icon="user" /></i>
+                    
+                
+                </div>   
+                <div className="search-box">
+                    <form>
+                        <input type="search" placeholder="Search for movies.." name="search"></input> 
+                    </form>
+                </div>
+                 
+
+                 
+            
+            
+
+
+            </div>     
+
+                         
+            
 
             <div className="mobile-menu">
                 <Nav />
             </div>
 
-            <div className="search">
-                <form>
-                       <input type="search" placeholder="Search for movies.." name="search"></input> 
-                </form>
-            </div>
+        
 
             
                 
