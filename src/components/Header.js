@@ -28,6 +28,11 @@ function Header (){
                     
                 
                 </div>   
+                
+                
+                
+                
+                
                 <div className="search-box">
                     <form>
                         <input type="search" placeholder="Search for movies.." name="search"></input> 

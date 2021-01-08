@@ -1,6 +1,7 @@
-// Main
+// Main for home page
 
 @use '../base/settings' as *;
+@use '../base/type' as *;
 
 main{
     
@@ -54,10 +55,9 @@ main{
         
             h2{
                 padding-top: 10px;
-                padding-bottom: 5px;
-                
+                padding-bottom: 5px; 
                 font-size: 1.2rem;
-                font-weight: $fontBold;
+              
             }
             h3{
                 font-size: 0.85rem;

@@ -1,0 +1,51 @@
+// Favourites page body styles
+@use '../base/settings' as *;
+@use '../base/type' as *;
+
+
+
+.fav-movie-cont{
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: $hoverColor 2px solid;
+
+    h2{
+        font-size: 0.875rem;
+        text-transform: uppercase;
+    }
+
+    ul{
+        li{
+            margin: 10px 0 10px 15px;
+            font-size: 0.875rem;
+            font-weight: $fontSemi;
+        }
+    }
+
+
+}
+    
+        .play-trailer-bar{
+          
+        background-color: $purple;
+        height: 40px;
+        
+            .play-icon{
+                margin: auto;
+                width: 15%;
+                color: $darkPurple;
+                border-radius: 50%;
+                padding: 8px;
+
+                .fa{
+
+
+                    font-size: 1.5rem;
+                    color: $fontColor;
+                    //border: 2px solid $darkPurple;
+                    //border-radius: 50%;
+                }
+            }
+
+   
+}   
