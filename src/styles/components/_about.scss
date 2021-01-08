@@ -1,0 +1,21 @@
+// About
+
+@use '../base/settings' as *;
+@use '../base/type' as *;
+
+main{
+    
+    .page-info-container{
+    
+        .page-bg{
+            position: relative;
+            background-size: cover;
+            
+            .about-text{
+                //position: absolute;
+
+                
+            }
+        }
+    }
+}
