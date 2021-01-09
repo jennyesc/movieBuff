@@ -8,12 +8,77 @@ main{
     .page-info-container{
     
         .page-bg{
-            position: relative;
-            background-size: cover;
+            width: 100%;
             
             .about-text{
-                //position: absolute;
+           
+                
+                .align-one{
+                    text-align: center;
+                    font-size: 2rem;
+                    padding: 30px 0px 30px 0px;
+                }
 
+                .p-one{
+                    text-align: center;
+                    padding: 0px 15px 20px 15px;
+                    font-weight: $fontMed;
+                    font-size: 0.95rem;
+                    line-height: 1.25;
+                }
+
+                .p-two{
+                    text-align: center;
+                    padding: 0px 15px 20px 15px;
+                    font-weight: $fontMed;
+                    font-size: 0.95rem;
+                    line-height: 1.25;
+                }
+
+                .align-two{
+                    text-align: center;
+                    font-weight: $fontBold;
+                    font-size: 1.2rem;
+                    padding-bottom: 25px;
+                }
+
+                .btn-container{
+                    padding: 0px 15px 5px 15px;
+                   
+
+                    .circle{
+                        padding:  5px;
+                        background-color: $darkPurple;
+                        border-radius: 100%;
+                        width: 50px;
+                        height: 50px;
+                        border: solid 2px $iconColor;
+                        color: $iconColor;
+                        text-align: center;
+                        font-weight: 5rem;
+                        font-size: 2rem;
+                        
+                    }
+
+                    .btn{
+            
+                        background-color: $darkPurple; 
+                        font-weight: $fontExtra;
+                        font-size: 0.65rem;
+                        color: $fontColor;
+                        border-radius: 15px;
+                        border: solid 2px $iconColor;
+                        padding: 8px;
+                        width: 150px;
+                        margin: 10px 0;
+                       
+                        .color{
+                            color: $iconColor;
+                            
+                        }
+                    }
+                    
+                }
                 
             }
         }
