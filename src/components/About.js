@@ -26,16 +26,21 @@ function About () {
                                     <h5 className="align-two">How it works</h5>
                                 
                                 <div className="btn-container">
-                                    <p className="circle">1</p> 
-                                    <button className="btn"> 
-                                        <p>Join the community by</p>
-                                        <p className="color">creating an account.</p>
-                                    </button>
-                                    <p className="circle">2</p> 
-                                    <button className="btn">
-                                        <p>Customize your profile and read the</p> 
-                                        <p className="color">Community Guidelines.</p>
-                                    </button>
+                                    <div className="btn-one">
+                                        <p className="circle">1</p> 
+                                        <button className="btn"> 
+                                            <p>Join the community by</p>
+                                            <p className="color">creating an account.</p>
+                                        </button>
+                                    </div>
+                                    <div className="btn-two">
+                                        <p className="circle">2</p> 
+                                        <button className="btn">
+                                            <p>Customize your profile and read the</p> 
+                                            <p className="color">Community Guidelines.</p>
+                                        </button>
+                                    </div>
+
                                 </div> 
                             </div>
                         </div>
