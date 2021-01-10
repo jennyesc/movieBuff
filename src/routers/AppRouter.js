@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import Home from '../components/Home';
 import About from '../components/About';
 import Favourites from '../components/Favourites';
+import SingleMovie from '../components/SingleMovie';
 
 function AppRouter() {
   return (
@@ -15,11 +16,12 @@ function AppRouter() {
               <Route path={'/'} exact><Home /></Route>
               <Route path={'/about'}><About /></Route>
               <Route path={'/favourites'}><Favourites /></Route>
+              <Route path={'/singlemovie'}><SingleMovie /></Route>  
           </Switch>
         <Footer />
-      </div>
+      </div>  
     </Router>
   );
 }
-
+//SINGLE MOVIE IS PLACED IN NAV TEMPORARILY WHILE DEV PAGE
 export default AppRouter;
