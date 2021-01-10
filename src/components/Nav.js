@@ -8,8 +8,13 @@ function Nav(){
                 <li><NavLink to={'/'}>Home</NavLink></li>
                 <li><NavLink to={'/about'}>About</NavLink></li>
                 <li><NavLink to={'/favourites'}>Favourites</NavLink> </li>
+                <li><NavLink to={'/singleMovie'}>Single</NavLink> </li>
             </ul>
+            
         </nav>
+//SINGLE IS ONLY TEMPORARY DURING DEVELOPMENT
+
+
     );
 
 }
