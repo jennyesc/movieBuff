@@ -6,6 +6,7 @@
 main{
     
     .page-info-container{
+        margin-top: 20px;
     
         .page-bg{
             width: 100%;
@@ -43,22 +44,26 @@ main{
                 }
 
                 .btn-container{
+                    
                     padding: 0px 30px 0px 60px;
                    
                     .btn-one, .btn-two {
                         display: flex;
                         .circle{
                             margin: 0px 30px 25px 0px;
-                            padding:  5px;
+                            padding:  8px;
                             background-color: $darkPurple;
-                            border-radius: 100%;
-                            width: 50px;
+                            position: relative;
+                            border-radius: 50%;
+                            width: 70px;
                             height: 50px;
                             border: solid 2px $iconColor;
                             color: $iconColor;
                             text-align: center;
-                            font-weight: 5rem;
-                            font-size: 2rem;
+                            font-weight: $fontBold;
+                            font-size: 1.75rem;
+                            
+                            
                             
                         }
     
@@ -67,11 +72,12 @@ main{
                             background-color: $darkPurple; 
                             font-weight: $fontExtra;
                             font-size: 0.65rem;
+                            line-height: 1.25rem;
                             color: $fontColor;
                             border-radius: 15px;
                             border: solid 2px $iconColor;
                             padding: 8px;
-                            width: 150px;
+                            width: 80%;
                             //margin: 10px 0;
                            
                             .color{

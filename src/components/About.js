@@ -1,5 +1,5 @@
 //About
-import background from '../images/about-bg.jpg';
+import background from '../images/about-bg2.jpg';
 
 function About () {
     return (

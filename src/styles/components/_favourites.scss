@@ -25,27 +25,34 @@
 
 }
     
-        .play-trailer-bar{
-          
-        background-color: $purple;
-        height: 40px;
+.play-trailer-bar{
         
-            .play-icon{
-                margin: auto;
-                width: 15%;
-                color: $darkPurple;
+    background-color: $purple;
+    height:40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+        
+        .play-icon{
+            display: flex;
+            align-items: center;
+            font-weight: $fontSemi;
+            font-size: 0.875rem;
+            
+            
+            
+            .fa{
+                margin-right: 5px;
+                border: 4px solid $darkPurple;
                 border-radius: 50%;
-                padding: 8px;
-
-                .fa{
-
-
-                    font-size: 1.5rem;
-                    color: $fontColor;
-                    //border: 2px solid $darkPurple;
-                    //border-radius: 50%;
-                }
+                font-size: 1.5rem;
+                color: $fontColor;              
             }
-
-   
+        }
 }   
+
+.fav-input-container{
+    background-color: $darkPurple;
+    display: flex;
+    justify-content: space-between;
+}

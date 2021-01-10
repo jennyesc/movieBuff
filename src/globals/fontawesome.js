@@ -8,7 +8,8 @@ import {
   faHeart, 
   faList, 
   faPlayCircle, 
-  faBookmark
+  faBookmark,
+  faTimesCircle
 } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -21,5 +22,6 @@ library.add(
   faHeart, 
   faList, 
   faPlayCircle, 
-  faBookmark
+  faBookmark,
+  faTimesCircle
 )
