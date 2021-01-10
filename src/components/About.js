@@ -7,7 +7,7 @@ function About () {
             <section>
                 <div className="page-info-container">
                     <div className="page-bg">
-                        <div style={{ backgroundImage: `url(${background})` }}>
+                        <div style={{ backgroundImage: `url(${background})`}}>
                         
                             <div className="about-text">
                                 <h1 className="align-one">Hello!</h1>

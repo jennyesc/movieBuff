@@ -7,7 +7,6 @@
 .fav-movie-cont{
     padding-top: 20px;
     margin-top: 20px;
-    border-top: $hoverColor 2px solid;
 
     h2{
         font-size: 0.875rem;
@@ -28,16 +27,17 @@
 .play-trailer-bar{
         
     background-color: $purple;
-    height:40px;
+    height:50px;
     width: 100%;
     display: flex;
     justify-content: center;
+    
         
         .play-icon{
             display: flex;
             align-items: center;
             font-weight: $fontSemi;
-            font-size: 0.875rem;
+            font-size: 1.1rem;
             
             
             
@@ -53,6 +53,49 @@
 
 .fav-input-container{
     background-color: $darkPurple;
-    display: flex;
-    justify-content: space-between;
+    
+    .icon-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px 0;
+        
+        .icon{
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            margin-left: 15px;
+            padding: 15px 0 15px 10px;
+            
+            .fa{
+            margin-right: 8px;
+            border: solid 1px $fontColor;
+            border-radius: 50%;
+            padding: 5px;
+            background-color: $iconBgColor;
+            font-size: 0.65rem;
+            }
+            
+            p{
+                font-size: 0.875rem;
+            }
+        }
+        //CHANGE TO DYNAMIC
+        .fav-icon{
+            .fa {
+                 color: $iconColor;
+                 background-color: $darkPurple;
+                 border: solid 1px $iconColor;
+            }
+            p{
+                color: $iconColor;
+            }
+        }
+       
+    
+
+    }
+
+
+    
 }

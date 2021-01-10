@@ -47,21 +47,21 @@ function Favourites() {
 
         <div className="fav-input-container">
           <div className="icon-container">
-            <div className="rating-icon">  
+            <div className="icon rating-icon">  
                   <i className="fa"> <FontAwesomeIcon icon="star" /> </i>
                   <p>Your Rating</p>
             </div> 
 
-            <div className="fav-icon">  
+            <div className=" icon fav-icon">  
                   <i className="fa"> <FontAwesomeIcon icon="heart" /> </i>
                   <p>Favourite</p>
             </div> 
-            <div className="fav-icon">  
+            <div className="icon list-icon">  
                   <i className="fa"> <FontAwesomeIcon icon="list" /> </i>
                   <p>Add to List</p>
             </div> 
 
-            <div className="remove-icon">  
+            <div className="icon remove-icon">  
                   <i className="fa"> <FontAwesomeIcon icon="times-circle" /> </i>
                   <p>Remove</p>
             </div> 
