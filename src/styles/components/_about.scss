@@ -54,7 +54,7 @@ main{
                     padding: 20px 15px 0 15px;
                                      
                    
-                    .btn-one, .btn-two {
+                    .btn-one, .btn-two, .btn-three, .btn-four {
                         display: flex;
                         align-items: center;
                         .circle{
@@ -91,7 +91,7 @@ main{
                                 color: $iconColor;
                                 
                             }
-                    }
+                        }
 
                     
                     }
@@ -101,4 +101,7 @@ main{
             }
         }
     }
-}
+    @media (min-width: 700px){
+
+    }// End of Media
+}// End of about
