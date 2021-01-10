@@ -1,5 +1,5 @@
 //About
-import background from '../images/about-bg2.jpg';
+import background from '../images/about-bg.jpg';
 
 function About () {
     return (
@@ -7,7 +7,7 @@ function About () {
             <section>
                 <div className="page-info-container">
                     <div className="page-bg">
-                        <div style={{ backgroundImage: `url(${background})`}}>
+                        <div className="img" style={{ backgroundImage: `url(${background})`}}>
                         
                             <div className="about-text">
                                 <h1 className="align-one">Hello!</h1>
