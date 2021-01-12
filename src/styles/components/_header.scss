@@ -33,7 +33,8 @@ header {
                     display: inline;
                     display: flex;
                     flex-wrap: nowrap;
-                    justify-content: space-around;
+                    justify-content: space-between;
+                    //align-items: center;
                     padding-top: 50px;
 
                     li{
@@ -91,7 +92,7 @@ header {
             }
 
             .btn-container{
-                padding-top: 40px;
+                padding: 40px 40px 0px 0px;
                 .btn{
                     display: none;
         
