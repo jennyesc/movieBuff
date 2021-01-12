@@ -11,7 +11,7 @@ function Nav(){
                 <li><NavLink to={'/singleMovie'}>Single</NavLink> </li>
             </ul>
             
-        </nav>
+    </nav>
 //SINGLE IS ONLY TEMPORARY DURING DEVELOPMENT
 
 

@@ -1,5 +1,6 @@
 //Header
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Nav from './Nav';
 import logo from '../images/movieBuff.png';
 import '../globals/fontawesome';
@@ -17,7 +18,16 @@ function Header (){
                     <picture className="logo-container">
                          <Link to={'/'}><img className="logo" src={logo} alt="The Movie Buff Logo"></img></Link>
                     </picture>
-                
+
+                    <nav className="main-nav" >
+                        <ul className="desktop-nav">
+                            <li><NavLink to={'/'}>Home</NavLink></li>
+                            <li><NavLink to={'/about'}>About</NavLink></li>
+                            <li><NavLink to={'/favourites'}>Favourites</NavLink> </li>
+                            <li><NavLink to={'/singleMovie'}>Single</NavLink> </li>
+                        </ul>
+                        
+                    </nav>
 
                 
                 <div className="icons">  
@@ -46,9 +56,6 @@ function Header (){
 
 
             </div>     
-
-                         
-            
 
             <div className="mobile-menu">
                 <Nav />

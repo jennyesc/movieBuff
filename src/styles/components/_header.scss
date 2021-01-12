@@ -15,6 +15,42 @@ header {
                 max-width: 200px;  
             }
         }
+
+        .desktop-nav{
+            display: none;
+
+            @media (min-width: $desktopSmall){
+                display: inline;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                padding-bottom: 20px;
+
+                li{
+                    align-items: justify;
+                    padding-top: 15px;
+                    display: inline;
+                    //width: 100%;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    text-align: center;
+                    
+            
+                    a{
+                        text-decoration: none;
+                        font-weight: $fontBold;
+                        
+                        &:hover, &:focus, &:active{
+                            color: $hoverColor;
+                            transition: 0.04s;
+                        }
+            
+                        
+                    }      
+                }
+            }// End Media
+
+        }// End Desktop-nav
         
         .icons{
             height: 100%;
@@ -30,6 +66,15 @@ header {
         .search-box{
             display:none;
         }
+
+
+
+    }// End Header-top-row
+
+    .mobile-menu{
+        @media (min-width: $desktopSmall){
+        display: none;
+        }
     }
-}
+}// End Header
 
