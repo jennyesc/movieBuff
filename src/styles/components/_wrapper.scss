@@ -1,0 +1,7 @@
+.wrapper {
+    // This is call to the mc mixin (margin-centre)
+    // it center the element left and right on the
+    // page..
+    max-width: 700px;
+    @include mc;
+}

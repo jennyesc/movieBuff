@@ -2,79 +2,132 @@
 
 @use '../base/settings' as *;
 
+
 header {
-    
-    .header-top-row{
-        background: $bgGradientDark; 
-        border-bottom: 5px solid $borderPurple; 
-        display: flex;
-        justify-content: space-between;
-    
-        .logo-container{
-            .logo{
-                max-width: 200px;  
-            }
+    .main-container{
+        @media (min-width: $desktopSmall){
+            max-width: $siteWidth;
         }
 
-        .desktop-nav{
-            display: none;
-
-            @media (min-width: $desktopSmall){
-                display: inline;
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: space-around;
-                padding-bottom: 20px;
-
-                li{
-                    align-items: justify;
-                    padding-top: 15px;
-                    display: inline;
-                    //width: 100%;
-                    margin-left: 5px;
-                    margin-right: 5px;
-                    text-align: center;
-                    
-            
-                    a{
-                        text-decoration: none;
-                        font-weight: $fontBold;
-                        
-                        &:hover, &:focus, &:active{
-                            color: $hoverColor;
-                            transition: 0.04s;
-                        }
-            
-                        
-                    }      
-                }
-            }// End Media
-
-        }// End Desktop-nav
-        
-        .icons{
-            height: 100%;
-            width: 15%;
-            margin: auto;
-            margin-right: 20px;
-            font-size: 20px;
-            color: $iconColor;
+        .header-top-row{
+            background: $bgGradientDark; 
+            border-bottom: 5px solid $borderPurple; 
             display: flex;
             justify-content: space-between;
+        
+            .logo-container{
+                .logo{
+                    max-width: 200px;  
+                    
+                    @media (min-width: $desktopSmall){
+                        max-width: 300px; 
+                    }// End of Media
+                }
+
+            }
+
+            .desktop-nav{
+                display: none;
+
+                @media (min-width: $desktopSmall){
+                    display: inline;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-around;
+                    padding-top: 50px;
+
+                    li{
+                        align-items: justify;
+                        padding-top: 15px;
+                        display: inline;
+                        //width: 100%;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        text-align: center;
+                        
+                
+                        a{
+                            text-decoration: none;
+                            font-weight: $fontBold;
+                            text-transform: uppercase;
+                            font-size: 1rem;
+                            
+                            &:hover, &:focus, &:active{
+                                color: $hoverColor;
+                                transition: 0.04s;
+                            }
+                
+                            
+                        }      
+                    }
+
+                }// End of Media
+
+            }// End of Desktop-nav
+            
+            .icons{
+                height: 100%;
+                width: 15%;
+                margin: auto;
+                margin-right: 20px;
+                font-size: 20px;
+                color: $iconColor;
+                display: flex;
+                justify-content: space-between;
+
+                @media (min-width: $desktopSmall){
+                    
+
+                }// End of Media
+            }
+
+            .search-box{
+                display:none;
+                
+                @media (min-width: $desktopSmall){
+                    
+                }// End of Media
+
+            }
+
+            .btn-container{
+                padding-top: 40px;
+                .btn{
+                    display: none;
+        
+                    @media (min-width: $desktopSmall){
+                            display: inline-block;
+                        
+                            background-color: $borderPurple;
+                            text-transform: uppercase;
+                            font-weight: $fontExtra;
+                            font-size: 0.65rem;
+                            color: $fontColor;
+                            border-radius: 8px;
+                            border: solid 2px $iconColor;
+                            padding: 8px;
+                            width: 150px;
+                            height: 50px;
+                            //margin: 10px 0;
+                
+                            a{
+                                text-decoration: none;   
+                            }
+                            
+                        
+                    }// End of Media
+                }
+
+            }// End of btn-container
+            
+            
+        }// End of Header-top-row
+
+        .mobile-menu{
+            @media (min-width: $desktopSmall){
+            display: none;
+            }
         }
-
-        .search-box{
-            display:none;
-        }
-
-
-
-    }// End Header-top-row
-
-    .mobile-menu{
-        @media (min-width: $desktopSmall){
-        display: none;
-        }
-    }
-}// End Header
+    }// End of main-container    
+}// End of Header
 

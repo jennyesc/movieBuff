@@ -3,6 +3,7 @@
 @use '../base/settings' as *;
 @use '../base/type' as *;
 
+
 .mobile-nav{
     display: inline;
     display: flex;
@@ -36,6 +37,10 @@
 
             
         }      
+    }
+    @media (min-width: $desktopSmall){
+        
+    max-width: $siteWidth;
     }
     
 }// End mobile-nav
