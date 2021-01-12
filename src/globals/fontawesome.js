@@ -9,7 +9,8 @@ import {
   faList, 
   faPlayCircle, 
   faBookmark,
-  faTimesCircle
+  faTimesCircle,
+  faTheaterMasks
 } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -23,5 +24,6 @@ library.add(
   faList, 
   faPlayCircle, 
   faBookmark,
-  faTimesCircle
+  faTimesCircle,
+  faTheaterMasks
 )
