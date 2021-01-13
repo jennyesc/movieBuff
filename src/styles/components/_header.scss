@@ -1,127 +1,172 @@
 // Header
 
 @use '../base/settings' as *;
+@use '../utilities/mixins' as *;
+
 
 
 header {
     .main-container{
-        @media (min-width: $desktopSmall){
-            max-width: $siteWidth;
-        }
+        background: $bgGradientDark; 
+        border-bottom: 5px solid $borderPurple; 
+
+        
 
         .header-top-row{
-            background: $bgGradientDark; 
-            border-bottom: 5px solid $borderPurple; 
+           
             display: flex;
             justify-content: space-between;
+
+            @media (min-width: $desktopSmall){
+                @include mc;
+                max-width: $siteWidth;
+            }
         
             .logo-container{
                 .logo{
                     max-width: 200px;  
-                    
+                    padding-left: 10px;
                     @media (min-width: $desktopSmall){
-                        max-width: 300px; 
+                        max-width: 250px; 
                     }// End of Media
                 }
 
             }
-
-            .desktop-nav{
+            .main-nav{
                 display: none;
 
                 @media (min-width: $desktopSmall){
-                    display: inline;
+  //                  border: 2px solid blue;
+                    width: 500px;
                     display: flex;
-                    flex-wrap: nowrap;
-                    justify-content: space-between;
-                    //align-items: center;
-                    padding-top: 50px;
+                    align-items: flex-end;
+                    margin-bottom: 25px;
+                    
+                    .desktop-nav{
+//                        border: solid 2px orange;
+                        display: flex;
+                        justify-content: space-around;
+                        width: 100%;
 
-                    li{
-                        align-items: justify;
-                        padding-top: 15px;
-                        display: inline;
-                        //width: 100%;
-                        margin-left: 5px;
-                        margin-right: 5px;
-                        text-align: center;
+                            li{
                         
-                
-                        a{
-                            text-decoration: none;
-                            font-weight: $fontBold;
-                            text-transform: uppercase;
-                            font-size: 1rem;
-                            
-                            &:hover, &:focus, &:active{
-                                color: $hoverColor;
-                                transition: 0.04s;
+                                display: inline;
+                                margin-left: 5px;
+                                margin-right: 5px;
+                                text-align: center;
+                                
+                        
+                                a{
+                                    text-decoration: none;
+                                    font-weight: $fontBold;
+                                    text-transform: uppercase;
+                                    font-size: 1rem;
+                                    
+                                    &:hover, &:focus, &:active{
+                                        color: $hoverColor;
+                                        transition: 0.04s;
+                                    }
+                        
+                                    
+                                }      
                             }
+
+                        }// End of Media
+
+                    }// End of Desktop-nav
+                    
+            }
+            
+            .right-nav{
+                width: 100px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding-right: 10px;
                 
-                            
-                        }      
+                @media (min-width: $tabletSmall){
+                    width: 200px;
+                    padding-right: 20px;
+                    align-items: flex-end;
+                    margin-bottom: 26px;
+                    
+                }
+
+                .icons{
+                    
+                    font-size: 20px;
+                    color: $iconColor;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: flex-end;
+
+                    .fa{
+                        padding: 0 5px;
+                        margin-right: 8px;
                     }
 
-                }// End of Media
+                    @media (min-width: $tabletSmall){
+                        margin-right: 10px;
 
-            }// End of Desktop-nav
-            
-            .icons{
-                height: 100%;
-                width: 15%;
-                margin: auto;
-                margin-right: 20px;
-                font-size: 20px;
-                color: $iconColor;
-                display: flex;
-                justify-content: space-between;
 
-                @media (min-width: $desktopSmall){
-                    
-
-                }// End of Media
-            }
-
-            .search-box{
-                display:none;
-                
-                @media (min-width: $desktopSmall){
-                    
-                }// End of Media
-
-            }
-
-            .btn-container{
-                @media (min-width: $desktopSmall){
-                    padding: 40px 40px 0px 0px;
-                }
-                .btn{
-                    display: none;
-        
-                    @media (min-width: $desktopSmall){
-                            display: inline-block;
                         
-                            background-color: $borderPurple;
-                            text-transform: uppercase;
-                            font-weight: $fontExtra;
-                            font-size: 0.65rem;
-                            color: $fontColor;
-                            border-radius: 8px;
-                            border: solid 2px $iconColor;
-                            padding: 8px;
-                            width: 150px;
-                            height: 50px;
-                            //margin: 10px 0;
-                
-                            a{
-                                text-decoration: none;   
-                            }
-                            
-                        
+                    
                     }// End of Media
                 }
+                
+                
+                
+                .btn-container{
+                    @media (min-width: $tabletSmall){
+                        
+                    }
+                    .btn{
+                        display: none;
+            
+                        @media (min-width: $tabletSmall){
+                                display: inline-block;
+                                background: $bgGradientDark;
+                                text-transform: uppercase;
+                                font-weight: $fontExtra;
+                                font-size: 0.65rem;
+                                color: $fontColor;
+                                border-radius: 8px;
+                                border: solid 2px $iconColor;
+                                padding: 8px;
+                                width: 100px;
+                                height: 40px;
+                               
+                    
+                                a{
+                                    text-decoration: none;   
+                                }
+                                
+                            
+                        }// End of Media
+                    }
+    
+                }// End of btn-container
+                
+                
+                   
+            }//end of .right-nav
 
-            }// End of btn-container
+           .search-box{
+                    display:none;
+                    
+                    @media (min-width: $desktopSmall){
+                        
+                    }// End of Media
+
+                }
+                    
+
+               
+        
+
+            
+
+            
             
             
         }// End of Header-top-row

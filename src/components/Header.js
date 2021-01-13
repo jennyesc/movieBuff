@@ -12,20 +12,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Header (){
     return (
         <header>
+            
             <div className="main-container">
+
                 <div className="header-top-row">
                 
 
-                        <picture className="logo-container">
-                            <Link to={'/'}><img className="logo" src={logo} alt="The Movie Buff Logo"></img></Link>
-                        </picture>
+                    <picture className="logo-container">
+                        <Link to={'/'}><img className="logo" src={logo} alt="The Movie Buff Logo"></img></Link>
+                    </picture>
 
-                        <nav className="main-nav" >
+                    <nav className="main-nav" >
                             <ul className="desktop-nav">
                                 <li><NavLink to={'/'}>Home</NavLink></li>
                                 <li><NavLink to={'/about'}>About</NavLink></li>
                                 <li><NavLink to={'/favourites'}>Favourites</NavLink> </li>
-                                <li><NavLink to={'/singleMovie'}>Single</NavLink> </li>
+                                {/* <li><NavLink to={'/singleMovie'}>Single</NavLink> </li> */}
                             </ul>
 
                             
@@ -39,19 +41,19 @@ function Header (){
                             
                         </nav>
 
-                    
-                    <div className="icons">   
-                        <i className="fa"> <FontAwesomeIcon icon="search" /> </i>
-                        
-                        <i className="fa"><FontAwesomeIcon icon="user" /></i>
-                    </div>   
+                    <div className="right-nav">                        
+                        <div className="icons">   
+                            <i className="fa"> <FontAwesomeIcon icon="search" /> </i>
+                            
+                            <i className="fa"><FontAwesomeIcon icon="user" /></i>
+                        </div>   
 
-                    <div className="btn-container">
-                        <button className="btn">
-                            <Link to={'/About'}>Join Now</Link>
-                        </button>
-                    </div>    
-                    
+                        <div className="btn-container">
+                            <button className="btn">
+                                <Link to={'/About'}>Join Now</Link>
+                            </button>
+                        </div>    
+                    </div>
                     
                     
                     <div className="search-box">
@@ -59,15 +61,14 @@ function Header (){
                             <input type="search" placeholder="Search for movies.." name="search"></input> 
                         </form>
                     </div>
-                    
 
-
+                    </div>
                 </div>     
                 <div className="mobile-menu">
                     <Nav />
                 </div>
-            </div>    
-
+                
+          
         </header> 
     );       
 }

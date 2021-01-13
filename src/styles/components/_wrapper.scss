@@ -1,3 +1,6 @@
+//wrapper styles
+@use '../utilities/mixins' as *;
+
 .wrapper {
     // This is call to the mc mixin (margin-centre)
     // it center the element left and right on the

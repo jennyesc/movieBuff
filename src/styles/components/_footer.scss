@@ -57,7 +57,7 @@ footer{
         padding: 10px;
 
         //FOR DESKTOP SIZE
-        @media (min-width: $desktopSmall){
+        @media (min-width: $tabletSmall){
             display: grid;
             grid-template-columns: auto;
             grid-template-rows: auto;
