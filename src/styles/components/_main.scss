@@ -2,10 +2,23 @@
 
 @use '../base/settings' as *;
 @use '../base/type' as *;
+@use '../utilities/mixins' as *;
 
 main{
     
     padding: 5px 15px 10px 15px;
+    
+    @media (min-width: $tabletSmall){
+        @include mc;
+        max-width: $siteWidth;
+        border: solid 2px orange;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+        padding: 0;
+        
+        
+    }
    
     
     .movie-container{
@@ -14,6 +27,17 @@ main{
         grid-template-columns: 45% 55%;
         margin-top: 15px;
         
+        @media (min-width: $tabletSmall){
+            @include mc;
+            border: solid 2px yellow;
+            width: 200px;
+            // height: auto;
+        
+        
+        } //end media
+
+        
+
         
 
         .movie-poster{
