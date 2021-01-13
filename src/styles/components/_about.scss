@@ -2,32 +2,42 @@
 
 @use '../base/settings' as *;
 @use '../base/type' as *;
+@use '../utilities/mixins' as *;
 
 main{
-    
+    @media (min-width: $tabletSmall){
+        @include mc;
+        
+    }
+
     .page-info-container{
         margin-top: 20px;
         
         
     
         .page-bg{
-            width: 100%;
-           
+            width: auto;
+            
+                        
            
             .img{
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
+                @media (min-width: $tabletSmall){
+                    @include mc;
+                }
+                
+                
             }
             
 
             .about-container{
-                @media (min-width: $desktopSmall){
+                @media (min-width: $tabletSmall){
                     max-width: 670px;
-                    margin-top: 0px;
-                    margin-bottom: 0px;
-                    margin-left: auto;
-                    margin-right: auto;
+                    border: solid 2px orange;
+                    @include mc;
+                    
                 }
                 .about-text{
                     .align-one{
