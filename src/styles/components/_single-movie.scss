@@ -44,6 +44,10 @@
         font-size: 0.875rem;
         padding: 0 10px;
         margin:auto;
+        @media (min-width: $desktopSmall){
+            display: none;
+        }
+
 
 
         .rating{
@@ -67,12 +71,14 @@
             align-items: center;
             
             
+            
             .fa{
                 margin-right: 5px;
                 border: 4px solid $darkPurple;
                 border-radius: 50%;
                 font-size: 1.25rem;
-                color: $fontColor;              
+                color: $fontColor;
+                              
             }
 
         }
@@ -83,6 +89,10 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         margin-bottom: 15px;
+
+        @media (min-width: $desktopSmall){
+            display: none;
+        }
         
         .icon{
             display: flex;
@@ -105,6 +115,9 @@
     h2{
         font-size: 1.4rem;
         text-align: center;
+        @media (min-width: $desktopSmall){
+            display: none;
+        }
         
     }
     .movie-info-container{
@@ -127,6 +140,9 @@
             font-size: 1.75rem; 
             padding: 10px;
         }
+        @media (min-width: $desktopSmall){
+            display: none;
+        }
         
     }
    
@@ -139,6 +155,9 @@
             font-size: 1rem;
             font-weight: $fontBold;
             margin: 10px 0;
+        }
+        @media (min-width: $desktopSmall){
+            display: none;
         }
     }
 

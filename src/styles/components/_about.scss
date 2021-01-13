@@ -7,101 +7,122 @@ main{
     
     .page-info-container{
         margin-top: 20px;
+        
+        
     
         .page-bg{
             width: 100%;
-
+           
+           
             .img{
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
             }
             
-            .about-text{
-           
-                
-                .align-one{
-                    text-align: center;
-                    font-size: 2rem;
-                    padding: 30px 0px 30px 0px;
+
+            .about-container{
+                @media (min-width: $desktopSmall){
+                    max-width: 670px;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
-
-                .p-one{
-                    text-align: center;
-                    padding: 0px 15px 20px 15px;
-                    font-weight: $fontMed;
-                    font-size: 0.95rem;
-                    line-height: 1.25;
-                }
-
-                .p-two{
-                    text-align: center;
-                    padding: 0px 15px 20px 15px;
-                    font-weight: $fontMed;
-                    font-size: 0.95rem;
-                    line-height: 1.25;
-                }
-
-                .align-two{
-                    text-align: center;
-                    font-weight: $fontBold;
-                    font-size: 1.2rem;
-                    padding-bottom: 25px;
-                }
-
-                .btn-container{
-                    
-                    padding: 20px 15px 0 15px;
-                                     
-                   
-                    .btn-one, .btn-two, .btn-three, .btn-four {
-                        display: flex;
-                        align-items: center;
-                        .circle{
-                            margin: 0px 10px 25px 0px;
-                            padding:  8px;
-                            background-color: $darkPurple;
-                            border-radius: 50%;
-                            width: 60px;
-                            height: 50px;
-                            border: solid 2px $iconColor;
-                            color: $iconColor;
-                            text-align: center;
-                            font-weight: $fontBold;
-                            font-size: 1.87rem;
-                        
-                            //in the larger media size, the width and height needs to be changed
-
+                .about-text{
+                    .align-one{
+                        text-align: center;
+                        font-size: 2rem;
+                        padding: 30px 0px 30px 0px;
+                    }
+    
+                    .p-one{
+                        text-align: center;
+                        padding: 0px 15px 20px 15px;
+                        font-weight: $fontMed;
+                        font-size: 0.95rem;
+                        line-height: 1.25;
+                        @media (min-width: $desktopSmall){
+                            font-size: $fontDesktop;
                         }
     
-                        .btn{
-                            margin: 0px 0 25px 0px;
-                            background-color: $darkPurple; 
-                            font-weight: $fontExtra;
-                            font-size: 0.875rem;
-                            line-height: 1.25rem;
-                            color: $fontColor;
-                            border-radius: 15px;
-                            border: solid 2px $iconColor;
-                            padding: 8px;
-                            width: 100%;
-                            //margin: 10px 0;
-                           
-                            .color{
-                                color: $iconColor;
-                                
-                            }
+                        
+                    }
+    
+                    .p-two{
+                        text-align: center;
+                        padding: 0px 15px 20px 15px;
+                        font-weight: $fontMed;
+                        font-size: 0.95rem;
+                        line-height: 1.25;
+                        @media (min-width: $desktopSmall){
+                            font-size: $fontDesktop;
                         }
-
-                    
+                    }
+    
+                    .align-two{
+                        text-align: center;
+                        font-weight: $fontBold;
+                        font-size: 1.2rem;
+                        padding-bottom: 25px;
+                    }
+    
+                    .btn-container{
+                        
+                        padding: 20px 15px 0 15px;
+                                         
+                       
+                        .btn-one, .btn-two, .btn-three, .btn-four {
+                            display: flex;
+                            align-items: center;
+                            .circle{
+                                margin: 0px 10px 25px 0px;
+                                padding:  8px;
+                                background-color: $darkPurple;
+                                border-radius: 50%;
+                                width: 60px;
+                                height: 50px;
+                                border: solid 2px $iconColor;
+                                color: $iconColor;
+                                text-align: center;
+                                font-weight: $fontBold;
+                                font-size: 1.87rem;
+                            
+                                //in the larger media size, the width and height needs to be changed
+    
+                            }
+        
+                            .btn{
+                                margin: 0px 0 25px 0px;
+                                background-color: $darkPurple; 
+                                font-weight: $fontExtra;
+                                font-size: 0.875rem;
+                                line-height: 1.25rem;
+                                color: $fontColor;
+                                border-radius: 15px;
+                                border: solid 2px $iconColor;
+                                padding: 8px;
+                                width: 100%;
+                                //margin: 10px 0;
+                               
+                                .color{
+                                    color: $iconColor;
+                                    
+                                }
+                            }
+    
+                        
+                        }
+                        
                     }
                     
-                }
-                
-            }
-        }
+                }// End about-text
+
+            }//End .about-container
+            
+        }// End page-bg
     }
     @media (min-width: 700px){
 
     }// End of Media
-}// End of about
+}// End of main

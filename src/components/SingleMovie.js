@@ -2,7 +2,7 @@
 import background from '../images/diehard.jpg';
 import '../globals/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import poster from '../images/diehard.jpg';
+//import poster from '../images/diehard.jpg';
 
 function SingleMovie() {
     return (
