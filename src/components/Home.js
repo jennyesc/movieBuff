@@ -5,7 +5,7 @@ import poster from '../images/diehard.jpg';
 
 function Home() {
     return (
-      <main className="grid">
+      <main>
        <section className="movie-container">
           
           
