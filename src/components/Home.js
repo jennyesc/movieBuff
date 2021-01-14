@@ -6,6 +6,7 @@ import poster from '../images/diehard.jpg';
 function Home() {
     return (
       <main>
+        <div className="desktop-grid">
        <section className="movie-container">
           
           
@@ -169,7 +170,7 @@ function Home() {
         </section>
 
 
-        
+        </div>  
       </main>
     );
   }
