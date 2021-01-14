@@ -19,7 +19,7 @@ header {
 
             @media (min-width: $desktopSmall){
                 @include mc;
-                max-width: $siteWidth;
+                max-width: $headerMaxWidth;
             }
         
             .logo-container{
