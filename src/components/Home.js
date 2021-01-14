@@ -22,7 +22,8 @@ function Home() {
               <h2>Hard Kill</h2>
               <div className="dt-movie-infobox">
                 <h3>Oct 23, 2020</h3>
-                <p className="dt-more-infolink">More Info</p>
+                <p className="dt-more-infolink"> More Info </p>
+                {/* <Link to="/singleMovie">About</Link> */}
               
                 <p>The work of billionaire tech CEO Donavan Chalmers is so valuable
                 that he hires ...</p>

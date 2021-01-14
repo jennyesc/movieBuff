@@ -10,12 +10,12 @@
     
     @media (min-width: $tabletSmall){
         @include mc;
-        max-width: $siteWidth;
+        max-width: $headerMaxWidth;
         //border: solid 2px orange;
         display: flex;
         flex-wrap: wrap;
-        grid-gap: 14px;
-        
+        grid-gap: 28px;
+        margin-top: 50px;        
         
     }
    
@@ -123,7 +123,7 @@
               
             }
             .dt-movie-infobox{
-                display: none;
+                
                 @media (min-width: $tabletSmall){
                     display: flex;
                     align-items: center;
@@ -156,7 +156,16 @@
                         padding: 0;
                         color: $iconColor;
                         font-size: .90rem;
-                        font-weight: $fontSemi;
+                        font-weight: $fontBold;
+                        
+                        a{
+                            color: $iconColor;
+                            text-decoration: none;
+
+                            &:hover, &:focus, &:active{
+                               transition: 0.04s;
+                            }
+                        }
 
                     }//end media
                 }
