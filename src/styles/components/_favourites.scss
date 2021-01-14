@@ -8,17 +8,28 @@
 .fav-movie-cont{
     padding-top: 20px;
     margin-top: 20px;
-
+    
+    @media (min-width: $tabletSmall){
+        @include mc;
+        max-width: $siteWidth;
+        display: flex;
+        padding-bottom: 20px;
+    }    
     h2{
         font-size: 0.875rem;
         text-transform: uppercase;
+        padding-left: 15px;
     }
 
     ul{
         li{
-            margin: 10px 0 10px 15px;
+            margin: 10px 0 10px 20px;
             font-size: 0.875rem;
             font-weight: $fontSemi;
+            @media (min-width: $tabletSmall){
+                display: inline;    
+            }
+
         }
     }
 
@@ -32,6 +43,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @media (min-width: $tabletSmall){
+        display: none;
+    }
     
         
         .play-icon{
@@ -39,6 +54,10 @@
             align-items: center;
             font-weight: $fontSemi;
             font-size: 1.1rem;
+            
+            @media (min-width: $tabletSmall){
+                display: none;
+            }
             
             
             
@@ -52,7 +71,7 @@
         }
 }   
 
-        .movie-container{
+        .about-movie-container{
             background: $bgGradient;
             display: grid;
             grid-template-columns: 45% 55%;
@@ -61,7 +80,10 @@
             @media (min-width: $tabletSmall){
                 @include mc;
                 border: solid 2px yellow;
-                width: 200px;
+                max-width: $siteWidth;
+                display: flex;
+                align-items: flex-end;
+                // width: 200px;
                 // height: auto;
             
             
@@ -92,6 +114,10 @@
                         bottom: 0;
                         right: 0;
 
+                        @media (min-width: $tabletSmall){
+                            display: none;
+                        }
+
                     p{
                         font-weight: $fontExtra;
                         font-size: 1.5rem;
@@ -107,6 +133,26 @@
                 color: $fontColor;
                 display: block;
                 padding: 10px;
+
+                .circle{
+                    display: none;
+                    @media (min-width: $tabletSmall){
+                        display: flex;
+                        // margin: 0px 10px 25px 0px;
+                                padding:  10px;
+                                background-color: $darkPurple;
+                                border-radius: 50%;
+                                width: 60px;
+                                height: 50px;
+                                border: solid 2px $iconColor;
+                                color: $iconColor;
+                                text-align: center;
+                                font-weight: $fontBold;
+                                font-size: 1.2rem;
+                    }
+
+
+                }
             
                 h2{
                     padding-top: 10px;
@@ -133,6 +179,9 @@
 
 .fav-input-container{
     background-color: $darkPurple;
+    @media (min-width: $tabletSmall){
+        display: none;
+    }
     
     .icon-container{
         width: 100%;

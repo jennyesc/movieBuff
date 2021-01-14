@@ -18,7 +18,7 @@ function Favourites() {
             </ul>
         </section>
 
-        <section className="movie-container">
+        <section className="about-movie-container">
           
           
           <div className="movie-poster">
@@ -30,6 +30,7 @@ function Favourites() {
           </div>
           
           <div className="movie-description">
+            <p className="circle">46%</p>
               <h2>Hard Kill</h2>
               <h3>Oct 23, 2020</h3>
               <p>The work of billionaire tech CEO Donavan Chalmers is so valuable

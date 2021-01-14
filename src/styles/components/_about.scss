@@ -35,7 +35,6 @@ main{
             .about-container{
                 @media (min-width: $tabletSmall){
                     max-width: 670px;
-                    border: solid 2px orange;
                     @include mc;
                     
                 }
