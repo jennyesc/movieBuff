@@ -11,17 +11,16 @@
     @media (min-width: $tabletSmall){
         @include mc;
         max-width: $siteWidth;
-        border: solid 2px orange;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        grid-gap: 10px;
-        padding: 0;
+        //border: solid 2px orange;
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 14px;
         
         
     }
    
     
-    .movie-container{
+    .index-movie-container{
         background: $bgGradient;
         display: grid;
         grid-template-columns: 45% 55%;
@@ -29,9 +28,15 @@
         
         @media (min-width: $tabletSmall){
             @include mc;
-            border: solid 2px yellow;
             width: 200px;
-            // height: auto;
+            height: 420px;
+            padding: 0;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            
+            
+            
         
         
         } //end media
@@ -42,6 +47,19 @@
 
         .movie-poster{
             position: relative;
+            
+
+            @media (min-width: $tabletSmall){
+            position: absolute;
+            left:-10px;
+            top: 15px;
+            width: 185px;
+            height: 280px;
+            box-shadow: $purple 3px 3px 8px;
+            
+            
+            
+            }//end media
 
             .poster-image{
                 width: 100%;
@@ -60,12 +78,24 @@
                     position: absolute;
                     bottom: 0;
                     right: 0;
+                    @media (min-width: $tabletSmall){
+                        width: 150px;
+                        left: 60px;
+
+                    }//end media
 
                 p{
                     font-weight: $fontExtra;
                     font-size: 1.5rem;
                     text-align: right;
                     padding: 10px 8px 10px 20px;
+                    color: $iconColor;
+                    @media (min-width: $tabletSmall){
+                        padding-right: 30px;
+                        padding-top: 12px;
+                        font-size: 2.0rem;
+                       
+                    }//end media
 
                 }
             }
@@ -76,24 +106,73 @@
             color: $fontColor;
             display: block;
             padding: 10px;
+            
+            @media (min-width: $tabletSmall){
+            height: 30%;
+            width: 100%;
+          
+            text-align: center;
+            }//end media
         
             h2{
                 padding-top: 10px;
                 padding-bottom: 5px; 
                 font-size: 1.2rem;
+            
+                
               
             }
-            h3{
+            .dt-movie-infobox{
+                display: none;
+                @media (min-width: $tabletSmall){
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    margin-top: 20px;
+                    padding: 0;
+
+                }//end media
+               
+                h3{
                 font-size: 0.85rem;
                 padding-bottom: 10px;
+                
+                @media (min-width: $tabletSmall){
+                    font-size: .90rem;
+                    padding: 0;
+                    
 
+                }
+
+                }
+
+                .dt-more-infolink{
+                    display: none;
+
+                    @media (min-width: $tabletSmall){
+                        display: block;
+                        
+                        padding: 0;
+                        color: $iconColor;
+                        font-size: .90rem;
+                        font-weight: $fontSemi;
+
+                    }//end media
+                }
+
+                p{
+                    font-size: 0.75rem;
+                    line-height: 1.25;
+                    padding-top: 50px;
+                    
+                    @media (min-width: $tabletSmall){
+                    display: none;
+                    }//end media
+                
+                }  
             }
-            p{
-                font-size: 0.75rem;
-                line-height: 1.25;
-                padding-top: 50px;
-              
-            }
+           
         }
     }
     
