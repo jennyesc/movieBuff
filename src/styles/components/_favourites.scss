@@ -31,6 +31,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @media (min-width: $desktopSmall){
+        display: none;
+    }
     
         
         .play-icon{
