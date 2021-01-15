@@ -5,235 +5,261 @@
 
 
 
-.fav-movie-cont{
-    padding-top: 20px;
-    margin-top: 20px;
-    
-    @media (min-width: $tabletSmall){
-        @include mc;
-        max-width: $siteWidth;
-        display: flex;
-        padding-bottom: 20px;
-    }    
-    h2{
-        font-size: 0.875rem;
-        text-transform: uppercase;
-        padding-left: 15px;
-    }
 
-    ul{
-        li{
-            margin: 10px 0 10px 20px;
-            font-size: 0.875rem;
-            font-weight: $fontSemi;
-            @media (min-width: $tabletSmall){
-                display: inline;    
-            }
-
-        }
-    }
-
-
-}
-    
-.play-trailer-bar{
+    .fav-movie-heading{
+        padding-top: 20px;
+        margin-top: 20px;
         
-    background-color: $purple;
-    height:50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-    @media (min-width: $tabletSmall){
-        display: none;
-    }
-    
-        
-        .play-icon{
+        @media (min-width: $tabletSmall){
+            @include mc;
+            max-width: $siteWidth;
             display: flex;
-            align-items: center;
-            font-weight: $fontSemi;
-            font-size: 1.1rem;
-            
-            @media (min-width: $tabletSmall){
-                display: none;
-            }
-            
-            
-            
-            .fa{
-                margin-right: 5px;
-                border: 4px solid $darkPurple;
-                border-radius: 50%;
-                font-size: 1.5rem;
-                color: $fontColor;              
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }    
+        h2{
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            padding-left: 15px;
+        }
+
+        ul{
+            li{
+                margin: 10px 0 10px 20px;
+                font-size: 0.875rem;
+                font-weight: $fontSemi;
+                @media (min-width: $tabletSmall){
+                    display: inline;    
+                }
+
             }
         }
-}   
 
-.fav-movie-container{
-    background: $bgGradient;
-    display: grid;
-    grid-template-columns: 45% 55%;
-    margin-top: 15px;
-            
-    @media (min-width: $tabletSmall){
-        @include mc;
-        border: solid 2px yellow;
-        max-width: $siteWidth;
-        display: flex;
-        max-height: 200px;
-    } //end media
 
-    .movie-poster{
-            position: relative;
-            border: 3px solid red;
+    }
 
-            .poster-image{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                @media (min-width: $tabletSmall){
-                    max-height: 300px;
-                }
-            }
+    .desktop-fav-container{
+    
 
-                
+        @media (min-width: $tabletSmall){
+            @include mc;
+                max-width: $siteWidth;
+                //border: 2px solid yellow;
+                height: 300px;
+                position: relative;
+        }
+        
+   
+
+        .fav-movie-container{
+            background: $bgGradientDark;
+            display: grid;
+            grid-template-columns: 45% 55%;
+            margin-top: 15px;
                     
-            .movie-rating{
-                background-color: $darkPurple;
-                opacity: 0.7;
-                width: 70%;
-                height: 20%;
-                color: $iconColor;
-                position: absolute;
-                bottom: 0;
-                right: 0;
+            @media (min-width: $tabletSmall){
+                @include mc;
+                display: flex;
+                //border: solid 1px orange;
+                height: 200px;
+            
+                
+            } //end media
+
+            .movie-poster{
+                    position: relative;
+                    //border: 3px solid red;
+
+                    @media (min-width: $tabletSmall){
+                        //position: absolute;
+                        
+                        height: 275px;
+                        width: 175px;
+                        margin-top: -35px;    
+                        box-shadow:  2px 2px 10px rgba(8, 3, 5, 0.5);    
+                    }
+
+                    .poster-image{
+                        
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                   
+                    }
+
+    
+                    .movie-rating{
+                        background-color: $darkPurple;
+                        opacity: 0.7;
+                        width: 70%;
+                        height: 20%;
+                        color: $iconColor;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+
+                        p{
+                            font-weight: $fontExtra;
+                            font-size: 1.5rem;
+                            text-align: right;
+                            padding: 10px 8px 10px 20px;
+                        }
+
+                     @media (min-width: $tabletSmall){
+                           display: none;
+
+                        }
+                    }
+                }
+            
+            .circle-container{
+               
+                .circle{
+                    display: none;
+                    @media (min-width: $tabletSmall){
+                            margin: 10px;
+                            display: flex;
+                            text-align: center;
+                            border-radius: 50%;
+                            width: 50px;
+                            height: 50px;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: $darkPurple;
+                            border: solid 2px $iconColor;
+                            color: $iconColor;
+                            font-weight: $fontBold;
+                            font-size: 1rem;
+                    }  
+                }
 
                 @media (min-width: $tabletSmall){
-                    display: none;
-                }
-
-                p{
-                    font-weight: $fontExtra;
-                    font-size: 1.5rem;
-                    text-align: right;
-                    padding: 10px 8px 10px 20px;
-
+                    
+                    margin-left: 10px;
                 }
             }
-        }
             
+
             .movie-description{
                 
                 color: $fontColor;
                 display: block;
                 padding: 10px;
-                border: 3px solid white;
-
+                        h2{
+                            border: 2px solid orange;
+                            padding-top: 20px;
+                            padding-bottom: 5px; 
+                            font-size: 1.2rem;
+                            display: inline;
+                            justify-content: flex-start;      
+                        }
+                        h3{
+                            border: 2px solid red;
+                            font-size: 0.85rem;
+                            padding-bottom: 10px;
+                        }
+                        p{
+                            border: 2px solid yellow;
+                            font-size: 0.75rem;
+                            line-height: 1.25;
+                            padding-top: 50px;
+                            @media (min-width: $tabletSmall){
+                                padding: 0;
+                            }  
+                        }
                 @media (min-width: $tabletSmall){
-                    display: flex;
-                    max-height: 200px;
+                    display: grid;      
+                    margin-left: 25px;          
                     border: 3px solid green;
                     
                 }
+            }
+        } //fav movie container
+    
 
-                .circle{
-                    display: none;
-                    @media (min-width: $tabletSmall){
-                        display: inline;
-                        // margin: 0px 10px 25px 0px;
-                                padding:  10px;
-                                background-color: $darkPurple;
-                                border-radius: 50%;
-                                width: 40px;
-                                height: 40px;
-                                border: solid 2px $iconColor;
-                                color: $iconColor;
-                                text-align: center;
-                                font-weight: $fontBold;
-                                font-size: 1rem;
-                    }
+    .play-trailer-bar{
+        
+        background-color: $purple;
+        height:50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
 
-
-                }
+        @media (min-width: $tabletSmall){
+            display: none;
+        }
+        
             
-                h2{
-                    padding-top: 20px;
-                    padding-bottom: 5px; 
-                    font-size: 1.2rem;
-                    display: inline;
-                    justify-content: flex-start;
-                    
+            .play-icon{
+                display: flex;
+                align-items: center;
+                font-weight: $fontSemi;
+                font-size: 1.1rem;
                 
+                @media (min-width: $tabletSmall){
+                    display: none;
                 }
-                h3{
-                    font-size: 0.85rem;
-                    padding-bottom: 10px;
+                
+                
+                
+                .fa{
+                    margin-right: 5px;
+                    border: 4px solid $darkPurple;
+                    border-radius: 50%;
+                    font-size: 1.5rem;
+                    color: $fontColor;              
+                }
+            }
+    }   
 
+
+    .fav-input-container{
+        background-color: $darkPurple;
+        @media (min-width: $tabletSmall){
+            display: none;
+        }
+        
+        .icon-container{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 10px 0;
+            
+            .icon{
+                display: flex;
+                align-items: center;
+                padding: 8px;
+                margin-left: 15px;
+                padding: 15px 0 15px 10px;
+                
+                .fa{
+                margin-right: 8px;
+                border: solid 1px $fontColor;
+                border-radius: 50%;
+                padding: 5px;
+                background-color: $iconBgColor;
+                font-size: 0.65rem;
+                }
+                
+                p{
+                    font-size: 0.875rem;
+                }
+            }
+            //CHANGE TO DYNAMIC
+            .fav-icon{
+                .fa {
+                    color: $iconColor;
+                    background-color: $darkPurple;
+                    border: solid 1px $iconColor;
                 }
                 p{
-                    font-size: 0.75rem;
-                    line-height: 1.25;
-                    padding-top: 50px;
-                    @media (min-width: $tabletSmall){
-                        padding: 0;
-                    }
-                
+                    color: $iconColor;
                 }
             }
-        }
-
-
-
-
-.fav-input-container{
-    background-color: $darkPurple;
-    @media (min-width: $tabletSmall){
-        display: none;
-    }
-    
-    .icon-container{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 10px 0;
         
-        .icon{
-            display: flex;
-            align-items: center;
-            padding: 8px;
-            margin-left: 15px;
-            padding: 15px 0 15px 10px;
-            
-            .fa{
-            margin-right: 8px;
-            border: solid 1px $fontColor;
-            border-radius: 50%;
-            padding: 5px;
-            background-color: $iconBgColor;
-            font-size: 0.65rem;
-            }
-            
-            p{
-                font-size: 0.875rem;
-            }
-        }
-        //CHANGE TO DYNAMIC
-        .fav-icon{
-            .fa {
-                 color: $iconColor;
-                 background-color: $darkPurple;
-                 border: solid 1px $iconColor;
-            }
-            p{
-                color: $iconColor;
-            }
-        }
-       
-    
+        
 
+        }
+        
     }
-    
-}
-
+}//end of desktop container
