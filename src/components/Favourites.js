@@ -18,9 +18,8 @@ function Favourites() {
             </ul>
         </section>
 
-        <section className="about-movie-container">
-          
-          
+        <section className="fav-movie-container">
+    
           <div className="movie-poster">
               <img className="poster-image" src={poster} alt="Die hard movie poster" ></img>
             
@@ -30,7 +29,9 @@ function Favourites() {
           </div>
           
           <div className="movie-description">
+            <div className="">
             <p className="circle">46%</p>
+            </div>
               <h2>Hard Kill</h2>
               <h3>Oct 23, 2020</h3>
               <p>The work of billionaire tech CEO Donavan Chalmers is so valuable
