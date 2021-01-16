@@ -1,5 +1,5 @@
 // Home
-
+import { Link } from 'react-router-dom';
 import poster from '../images/diehard.jpg';
 
 
@@ -11,7 +11,7 @@ function Home() {
           
           
           <div className="movie-poster">
-              <img className="poster-image" src={poster} alt="Die hard movie poster" ></img>
+              <Link to="/singleMovie"><img className="poster-image" src={poster} alt="Die hard movie poster" /></Link> 
             
               <div className="movie-rating">
                 <p> 44%</p>

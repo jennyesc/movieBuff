@@ -1,6 +1,6 @@
 // Page Not Found
 
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const PageNotFound = () => (
 
@@ -17,4 +17,4 @@ const PageNotFound = () => (
 
 );
 
-//export default PageNotFound;
+export default PageNotFound;
