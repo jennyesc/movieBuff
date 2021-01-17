@@ -1,8 +1,17 @@
 // Single Movie
-
+import { Link, Redirect, useParams} from 'react-router-dom';
 import background from '../images/diehard.jpg';
 import '../globals/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+
+const PageSingleMovie = () => {
+
+  let { id } = useParams()
+
+  
+}
+
 
 function SingleMovie() {
     return (
