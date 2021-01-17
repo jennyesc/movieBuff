@@ -68,10 +68,17 @@
             position: relative;
             display: flex;
             align-items: flex-end;
-      
+            
+            
+            
+        
+        
         } //end media
 
-  
+        
+
+        
+
         .movie-poster{
             position: relative;
             
@@ -82,7 +89,7 @@
             top: 15px;
             width: 185px;
             height: 280px;
-            box-shadow:  3px 3px 8px rgba(8, 3, 5, 0.5);
+            box-shadow: $purple 3px 3px 8px;
             
             
             
