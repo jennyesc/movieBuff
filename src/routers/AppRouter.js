@@ -24,7 +24,7 @@ function AppRouter() {
                 <Route path={'/'} exact><Home /></Route>
                 <Route path={'/about'}><About /></Route>
                 <Route path={'/favourites'}><Favourites /></Route>
-                <Route path={'/singlemovie'}><SingleMovie /></Route> 
+                <Route path={'/singlemovie/:id'}><SingleMovie /></Route> 
                 <Route><PageNotFound /></Route> 
             </Switch>
             </main>
