@@ -9,7 +9,7 @@ function Favourites() {
     return (
       <main>
         <div className="line"> </div>
-        <section className="fav-movie-cont">
+        <section className="fav-movie-heading">
             <h2>My Favourites</h2>
             <ul>
               <li>Movies (3)</li>
@@ -17,63 +17,146 @@ function Favourites() {
 
             </ul>
         </section>
-
-        <section className="fav-movie-container">
-    
-          <div className="movie-poster">
-              <img className="poster-image" src={poster} alt="Die hard movie poster" ></img>
-            
-              <div className="movie-rating">
-                <p> 44%</p>
-              </div>
-          </div>
+        <div className="desktop-fav-container">
           
-          <div className="movie-description">
-            <div className="">
-            <p className="circle">46%</p>
+          <section className="fav-movie-container">
+      
+            <div className="movie-poster">
+                <img className="poster-image" src={poster} alt="Die hard movie poster" ></img>
+              
+                <div className="movie-rating">
+                  <p> 44%</p>
+                </div>
             </div>
-              <h2>Hard Kill</h2>
-              <h3>Oct 23, 2020</h3>
-              <p>The work of billionaire tech CEO Donavan Chalmers is so valuable
-               that he hires ...</p>
-          </div>
-        </section>
+            
+            <div className="circle-container">
+                    <p className="circle">46%</p>
+            </div>
+            
+            <div className="movie-description">   
+                <h2>Hard Kill</h2>
+                <h3>Oct 23, 2020</h3>
+                <span className="more-info">More Info</span>
+                <p>The work of billionaire tech CEO Donavan Chalmers is so valuable
+                that he hires ...</p>
+            </div>
+          
+          </section>
 
-        <div className="play-trailer-bar">
-            <div className="play-icon">  
-                <i className="fa"> <FontAwesomeIcon icon="play-circle" /> </i>
-                <p>Play Trailer</p>
-                
-            </div>   
-        </div>
-
-        <div className="fav-input-container">
-          <div className="icon-container">
-            <div className="icon rating-icon">  
-                  <i className="fa"> <FontAwesomeIcon icon="star" /> </i>
-                  <p>Your Rating</p>
-            </div> 
-
-            <div className=" icon fav-icon">  
-                  <i className="fa"> <FontAwesomeIcon icon="heart" /> </i>
-                  <p>Favourite</p>
-            </div> 
-            <div className="icon list-icon">  
-                  <i className="fa"> <FontAwesomeIcon icon="list" /> </i>
-                  <p>Add to List</p>
-            </div> 
-
-            <div className="icon remove-icon">  
-                  <i className="fa"> <FontAwesomeIcon icon="times-circle" /> </i>
-                  <p>Remove</p>
-            </div> 
-
-
-
+          <div className="play-trailer-bar">
+              <div className="play-icon">  
+                  <i className="fa"> <FontAwesomeIcon icon="play-circle" /> </i>
+                  <p>Play Trailer</p>
+                  
+              </div>   
           </div>
 
-        </div>
+          <div className="fav-input-container">
+            <div className="icon-container">
+              <div className="icon play-icon">  
+                      <i className="fa play-circle"> <FontAwesomeIcon icon="play-circle" /> </i>
+                      <p className="play-circle">Play Trailer</p>
+                </div> 
+              
+              <div className="icon rating-icon">  
+                    <i className="fa"> <FontAwesomeIcon icon="star" /> </i>
+                    <p>Your Rating</p>
+              </div> 
 
+              <div className=" icon fav-icon">  
+                    <i className="fa"> <FontAwesomeIcon icon="heart" /> </i>
+                    <p>Favourite</p>
+              </div> 
+              <div className="icon list-icon">  
+                    <i className="fa"> <FontAwesomeIcon icon="list" /> </i>
+                    <p>Add to List</p>
+              </div> 
+
+              <div className="icon remove-icon">  
+                    <i className="fa"> <FontAwesomeIcon icon="times-circle" /> </i>
+                    <p>Remove</p>
+              </div> 
+
+
+
+            </div> {/* end icon-container */}
+
+          </div> {/* end fav-input-container */}
+
+        
+
+        </div> {/* end desktop container */}
+
+
+        <div className="desktop-fav-container">
+          
+          <section className="fav-movie-container">
+      
+            <div className="movie-poster">
+                <img className="poster-image" src={poster} alt="Die hard movie poster" ></img>
+              
+                <div className="movie-rating">
+                  <p> 44%</p>
+                </div>
+            </div>
+            
+            <div className="circle-container">
+                    <p className="circle">46%</p>
+            </div>
+            
+            <div className="movie-description">   
+                <h2>Hard Kill</h2>
+                <h3>Oct 23, 2020</h3>
+                <span className="more-info">More Info</span>
+                <p>The work of billionaire tech CEO Donavan Chalmers is so valuable
+                that he hires ...</p>
+            </div>
+          
+          </section>
+
+          <div className="play-trailer-bar">
+              <div className="play-icon">  
+                  <i className="fa"> <FontAwesomeIcon icon="play-circle" /> </i>
+                  <p>Play Trailer</p>
+                  
+              </div>   
+          </div>
+
+          <div className="fav-input-container">
+            <div className="icon-container">
+              <div className="icon play-icon">  
+                      <i className="fa play-circle"> <FontAwesomeIcon icon="play-circle" /> </i>
+                      <p className="play-circle">Play Trailer</p>
+                </div> 
+              
+              <div className="icon rating-icon">  
+                    <i className="fa"> <FontAwesomeIcon icon="star" /> </i>
+                    <p>Your Rating</p>
+              </div> 
+
+              <div className=" icon fav-icon">  
+                    <i className="fa"> <FontAwesomeIcon icon="heart" /> </i>
+                    <p>Favourite</p>
+              </div> 
+              <div className="icon list-icon">  
+                    <i className="fa"> <FontAwesomeIcon icon="list" /> </i>
+                    <p>Add to List</p>
+              </div> 
+
+              <div className="icon remove-icon">  
+                    <i className="fa"> <FontAwesomeIcon icon="times-circle" /> </i>
+                    <p>Remove</p>
+              </div> 
+
+
+
+            </div> {/* end icon-container */}
+
+          </div> {/* end fav-input-container */}
+
+        
+
+        </div> {/* end desktop container */}
       </main>
     );
   }
