@@ -16,15 +16,18 @@
         border: 2px solid $iconColor;
         background-color: transparent;
         color: $iconColor;
-        font-size: 0.875rem;
+        font-size: 1rem;
         font-weight: $fontSemi;
         height: 40px;
-        justify-content: right;
+        width: 320px;
+        justify-content: left;
         border-radius: 15px;
+        padding-left: 10px;
 
         @media (min-width: $tabletSmall){
             @include mc;
             max-width: $siteWidth;
+            width: $siteWidth;
         }  
 
        
