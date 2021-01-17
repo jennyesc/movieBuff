@@ -4,6 +4,40 @@
 @use '../base/type' as *;
 @use '../utilities/mixins' as *;
 
+
+
+.form-select-group {
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-left: 15px;
+    
+
+    .selection{
+        border: 2px solid $iconColor;
+        background-color: transparent;
+        color: $iconColor;
+        font-size: 0.875rem;
+        font-weight: $fontSemi;
+        height: 40px;
+        justify-content: right;
+        border-radius: 15px;
+
+        @media (min-width: $tabletSmall){
+            @include mc;
+            max-width: $siteWidth;
+        }  
+
+       
+    }
+
+    @media (min-width: $tabletSmall){
+        @include mc;
+        max-width: $siteWidth;
+        
+    } 
+}
+
+
 .desktop-grid{
     
     padding: 5px 15px 10px 15px;
@@ -120,8 +154,7 @@
                 @media (min-width: $tabletSmall){
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
-                    
+                    justify-content: space-between;    
                     margin-top: 20px;
                     padding: 0;
 
@@ -130,6 +163,7 @@
                 h3{
                 font-size: 0.85rem;
                 padding-bottom: 10px;
+
                 
                 @media (min-width: $tabletSmall){
                     font-size: .90rem;
@@ -145,7 +179,6 @@
 
                     @media (min-width: $tabletSmall){
                         display: block;
-                        
                         padding: 0;
                         color: $iconColor;
                         font-size: .90rem;
@@ -153,7 +186,7 @@
                         
                         a{
                             color: $iconColor;
-                            text-decoration: none;
+                            //text-decoration: none;
 
                             &:hover, &:focus, &:active{
                                transition: 0.04s;
