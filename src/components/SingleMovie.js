@@ -28,7 +28,7 @@ function SingleMovie() {
 
           </div>  
 
-          <div className="single-bar">
+          {/* <div className="single-bar">
               <div className="rating">
                 <p><span className="rating-text">71%</span> User Score  </p>
 
@@ -38,13 +38,13 @@ function SingleMovie() {
                 <i className="fa"> <FontAwesomeIcon icon="play-circle" /> </i>
                 <p>Play Trailer</p>
               </div>
-          </div>
+          </div> */}
 
                   
           <div className="icon-container">
             
-            <div className="icon list-icon">  
-                  <i className="fa"> <FontAwesomeIcon icon="list" /> </i>
+            <div className="icon percentage-icon">  
+                  <i className="fa fa-rating"> <FontAwesomeIcon icon="percentage" /> </i>
                   
             </div> 
 
@@ -70,7 +70,7 @@ function SingleMovie() {
 
           </div>
 
-         <h2> Movie Title</h2>
+        
 
         <div className="movie-info-container">
 
@@ -78,14 +78,15 @@ function SingleMovie() {
                {/* PLACEHOLDER ICON */}
                <i className="fa"> <FontAwesomeIcon icon="theater-masks" /> </i> 
 
-           </div>
+           </div> 
 
           <div className="movie-info">
-             <p>10/26/2020 (IE) | 1hr 46m</p>
-             <p>Fantasy, Family, Adventure</p>
+             <p>10/26/2020 (IE) | 1hr 46m | Fantasy, Family, Adventure</p>
           </div>
           </div>
           
+          <h2> Movie Title</h2>
+
           <div className="movie-summary">
             <h3>Overview</h3>
             <p>In late 1967, a young orphaned boy goes to live with his 
@@ -95,7 +96,9 @@ function SingleMovie() {
               him away to a seaside resort. Regrettably, they arrive at 
               precisely the same time that the world's Grand High Witch has gathered.
             </p>
-         </div>
+
+            
+         </div> {/* movie info container end */}
 
         
         </section>

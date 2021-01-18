@@ -1,28 +1,37 @@
 // Single Movie page body styles
 @use '../base/settings' as *;
 @use '../base/type' as *;
+@use '../utilities/mixins' as *;
 
 
 .single-movie-cont{
     margin-top: 15px;
-    background: $bgGradient;
+    background: $borderPurple;
     height: 100%;
     width: auto;
+
+    @media (min-width: $tabletSmall){
+        @include mc;
+        //max-width: $siteWidth;
+    }
 
     .poster-section{
        height: 250px;
        position: relative;
-       
+       margin-bottom: 10px;
              
         .single-bg{
             height: 100%;
             background-position: top left;
             background-size: cover;
             background-repeat: no-repeat;
-            opacity: 0.1;
+            opacity: 0.05;
             overflow: hidden;
             
-        }
+            @media (min-width: $tabletSmall){
+                background-position: center;
+            }
+        }//single-bg end
 
         .poster-single{
             width: 165px;
@@ -33,64 +42,74 @@
             background-position: fixed;
             background-size: cover;
             background-repeat: no-repeat;
-            box-shadow: 1px 1px 6px $purple;
+            box-shadow:  2px 2px 8px rgba(8, 3, 5, 0.8);  
 
             @media (min-width: $tabletSmall){
-                left: 10%;
+                left: 38%;
+                width: 265px;
+                height: 400px;
+                
+                top:0;
                 
                 
             }
+        }//poster-single end
+
+        @media (min-width: $tabletSmall){
+        height: 400px;
         }
-    }    
+    }//poster-section end
 
-    .single-bar{
-        background-color: $purple;
-        height: 50px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-size: 0.875rem;
-        padding: 0 10px;
-        margin:auto;
-        @media (min-width: $desktopSmall){
-            display: none;
-        }
+    // .single-bar{
+    //     display: none;
+    //     background-color: $darkPurple;
+    //     height: 50px;
+    //     display: flex;
+    //     justify-content: space-around;
+    //     align-items: center;
+    //     font-size: 0.875rem;
+    //     padding: 0 10px;
+    //     margin:auto;
+    //     @media (min-width: $desktopSmall){
+    //        display: none;
+            
+    //     }
 
 
 
-        .rating{
-            display: flex;
-            align-content: center;
+    //     .rating{
+    //         display: flex;
+    //         align-content: center;
             
             
-            p{
-                color: $iconColor;
+    //         p{
+    //             color: $iconColor;
                 
-                .rating-text{
-                    font-size: 1.5rem;
-                    font-weight: $fontExtra;
-                    padding-right: 5px;
-                }
-            }         
-        }
+    //             .rating-text{
+    //                 font-size: 1.5rem;
+    //                 font-weight: $fontExtra;
+    //                 padding-right: 5px;
+    //             }
+    //         }         
+    //     }
 
-        .play-container{
-            display: flex;
-            align-items: center;
+    //     .play-container{
+    //         display: flex;
+    //         align-items: center;
             
             
             
-            .fa{
-                margin-right: 5px;
-                border: 4px solid $darkPurple;
-                border-radius: 50%;
-                font-size: 1.25rem;
-                color: $fontColor;
+    //         .fa{
+    //             margin-right: 5px;
+    //             border: 4px solid $darkPurple;
+    //             border-radius: 50%;
+    //             font-size: 1.25rem;
+    //             color: $fontColor;
                               
-            }
+    //         }
 
-        }
-    }
+    //     }
+    // }
 
     .icon-container{
         width: 100%;
@@ -98,10 +117,11 @@
         grid-template-columns: repeat(5, 1fr);
         margin-bottom: 15px;
 
-        @media (min-width: $desktopSmall){
-            display: none;
+        .percentage-icon{
+            color: $iconColor;
+            
         }
-        
+               
         .icon{
             display: flex;
             align-items: center;
@@ -109,63 +129,118 @@
             padding: 5px;
             padding: 15px 0 15px 10px;
             
+            
             .fa{
             margin-right: 8px;
             border-radius: 50%;
             padding: 10px;
             background-color: $darkPurple;
             font-size: 1.25rem;
+            border: 1px $fontColor solid;
+            }
+
+            .fa-rating{
+                border: 1px $iconColor solid;
+                //font-size: 2rem;
+            }
+           
+
+            @media (min-width: $desktopSmall){
+                padding: 10px 0 0 0;    
+                .fa{
+                    font-size: 1rem;
+                }
+                    
             }    
         }
         
-    }
-
-    h2{
-        font-size: 1.4rem;
-        text-align: center;
         @media (min-width: $desktopSmall){
-            display: none;
+            width: 60%;
+            margin: auto;
+            margin-bottom: 20px;
+            
         }
         
     }
+
+    
     .movie-info-container{
         margin-top: 15px;
         padding: 10px;
-        background-color: $purple;
+        background: $bgGradientDark;
         width: 100%;
         display: flex;
+        justify-content: center;
         align-items: center;
-
-       .movie-info{
-        margin-left: 20%;
-        width: 90%;
-        font-size: 0.875rem;
-        line-height: 1.3rem;
-        }  
         
+        
+        @media (min-width: $desktopSmall){
+            margin-top: 0;
+            padding: 0;           
+            width: 100%;
+            margin: auto;  
+            margin-bottom: 20px;
+            
+        }
+       
         .rating-icon{
-            width: 10%;
+            width: 25%;
             font-size: 1.75rem; 
             padding: 10px;
+            text-align: center;
+            @media (min-width: $desktopSmall){
+                width: 70px;
+                margin-left: 110px;
+                
+            }
         }
+
+        .movie-info{
+            margin-left: 15px;
+            width: 90%;
+            font-size: 0.875rem;
+            line-height: 1.3rem;
+            @media (min-width: $desktopSmall){
+               width: 40%;
+               margin-left: 10px;
+            }           
+        }  
+     } //movie-info-container end
+   
+     h2{
+        font-size: 1.4rem;
+        text-align: center;
+        height: 25px;
+        margin-top: 20px;
         @media (min-width: $desktopSmall){
-            display: none;
+           font-size: 1.875rem;
+           height: 40px;
+           margin-top: 10px;
         }
         
     }
-   
+
     .movie-summary{
-        padding: 10px;
+        padding: 15px 20px;
         font-size: 0.75rem;
         line-height: 1rem;
+        border: 2px solid red;
+        
 
         h3{
             font-size: 1rem;
             font-weight: $fontBold;
             margin: 10px 0;
         }
+
+        
         @media (min-width: $desktopSmall){
-            display: none;
+            @include mc;
+                max-width: $siteWidth;
+                padding: 0 100px 25px 100px;
+         
+            
+            
         }
     }
 
