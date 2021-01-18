@@ -1,7 +1,7 @@
 // Home
 
 import { useState, useEffect } from 'react';
-import { MD_BASE_URL, MD_API_KEY } from '../globals/variables';
+import { MD_BASE_URL, MD_API_KEY, MD_LAN } from '../globals/variables';
 import { Link } from 'react-router-dom';
 import poster from '../images/diehard.jpg';
 
@@ -9,9 +9,18 @@ import poster from '../images/diehard.jpg';
 const Home = () => {
 
       const fetchMovie = async () => {
-          const res = await fetch( `${MD_BASE_URL}${MD_API_KEY}`);
+          const res = await fetch( `${MD_BASE_URL}${MD_API_KEY}${MD_LAN}`);
           let data = await res.json();
           console.log(data);
+          // return {
+          //     id       : data.results[0].id,
+          //     title    : data.results[0].title,
+          //     poster   : data.results[0].poster_path,
+          //     date     : data.results[0].release_date,
+          //     overview : data.results[0].overview,
+          //     vote     : data.results[0].vote_average,
+          //     backdrop : data.results[0].backdrop_path
+          // }
       }
 
       fetchMovie();
