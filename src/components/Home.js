@@ -32,7 +32,7 @@ function movieGrid(arr) {
       <section key={i} className="index-movie-container">  
 
               <div className="movie-poster">
-                  <Link to="/singleMovie"><img className="poster-image" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} /></Link> 
+                  <Link to="/singleMovie:id"><img className="poster-image" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} /></Link> 
                 
                   <div className="movie-rating">
                     <p>{percentNumber(movie.vote_average)}%</p>
