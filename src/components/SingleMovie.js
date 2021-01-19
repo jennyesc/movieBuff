@@ -29,7 +29,7 @@ const SingleMovie = () => {
       let data = await res.json();
       console.log(data);
       //console.log('API Call: ', `https://api.themoviedb.org/3/movie/${id}&api_key=25f11b1e22143258eab2e1001edc3432${MD_LAN}`);
-      // setMovie(data.results);
+      setMovie(data.results);
   }
 
   fetchMovie();
