@@ -1,19 +1,43 @@
 // Single Movie
-import { Link, Redirect, useParams} from 'react-router-dom';
+
+import { useState, useEffect } from 'react';
+import { MD_API_KEY, MD_LAN } from '../globals/variables';
+//import { Link, Redirect, useParams} from 'react-router-dom';
 import background from '../images/diehard.jpg';
 import '../globals/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import poster from '../images/diehard.jpg';
+import { useParams} from 'react-router-dom';
 
-const PageSingleMovie = () => {
+// const PageSingleMovie = () => {
+
+ 
+  // https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
+  
+// }
+
+const SingleMovie = () => {
 
   let { id } = useParams()
 
-  
-}
+  const [movie, setMovie] = useState(null);
+
+  useEffect( () => {
+
+    const fetchMovie = async () => {
+      const res = await fetch( `https://api.themoviedb.org/3/movie/${id}?api_key=25f11b1e22143258eab2e1001edc3432${MD_LAN}`);
+      let data = await res.json();
+      console.log(data);
+      //console.log('API Call: ', `https://api.themoviedb.org/3/movie/${id}&api_key=25f11b1e22143258eab2e1001edc3432${MD_LAN}`);
+      // setMovie(data.results);
+  }
+
+  fetchMovie();
+
+  }, [] );
 
 
-function SingleMovie() {
+//function SingleMovie() {
     return (
       <main>
         <section className="single-movie-cont" >
@@ -70,6 +94,9 @@ function SingleMovie() {
                <i className="fa"> <FontAwesomeIcon icon="theater-masks" /> </i> 
 
            </div> 
+
+
+
 
           <div className="movie-info">
              <p>10/26/2020 (IE) | 1hr 46m | Fantasy, Family, Adventure</p>

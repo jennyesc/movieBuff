@@ -32,7 +32,7 @@ function movieGrid(arr) {
       <section key={i} className="index-movie-container">  
 
               <div className="movie-poster">
-                  <Link to="/singleMovie:id"><img className="poster-image" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} /></Link> 
+                  <Link to={`/single-movie/${movie.id}`}><img className="poster-image" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} /></Link> 
                 
                   <div className="movie-rating">
                     <p>{percentNumber(movie.vote_average)}%</p>
@@ -43,7 +43,7 @@ function movieGrid(arr) {
               <h2>{movie.title}</h2>
                   <div className="dt-movie-infobox">
                     <h3>{formatDate(movie.release_date)}</h3>
-                    <Link to="/singleMovie"><p className="dt-more-infolink"> More Info </p></Link>
+                    <Link to={`/single-movie/${movie.id}`} className="dt-more-infolink"> More Info</Link>
                     {/* <Link to="/singleMovie">About</Link> */}
                   
                       <p>{shortenPars(movie.overview)}...</p>
@@ -74,9 +74,6 @@ function movieGrid(arr) {
           </form>
         <div className="desktop-grid">
           {movies !== null && movieGrid(movies)}
-       {/* {movies !== null && 
-          
-        } */}
         </div>  
       </main>
     );
