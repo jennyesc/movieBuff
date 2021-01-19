@@ -18,12 +18,13 @@ function SingleMovie() {
       <main>
         <section className="single-movie-cont" >
 
-          <div className="poster-section" style={{ backgroundImage: `url(${background})`}}>
+          <div className="poster-section" >
              
-            {/* <div className="single-bg"  >  
-            </div> */}
-            
-            <img className="poster-single" src={poster} alt="Die hard movie poster" />
+            <div className="single-bg" style={{ backgroundImage: `url(${background})`}} >  
+            </div>
+            <div className="poster-single">
+              <img src={poster} alt="Die hard movie poster" />
+            </div>
             
 
           </div>  
