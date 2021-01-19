@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { MD_BASE_URL, MD_API_KEY, MD_LAN } from '../globals/variables';
 import { Link } from 'react-router-dom';
 import formatDate from '../utilities/dateMaker';
+import shortenPars from '../utilities/movieMaker';
 
 
 
@@ -45,7 +46,7 @@ function movieGrid(arr) {
                     <Link to="/singleMovie"><p className="dt-more-infolink"> More Info </p></Link>
                     {/* <Link to="/singleMovie">About</Link> */}
                   
-                      <p>{movie.overview}</p>
+                      <p>{shortenPars(movie.overview)}...</p>
                   </div>
 
               </div>
