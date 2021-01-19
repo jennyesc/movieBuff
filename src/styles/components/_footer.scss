@@ -5,6 +5,7 @@
 footer{
     background-color: $darkPurple;
     border-top: 5px solid $borderPurple;
+   
 
     .footer-top-row{
         padding: 5px 15px 0 15px;
@@ -47,6 +48,11 @@ footer{
             }
             
         }
+    
+        @media (min-width: $desktopSmall){
+        width: 25%;
+        }
+    
     }
     
     .footer-menu-container{
@@ -56,14 +62,7 @@ footer{
         line-height: normal;
         padding: 10px;
 
-        //FOR DESKTOP SIZE
-        @media (min-width: $tabletSmall){
-            display: grid;
-            grid-template-columns: auto;
-            grid-template-rows: auto;
-            grid-template-areas:
-            "colOne colTwo colThree colFour colFive";
-        }
+        
         
         .footer-menu{
             padding: 10px;
@@ -98,13 +97,37 @@ footer{
         .colFive{
             grid-area: colFive;
         }
-            
         
+        @media (min-width: $tabletSmall){
+          
+            width: 75%;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            grid-template-areas:
+            "colOne colTwo colThree colFour colFive";
+           
+        }
     }
     p{
         
         font-weight: $fontReg;
         padding: 20px;
+        color: $footerText;
+        font-size: 0.75rem;
+        margin: 0;
+
+        @media (min-width: $tabletSmall){
+         width: 100%;
+         text-align: center;
+         
+        }
         
     }
+
+    @media (min-width: $tabletSmall){
+    display: flex;
+    flex-wrap: wrap;
+    }
+
 }
