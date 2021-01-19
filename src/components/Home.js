@@ -30,22 +30,21 @@ function movieGrid(arr) {
       <section key={i} className="index-movie-container">  
 
               <div className="movie-poster">
-                  <Link to="/singleMovie"><img className="poster-image" src={poster} alt="Die hard movie poster" /></Link> 
+                  <Link to="/singleMovie"><img className="poster-image" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} /></Link> 
                 
                   <div className="movie-rating">
-                    <p> 44%</p>
+                    <p>{movie.vote_average}</p>
                   </div>
               </div>
               
               <div className="movie-description">
               <h2>{movie.title}</h2>
                   <div className="dt-movie-infobox">
-                    <h3>Oct 23, 2020</h3>
+                    <h3>{movie.release_date}</h3>
                     <Link to="/singleMovie"><p className="dt-more-infolink"> More Info </p></Link>
                     {/* <Link to="/singleMovie">About</Link> */}
                   
-                    <p>The work of billionaire tech CEO Donavan Chalmers is so valuable
-                    that he hires ...</p>
+                      <p>{movie.overview}</p>
                   </div>
 
               </div>
