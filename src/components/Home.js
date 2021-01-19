@@ -8,27 +8,28 @@ import poster from '../images/diehard.jpg';
 
 const Home = () => {
 
-      const fetchMovie = async () => {
-          const res = await fetch( `${MD_BASE_URL}${MD_API_KEY}${MD_LAN}`);
-          let data = await res.json();
-          console.log(data);
-          // return {
-          //     id       : data.results[0].id,
-          //     title    : data.results[0].title,
-          //     poster   : data.results[0].poster_path,
-          //     date     : data.results[0].release_date,
-          //     overview : data.results[0].overview,
-          //     vote     : data.results[0].vote_average,
-          //     backdrop : data.results[0].backdrop_path
-          // }
-      }
-
-      fetchMovie();
-
+      
+  const [movies, setMovies] = useState(null);
 
   useEffect( () => {
 
+    const fetchMovie = async () => {
+      const res = await fetch( `${MD_BASE_URL}${MD_API_KEY}${MD_LAN}`);
+      let data = await res.json();
+      console.log(data);
+      setMovies(data.results.splice(0,12));
+  }
+
+  fetchMovie();
+
   }, [] );
+
+function movieGrid(arr) {
+  return arr.map((movie, i) => {
+    return <p key={i}> {movie.title}</p>
+  })
+} 
+
 
 
 //function Home() {
@@ -47,6 +48,7 @@ const Home = () => {
             </div>  
           </form>
         <div className="desktop-grid">
+          {movies !== null && movieGrid(movies)}
        <section className="index-movie-container">
           
           
