@@ -1,15 +1,21 @@
 // Trim
 
-function shortenPars (string) {
+export function shortenPars (string) {
      let untrimmed = string;
      const trimLength = 150;
-     return untrimmed.substring(0, trimLength);
+        return `${untrimmed.substring(0, trimLength)}`;
   };
 
-  export default shortenPars;
+//  default shortenPars;
 
-// export const shortenPars = (string) => {
-//     let untrimmed = string;
-//     const trimLength = 55;
-//     return (untrimmed.substring(0, trimLength)};
+//Change rating into percentage
+
+// export function percentNumber (int) {
+//     return Math.floor(int * 10);
 //  };
+
+//  export  percentNumber;
+
+export const percentNumber = (int) => {
+    return `${Math.floor(int * 10)}`;
+ };
