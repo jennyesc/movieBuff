@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { MD_BASE_URL, MD_API_KEY, MD_LAN } from '../globals/variables';
 import { Link } from 'react-router-dom';
-import poster from '../images/diehard.jpg';
+import formatDate from '../utilities/dateMaker';
+
 
 
 const Home = () => {
@@ -40,7 +41,7 @@ function movieGrid(arr) {
               <div className="movie-description">
               <h2>{movie.title}</h2>
                   <div className="dt-movie-infobox">
-                    <h3>{movie.release_date}</h3>
+                    <h3>{formatDate(movie.release_date)}</h3>
                     <Link to="/singleMovie"><p className="dt-more-infolink"> More Info </p></Link>
                     {/* <Link to="/singleMovie">About</Link> */}
                   
