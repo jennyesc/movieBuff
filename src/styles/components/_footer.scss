@@ -109,10 +109,10 @@ footer{
            
         }
     }
-    p, span{
+    p{
         
         font-weight: $fontReg;
-        padding-left: 20px;
+        padding: 0 20px 20px 20px;
         color: $footerText;
         font-size: 0.75rem;
         margin: 0;
@@ -121,11 +121,24 @@ footer{
         @media (min-width: $tabletSmall){
          width: 100%;
          text-align: center;
-         padding: 0px;
          line-height: 1.2rem;
+         padding-bottom: 0 20px 20px 20px;
          
         }
         
+        .footer-break{
+        
+            @media (min-width: $tabletSmall){
+                display: none;
+            } 
+        }
+    
+    }
+
+    span{ 
+        @media (min-width: $tabletSmall){
+        margin-left: 20px;
+        }
     }
 
     @media (min-width: $tabletSmall){

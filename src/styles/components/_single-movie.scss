@@ -4,11 +4,14 @@
 @use '../utilities/mixins' as *;
 
 
+
+
 .single-movie-cont{
     margin-top: 15px;
     background: $borderPurple;
     height: 100%;
     width: auto;
+    
 
     @media (min-width: $tabletSmall){
         @include mc;
@@ -19,19 +22,19 @@
        height: 250px;
        position: relative;
        margin-bottom: 10px;
+       background-position: top left;
+       background-size: cover;
+       background-repeat: no-repeat;
+       //opacity: 0.05;
              
-        .single-bg{
-            height: 100%;
-            background-position: top left;
-            background-size: cover;
-            background-repeat: no-repeat;
-            opacity: 0.05;
-            overflow: hidden;
+        // .single-bg{
+        //     height: 100%;
             
-            @media (min-width: $tabletSmall){
-                background-position: center;
-            }
-        }//single-bg end
+            
+        //     @media (min-width: $tabletSmall){
+        //         background-position: center;
+        //     }
+        // }//single-bg end
 
         .poster-single{
             width: 165px;

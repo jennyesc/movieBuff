@@ -3,7 +3,7 @@ import { Link, Redirect, useParams} from 'react-router-dom';
 import background from '../images/diehard.jpg';
 import '../globals/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import poster from '../images/diehard.jpg';
 
 const PageSingleMovie = () => {
 
@@ -16,15 +16,15 @@ const PageSingleMovie = () => {
 function SingleMovie() {
     return (
       <main>
-        <section className="single-movie-cont">
+        <section className="single-movie-cont" >
 
-          <div className="poster-section">
+          <div className="poster-section" style={{ backgroundImage: `url(${background})`}}>
              
-            <div className="single-bg" style={{ backgroundImage: `url(${background})`}} >  
-            </div>
+            {/* <div className="single-bg"  >  
+            </div> */}
             
-            <div className="poster-single" style={{ backgroundImage: `url(${background})`}}>
-            </div>
+            <img className="poster-single" src={poster} alt="Die hard movie poster" />
+            
 
           </div>  
 

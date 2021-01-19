@@ -72,9 +72,9 @@ function Footer() {
         
 
      
-      <p>&copy; {year} Movie Corp. </p> 
-      <span>For educational purposes only</span><br /> 
-      <span>Created by Jenny Escobell and Gaia Santoro</span>
+      <p>&copy; {year} Movie Corp. <span className="footer-break"><br /></span> 
+      <span>For educational purposes only</span><span className="footer-break"><br /></span> 
+      <span>Created by Jenny Escobell and Gaia Santoro</span></p>
     </footer>
   );
 }
