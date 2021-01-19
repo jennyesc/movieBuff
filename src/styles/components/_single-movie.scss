@@ -60,57 +60,6 @@
         }
     }//poster-section end
 
-    // .single-bar{
-    //     display: none;
-    //     background-color: $darkPurple;
-    //     height: 50px;
-    //     display: flex;
-    //     justify-content: space-around;
-    //     align-items: center;
-    //     font-size: 0.875rem;
-    //     padding: 0 10px;
-    //     margin:auto;
-    //     @media (min-width: $desktopSmall){
-    //        display: none;
-            
-    //     }
-
-
-
-    //     .rating{
-    //         display: flex;
-    //         align-content: center;
-            
-            
-    //         p{
-    //             color: $iconColor;
-                
-    //             .rating-text{
-    //                 font-size: 1.5rem;
-    //                 font-weight: $fontExtra;
-    //                 padding-right: 5px;
-    //             }
-    //         }         
-    //     }
-
-    //     .play-container{
-    //         display: flex;
-    //         align-items: center;
-            
-            
-            
-    //         .fa{
-    //             margin-right: 5px;
-    //             border: 4px solid $darkPurple;
-    //             border-radius: 50%;
-    //             font-size: 1.25rem;
-    //             color: $fontColor;
-                              
-    //         }
-
-    //     }
-    // }
-
     .icon-container{
         width: 100%;
         display: grid;
@@ -220,11 +169,11 @@
         
     }
 
-    .movie-summary{
+    .movie-summary {
         padding: 15px 20px;
         font-size: 0.75rem;
         line-height: 1rem;
-        border: 2px solid red;
+       // border: 2px solid red;
         
 
         h3{
@@ -237,11 +186,43 @@
         @media (min-width: $desktopSmall){
             @include mc;
                 max-width: $siteWidth;
-                padding: 0 100px 25px 100px;
-         
-            
-            
+                padding: 0 100px 25px 100px;   
         }
+    }
+
+    .cast-container{
+        padding: 15px 20px;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        //border: 2px solid blue;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        
+
+        h3{
+            font-size: 1rem;
+            font-weight: $fontBold;
+            width: 100%;
+            margin: 10px 0 20px 0;
+        }
+        .cast-head{
+            background-color: $purple;
+            width: 150px;
+            height: 200px;
+            border-radius: 10px;
+            margin: auto;
+            margin-bottom: 20px;
+
+        }
+    
+        @media (min-width: $desktopSmall){
+            @include mc;
+                max-width: $siteWidth;
+                padding: 0 100px 25px 100px;   
+        }
+    
+    
     }
 
 }

@@ -28,17 +28,7 @@ function SingleMovie() {
 
           </div>  
 
-          {/* <div className="single-bar">
-              <div className="rating">
-                <p><span className="rating-text">71%</span> User Score  </p>
-
-              </div>
-
-              <div className="play-container">
-                <i className="fa"> <FontAwesomeIcon icon="play-circle" /> </i>
-                <p>Play Trailer</p>
-              </div>
-          </div> */}
+          
 
                   
           <div className="icon-container">
@@ -96,9 +86,36 @@ function SingleMovie() {
               him away to a seaside resort. Regrettably, they arrive at 
               precisely the same time that the world's Grand High Witch has gathered.
             </p>
+      
+          </div> {/* movie info container end */}
+
+          <div className="cast-container">
+            <h3>Top Billed Cast</h3>
+            
+            <div className="cast-head">
+              <p>headshot of cast</p>
+           </div>
+
+           <div className="cast-head">
+              <p>headshot of cast</p>
+           </div>
+
+
+           <div className="cast-head">
+              <p>headshot of cast</p>
+           </div>
+
+
+           <div className="cast-head">
+              <p>headshot of cast</p>
+           </div>
+           <div className="cast-head">
+              <p>headshot of cast</p>
+           </div>
 
             
-         </div> {/* movie info container end */}
+          </div> {/* cast container end */}
+          
 
         
         </section>
