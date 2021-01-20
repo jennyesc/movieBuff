@@ -48,7 +48,7 @@
     .index-movie-container{
         background: $bgGradient;
         display: grid;
-        grid-template-columns: 45% 55%;
+        grid-template-columns: 45%  55%;
         margin-top: 15px;
         
         @media (min-width: $tabletSmall){
@@ -62,20 +62,17 @@
         
         } //end media
 
+        
         .movie-poster{
             position: relative;
             
-
             @media (min-width: $tabletSmall){
-            position: absolute;
-            left:-10px;
-            top: 15px;
-            width: 185px;
-            height: 280px;
-            box-shadow: $boxShadow;
-            
-            
-            
+                position: absolute;
+                left:-10px;
+                top: 15px;
+                width: 185px;
+                height: 280px;
+                box-shadow: $boxShadow;
             }//end media
 
             .poster-image{
@@ -84,38 +81,38 @@
                 object-fit: cover;
             }
 
-              
-                
             .movie-rating{
-                    background: $darkPurpleRGB;
-                    width: 80%;
-                    height: 20%;
-                    color: $iconColor;
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                    padding-right: 8px;
+                background: $darkPurpleRGB;
+                width: 70%;
+                height: 20%;
+                color: $iconColor;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding-right: 10px;
+                border-top-left-radius: 10px;
 
-                    @media (min-width: $tabletSmall){
-                        width: 150px;
-                        left: 60px;
-                    }//end media
+                @media (min-width: $tabletSmall){
+                    width: 65%;
+                    left: 90px;
+                    
+                }//end media
 
-                p{
-                    font-weight: $fontExtra;
-                    font-size: 2rem;
-                    color: $iconColor;
-                   
-                    @media (min-width: $tabletSmall){
-                        padding-right: 30px;
-                    }//end media
+            p{
+                font-weight: $fontExtra;
+                font-size: 1.80rem;
+                color: $iconColor;
+                
+                @media (min-width: $tabletSmall){
+                    padding-right: 20px;
+                }//end media
 
-                }
             }
         }
+    }
         
         .movie-description{
             padding: 15px;
@@ -208,6 +205,30 @@
             }
            
         }
-    }
+
+        .fav-heart-icon{
+            position: absolute;
+            top: 100;
+            left: 39%;
+            margin-top: 2px;
+
+            img{
+                width: 10%;
+                opacity: 0.7;
+            }
+            
+            @media (min-width: $tabletSmall){
+                top: 0;
+                left: 78%;
+                padding-top: 3px;
+
+                img{
+                    width: 65%;
+                }
+            }//end media
+        
+        
+        }
+    }// index movie container
     
 }
