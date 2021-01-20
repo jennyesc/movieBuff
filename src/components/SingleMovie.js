@@ -1,7 +1,7 @@
 // Single Movie
 
 import { useState, useEffect } from 'react';
-import { MD_API_KEY, MD_LAN } from '../globals/variables';
+import { MD_API_KEY_ONLY, MD_LAN } from '../globals/variables';
 //import { Link, Redirect, useParams} from 'react-router-dom';
 import background from '../images/diehard.jpg';
 import '../globals/fontawesome';
@@ -25,7 +25,7 @@ const SingleMovie = () => {
   useEffect( () => {
 
     const fetchMovie = async () => {
-      const res = await fetch( `https://api.themoviedb.org/3/movie/${id}?api_key=25f11b1e22143258eab2e1001edc3432${MD_LAN}`);
+      const res = await fetch( `https://api.themoviedb.org/3/movie/${id}?api_key=${MD_API_KEY_ONLY}${MD_LAN}`);
       let data = await res.json();
       console.log(data);
       //console.log('API Call: ', `https://api.themoviedb.org/3/movie/${id}&api_key=25f11b1e22143258eab2e1001edc3432${MD_LAN}`);
