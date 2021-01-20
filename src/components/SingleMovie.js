@@ -59,7 +59,7 @@ const SingleMovie = () => {
           <div className="icon-container">
             
             <div className="icon percentage-icon">  
-                  <i className="fa fa-rating"> <FontAwesomeIcon icon="percentage" /> </i>
+                  <i className="fa fa-rating"> 71% </i>
                   
             </div> 
 
@@ -124,22 +124,7 @@ const SingleMovie = () => {
               <p>headshot of cast</p>
            </div>
 
-           <div className="cast-head">
-              <p>headshot of cast</p>
-           </div>
-
-
-           <div className="cast-head">
-              <p>headshot of cast</p>
-           </div>
-
-
-           <div className="cast-head">
-              <p>headshot of cast</p>
-           </div>
-           <div className="cast-head">
-              <p>headshot of cast</p>
-           </div>
+           
 
             
           </div> {/* cast container end */}
