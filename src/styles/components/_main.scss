@@ -7,36 +7,26 @@
 
 
 .form-select-group {
-    padding-top: 20px;
-    margin-top: 20px;
-    padding-left: 15px;
-    
-
+    padding: 20px 15px;
+        
     .selection{
-        border: 2px solid $iconColor;
-        background-color: transparent;
+        border: 1px solid $iconColor;
+        background: $bgGradientDark;
         color: $iconColor;
         font-size: 1rem;
         font-weight: $fontSemi;
         height: 40px;
-        width: 320px;
-        justify-content: left;
-        border-radius: 15px;
-        padding-left: 10px;
-
-        @media (min-width: $tabletSmall){
-            @include mc;
-            max-width: $siteWidth;
-            width: $siteWidth;
-        }  
-
-       
+        width: 100%;
+        border-radius: 10px;
+        padding: 10px;
     }
 
     @media (min-width: $tabletSmall){
         @include mc;
         max-width: $siteWidth;
-        
+        display: flex;
+        justify-content: center;
+        align-items: center;
     } 
 }
 
@@ -44,16 +34,14 @@
 .desktop-grid{
     
     padding: 5px 15px 10px 15px;
-    
+        
     @media (min-width: $tabletSmall){
         @include mc;
         max-width: $headerMaxWidth;
         //border: solid 2px orange;
         display: flex;
         flex-wrap: wrap;
-        grid-gap: 28px;
-        margin-top: 50px;        
-        
+        grid-gap: 28px;     
     }
    
     
@@ -66,21 +54,13 @@
         @media (min-width: $tabletSmall){
             @include mc;
             width: 200px;
-            height: 420px;
+            height: 440px;
             padding: 0;
             position: relative;
             display: flex;
             align-items: flex-end;
-            
-            
-            
-        
         
         } //end media
-
-        
-
-        
 
         .movie-poster{
             position: relative;
@@ -92,7 +72,7 @@
             top: 15px;
             width: 185px;
             height: 280px;
-            box-shadow: $purple 3px 3px 8px;
+            box-shadow: $boxShadow;
             
             
             
@@ -107,31 +87,30 @@
               
                 
             .movie-rating{
-                    background-color: $darkPurple;
-                    opacity: 0.7;
-                    width: 70%;
+                    background: $darkPurpleRGB;
+                    width: 80%;
                     height: 20%;
                     color: $iconColor;
                     position: absolute;
                     bottom: 0;
                     right: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding-right: 8px;
+
                     @media (min-width: $tabletSmall){
                         width: 150px;
                         left: 60px;
-
                     }//end media
 
                 p{
                     font-weight: $fontExtra;
-                    font-size: 1.5rem;
-                    text-align: right;
-                    padding: 10px 8px 10px 20px;
+                    font-size: 2rem;
                     color: $iconColor;
+                   
                     @media (min-width: $tabletSmall){
                         padding-right: 30px;
-                        padding-top: 12px;
-                        font-size: 2.0rem;
-                       
                     }//end media
 
                 }
@@ -139,70 +118,79 @@
         }
         
         .movie-description{
-            
-            color: $fontColor;
-            display: block;
-            padding: 10px;
-            
+            padding: 15px;
+    
+            h2{
+                font-size: 1.25rem;
+                width: 100%; 
+                @media (min-width: $tabletSmall){
+                    font-size: 1rem;
+                    padding: 10px;
+                }
+            }
+
             @media (min-width: $tabletSmall){
-            height: 30%;
-            width: 100%;
-          
-            text-align: center;
+                display: wrap;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                height: 32%;
+                width: 100%;
+                text-align: center;
+                padding: 2px;
             }//end media
         
-            h2{
-                padding-top: 10px;
-                padding-bottom: 5px; 
-                font-size: 1.2rem;
-            
-                
-              
-            }
+
             .dt-movie-infobox{
                 
                 @media (min-width: $tabletSmall){
                     display: flex;
-                    align-items: center;
-                    justify-content: space-between;    
-                    margin-top: 20px;
+                    flex-wrap: wrap;
+                    width: 100%;
                     padding: 0;
-
+                    position: absolute;
+                    bottom: 0;
+                    padding-bottom: 10px; 
                 }//end media
                
                 h3{
                 font-size: 0.85rem;
                 padding-bottom: 10px;
+                width: 100%;
+                line-height: 1.2rem;
+                margin-bottom: 5px;
+                margin-top: 10px;
 
+                .date-break{
+                   
+                    @media (min-width: $tabletSmall){
+                        display: block;
+                        margin: 0;
+                        line-height: 0;
+                    }
+                }
                 
+              
                 @media (min-width: $tabletSmall){
-                    font-size: .90rem;
+                    font-size: .75rem;
                     padding: 0;
-                    
-
+                    margin: 0;
+                    text-align: center;
                 }
-
-                }
+            }
 
                 .dt-more-infolink{
                     display: none;
 
                     @media (min-width: $tabletSmall){
                         display: block;
-                        padding: 0;
+                        padding: 5px;
                         color: $iconColor;
-                        font-size: .90rem;
-                        font-weight: $fontBold;
-                        
-                        a{
-                            color: $iconColor;
-                            //text-decoration: none;
-
-                            &:hover, &:focus, &:active{
-                               transition: 0.04s;
-                            }
-                        }
-
+                        font-size: .875rem;
+                        font-weight: $fontSemi;
+                        text-decoration: none; 
+                        margin-top: 5px;
+                        width: 100%;
                     }//end media
                 }
 
@@ -210,6 +198,7 @@
                     font-size: 0.75rem;
                     line-height: 1.25;
                     padding-top: 50px;
+                    
                     
                     @media (min-width: $tabletSmall){
                     display: none;
