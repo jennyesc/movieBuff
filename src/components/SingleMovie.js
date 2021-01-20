@@ -49,13 +49,8 @@ const SingleMovie = () => {
             <div className="poster-single">
               <img src={poster} alt="Die hard movie poster" />
             </div>
-            
+         </div>  
 
-          </div>  
-
-          
-
-                  
           <div className="icon-container">
             
             <div className="icon percentage-icon">  
@@ -84,8 +79,6 @@ const SingleMovie = () => {
 
 
           </div>
-
-        
 
         <div className="movie-info-container">
 
