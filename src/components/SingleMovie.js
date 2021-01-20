@@ -54,7 +54,7 @@ const SingleMovie = () => {
           <div className="icon-container">
             
             <div className="icon percentage-icon">  
-                  <i className="fa fa-rating"> 71% </i>
+                  <i className="rating"> 71% </i>
                   
             </div> 
 
