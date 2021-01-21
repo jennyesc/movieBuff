@@ -38,7 +38,18 @@ const SingleMovie = () => {
   }
 
  const createCasts = (casts) => {
-    return casts.splice(0, 5).map((cast, i) => <img key={i} src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} alt={cast.name} />
+    return casts.splice(0, 5).map((cast, i) => {  
+      return (
+        <div className="cast"> 
+          { cast.profile_path !== null ? <img key={i} src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} alt={cast.name} /> :
+          <p>No picture available</p> }
+          <div className="cast-info"> 
+            <p>{cast.name}</p>
+            <p>{cast.character}</p>
+          </div>
+        </div> 
+    
+    ) }
     );
   }
 
@@ -112,7 +123,8 @@ const SingleMovie = () => {
               <h3>Top Billed Cast</h3>
               
               {/* container for headshot */}
-              <div className="cast-head">
+              <div className="cast-members">
+
               {createCasts(movie.credits.cast)}
               
             </div>
