@@ -8,7 +8,8 @@ import '../globals/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import poster from '../images/diehard.jpg';
 import { useParams} from 'react-router-dom';
-import {shortenPars, percentNumber} from '../utilities/movieMaker';
+import {percentNumber, timeConvert } from '../utilities/movieMaker';
+import formatDate from '../utilities/dateMaker';
 
 // const PageSingleMovie = () => {
 
@@ -39,6 +40,7 @@ const SingleMovie = () => {
 
     return (
       <main>
+        {movie !== null &&
         <section className="single-movie-cont" >
 
           <div className="poster-section" >
@@ -91,21 +93,15 @@ const SingleMovie = () => {
 
 
           <div className="movie-info">
-             <p>10/26/2020 (IE) | 1hr 46m | Fantasy, Family, Adventure</p>
+        <p>{formatDate(movie.release_date)} (IE) | {timeConvert(movie.runtime)} | </p>
           </div>
           </div>
           
-          <h2> {movie.title}</h2>
+        <h2> {movie.title}</h2>
 
           <div className="movie-summary">
             <h3>Overview</h3>
-            <p>In late 1967, a young orphaned boy goes to live with his 
-              loving grandma in the rural Alabama town of  Demopolis. 
-              As the boy and his gratndmother encounter some deceptively 
-              glamorous but thoroughly diabolical witches, she wisely whisks 
-              him away to a seaside resort. Regrettably, they arrive at 
-              precisely the same time that the world's Grand High Witch has gathered.
-            </p>
+            <p>{movie.overview}</p>
       
           </div> {/* movie info container end */}
 
@@ -124,6 +120,7 @@ const SingleMovie = () => {
 
         
         </section>
+        }
       </main>
     );
   }
