@@ -70,7 +70,7 @@ function movieGrid(arr) {
             <div className="input-group input-select-group">
               {/* <label htmlFor="">Movies</label> */}
                 <select id="selectChart" name="selectChart" className="selection">
-                <option value="popular" defaultValue><NavLink to={`${MD_TOP_URL}api_key=${MD_API_KEY_ONLY}${MD_LAN}`}> Popular </NavLink></option>
+                <option value="popular" defaultValue>Popular</option>
                   <option value="top-rated"><Link to={"/top-rated"}> Top Rated</Link></option>
                   <option value="now-playing">Now Playing</option>
                   <option value="upcoming">Upcoming</option>
