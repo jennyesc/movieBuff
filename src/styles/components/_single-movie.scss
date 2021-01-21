@@ -133,6 +133,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    
         
         
         @media (min-width: $desktopSmall){
@@ -161,6 +162,7 @@
             width: 90%;
             font-size: 0.875rem;
             line-height: 1.3rem;
+            
             @media (min-width: $desktopSmall){
                width: 40%;
                margin-left: 10px;
@@ -170,35 +172,50 @@
    
      h2{
         font-size: 1.4rem;
-        text-align: center;
+        padding-left: 20px;
         height: 25px;
         margin-top: 20px;
-        @media (min-width: $desktopSmall){
-           font-size: 1.875rem;
-           height: 40px;
-           margin-top: 10px;
-        }
         
+        @media (min-width: $desktopSmall){
+            text-align: center;
+            font-size: 1.875rem;
+            height: 40px;
+            margin-top: 10px;
+        }
     }
+
+    .tag-line{
+        font-style: italic;
+        padding-left: 20px;
+        margin-top: 20px;
+
+        @media (min-width: $desktopSmall){
+            text-align: center;
+            margin: 10px 0 40px 0;
+        }
+    }
+   
 
     .movie-summary {
         padding: 15px 20px;
         font-size: 0.75rem;
-        line-height: 1rem;
-       // border: 2px solid red;
-        
+        line-height: 1rem;     
 
         h3{
             font-size: 1rem;
             font-weight: $fontBold;
             margin: 10px 0;
+            @media (min-width: $desktopSmall){
+            font-size: 1.25rem;
+            margin: 20px 0;
+            }
         }
-
-        
         @media (min-width: $desktopSmall){
             @include mc;
                 max-width: $siteWidth;
                 padding: 0 100px 25px 100px;   
+                font-size: 1rem;
+                line-height: 1.2rem;
         }
     }
 

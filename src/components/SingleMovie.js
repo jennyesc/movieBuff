@@ -89,19 +89,18 @@ const SingleMovie = () => {
 
            </div> 
 
-
-
-
-          <div className="movie-info">
-            
-        <p>{formatDate(movie.release_date)} (IE) | {timeConvert(movie.runtime)} | </p>
+          <div className="movie-info">          
+            <p>{formatDate(movie.release_date)} (IE) | {timeConvert(movie.runtime)} | </p>
           </div>
+          
           </div>
-          {/* {genres.map(genre=>{returns <li>{genre}</li>})} */}
-        <h2> {movie.title}</h2>
+            {/* {genres.map(genre=>{returns <li>{genre}</li>})} */}
+          <h2> {movie.title}</h2>
+          <h3 className="tag-line"> {movie.tagline}</h3>
 
           <div className="movie-summary">
             <h3>Overview</h3>
+            
             <p>{movie.overview}</p>
       
           </div> {/* movie info container end */}
