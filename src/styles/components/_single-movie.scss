@@ -93,16 +93,11 @@
             }
 
             .rating{
-                border: none;
                 background: none;
                 border-radius: 5%;
                 font-size: 1.875rem;
                 font-weight: $fontBold;
-                padding-left: 20px;
-               
-
-                
-                
+                padding-left: 20px;    
             }
            
 
@@ -133,25 +128,35 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    
+        text-align: center;
+        border: solid 2px green;
         
         
         @media (min-width: $desktopSmall){
             margin-top: 0;
-            padding: 0;           
             width: 100%;
             margin: auto;  
-            margin-bottom: 20px;
-            
+            margin-bottom: 20px;     
         }
        
         .rating-icon{
-            width: 25%;
-            font-size: 1.75rem; 
+            width: 75px;
+            
+            border: solid 1px $iconBgColor;
+            border-radius: 3px;
             padding: 10px;
             text-align: center;
+            font-size: 0.875rem;
+
+            p{
+                display: inline;
+                width: 75px;
+                border: solid 2px red;
+            }
+
             @media (min-width: $desktopSmall){
-                width: 70px;
+                width: 100px;
+                margin-right: 30px;
                 margin-left: 110px;
                 
             }
@@ -202,6 +207,7 @@
         line-height: 1rem;     
 
         h3{
+            
             font-size: 1rem;
             font-weight: $fontBold;
             margin: 10px 0;

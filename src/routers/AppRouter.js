@@ -2,6 +2,7 @@
 
 // Development Components
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {   MD_TOP_URL} from '../globals/variables';
 
 // Components
 import Header from '../components/Header';
@@ -14,6 +15,8 @@ import Favourites from '../components/Favourites';
 import SingleMovie from '../components/SingleMovie';
 import PageNotFound from '../components/PageNotFound';
 
+
+
 function AppRouter() {
   return (
     <Router>
@@ -25,6 +28,13 @@ function AppRouter() {
                 <Route path={'/about'}><About /></Route>
                 <Route path={'/favourites'}><Favourites /></Route>
                 <Route path={'/single-movie/:id'}><SingleMovie /></Route> 
+                <Route path="/top-rated" component={MD_TOP_URL}/>
+
+                {/* <Route path = "/popular" component={Popular}/>
+                <Route path="/top-rated" component={TopRated}/>
+                <Route path="/now-playing" component={NowPlaying}/> */}
+                
+
                 <Route><PageNotFound /></Route> 
             </Switch>
             </main>
@@ -33,5 +43,4 @@ function AppRouter() {
     </Router>
   );
 }
-//SINGLE MOVIE IS PLACED IN NAV TEMPORARILY WHILE DEV PAGE
 export default AppRouter;
