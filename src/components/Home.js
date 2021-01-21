@@ -62,7 +62,7 @@ function movieGrid(arr) {
   })
 } 
 
-//function Home() {
+////////function Home() {
     return (
       <main>
         <div className="line"> </div>
