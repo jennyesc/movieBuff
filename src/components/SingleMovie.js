@@ -8,6 +8,7 @@ import '../globals/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import poster from '../images/diehard.jpg';
 import { useParams} from 'react-router-dom';
+import {shortenPars, percentNumber} from '../utilities/movieMaker';
 
 // const PageSingleMovie = () => {
 
@@ -36,9 +37,6 @@ const SingleMovie = () => {
 
   }, [] );
 
-
-//function SingleMovie() {
-  //const {genres, title} = SingleMovie
     return (
       <main>
         <section className="single-movie-cont" >
@@ -55,7 +53,7 @@ const SingleMovie = () => {
           <div className="icon-container">
             
             <div className="icon percentage-icon">  
-                  <i className="rating"> 71% </i>
+                  <i className="rating">{percentNumber(movie.vote_average)}%</i>
                   
             </div> 
 
