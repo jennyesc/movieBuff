@@ -33,11 +33,7 @@
             background-position: top left;
             background-size: cover;
             background-repeat: no-repeat;
-            opacity: 0.1;
-                    
-             @media (min-width: $tabletSmall){
-                 background-position: center;
-             }
+            opacity: 0.2;      
         }//single-bg end
 
         .poster-single{
@@ -57,7 +53,7 @@
             }
 
             @media (min-width: $tabletSmall){
-                
+               width: 265px; 
                 
                 
             }
