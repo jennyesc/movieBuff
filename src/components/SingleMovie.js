@@ -3,10 +3,8 @@
 import { useState, useEffect } from 'react';
 import { MD_API_KEY_ONLY, MD_LAN } from '../globals/variables';
 //import { Link, Redirect, useParams} from 'react-router-dom';
-import background from '../images/diehard.jpg';
 import '../globals/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import poster from '../images/diehard.jpg';
 import { useParams} from 'react-router-dom';
 import {percentNumber, timeConvert } from '../utilities/movieMaker';
 import formatDate from '../utilities/dateMaker';
@@ -93,7 +91,7 @@ const SingleMovie = () => {
           <div className="movie-info-container">
 
             <div className="rating-icon">   
-                <p>{movie.adult == true ? "Rated-R" : "PG-13"}</p>
+                <p>{movie.adult === true ? "Rated-R" : "PG-13"}</p>
             </div> 
 
             <div className="movie-info">          
