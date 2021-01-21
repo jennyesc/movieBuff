@@ -38,7 +38,7 @@ const SingleMovie = () => {
   }
 
  const createCasts = (casts) => {
-    return casts.splice(0, 2).map((cast, i) => <img key={i} src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} alt={cast.name} />
+    return casts.splice(0, 5).map((cast, i) => <img key={i} src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} alt={cast.name} />
     );
   }
 
