@@ -15,7 +15,7 @@
 
     @media (min-width: $tabletSmall){
         @include mc;
-        //max-width: $siteWidth;
+        
     }
 
     .poster-section{
@@ -41,14 +41,13 @@
         }//single-bg end
 
         .poster-single{
-            
             width: 165px;
             height: 100%;
-            
             margin: 0 auto;
             position: relative;
             z-index: 300;           
-            box-shadow:  2px 2px 8px rgba(8, 3, 5, 0.8);  
+            box-shadow: $boxShadow;
+            
             
             img{
                 display: block;
@@ -97,9 +96,17 @@
             border: 1px $fontColor solid;
             }
 
-            .fa-rating{
-                border: 1px $iconColor solid;
-                //font-size: 2rem;
+            .rating{
+                border: none;
+                background: none;
+                border-radius: 5%;
+                font-size: 1.875rem;
+                font-weight: $fontBold;
+                padding-left: 20px;
+               
+
+                
+                
             }
            
 

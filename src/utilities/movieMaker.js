@@ -2,7 +2,7 @@
 
 export function shortenPars (string) {
      let untrimmed = string;
-     const trimLength = 150;
+     const trimLength = 75;
         return `${untrimmed.substring(0, trimLength)}`;
   };
 
