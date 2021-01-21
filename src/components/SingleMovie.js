@@ -46,14 +46,12 @@ const SingleMovie = () => {
   fetchCast();
   }, [] );
 
-  
-  
-
     return (
       <main>
-        {movie !== null &&
+       
+        {movie !== null && 
           <section className="single-movie-cont" > 
-
+<div className="wrappertwo">
             <div className="poster-section" >
               
               <div className="single-bg" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`}} >  
@@ -62,8 +60,8 @@ const SingleMovie = () => {
                 <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
               </div>
             </div>  
-
-            <div className="icon-container">
+          
+          <div className="icon-container">
               
               <div className="icon percentage-icon">  
                     <i className="rating">{percentNumber(movie.vote_average)}%</i>
@@ -96,8 +94,6 @@ const SingleMovie = () => {
 
             <div className="rating-icon">   
                 <p>{movie.adult == true ? "Rated-R" : "PG-13"}</p>
-                
-
             </div> 
 
             <div className="movie-info">          
@@ -105,10 +101,8 @@ const SingleMovie = () => {
             </div>
             
             </div>
-              {/* {genres.map(genre=>{returns <li>{genre}</li>})} */}
             <h2> {movie.title}</h2>
             <h3 className="tag-line"> {movie.tagline}</h3>
-
 
             <div className="movie-summary">
               <h3>Overview</h3>
@@ -128,10 +122,10 @@ const SingleMovie = () => {
               
             </section> {/* cast container end */}
             
-
+            </div>
           
           </section>
-        }
+        } 
       </main>
     );
   }
