@@ -1,8 +1,7 @@
 // Home
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { MD_BASE_URL, MD_API_KEY, MD_LAN, MD_TOP_URL, MD_API_KEY_ONLY } from '../globals/variables';
-import { Link } from 'react-router-dom';
+import { MD_BASE_URL_NO_SORT, MD_API_KEY, MD_LAN, MD_TOP_URL, MD_API_KEY_ONLY } from '../globals/variables';
 import formatDate from '../utilities/dateMaker';
 import {shortenPars, percentNumber} from '../utilities/movieMaker';
 import faveIcon from '../images/fav-heart.png';
@@ -12,23 +11,56 @@ import faveIcon from '../images/fav-heart.png';
 
 const Home = () => {
 
+  const {sort} = useParams();
+  
+
+  const [sortType, setSortType] = useState(null);
       
   const [movies, setMovies] = useState(null);
 
+  const setURLSort = (sort) => {
+    let urlSort;
+    switch (sort){
+      case 'popular':
+        urlSort = 'popular';
+        break;
+      case 'top-rated':
+        urlSort = 'top_rated';
+        break;
+      case 'now-playing':
+        urlSort = 'now_playing';
+        break;
+      case 'upcoming':
+        urlSort = 'upcoming';
+        break;
+      default:
+        urlSort = 'popular';
+    }
+      
+    return urlSort;
+
+  }
+
   useEffect( () => {
 
+    //setSortType(sort);
+    const urlSort = setURLSort(sort)
+    console.log(urlSort);
+    
     const fetchMovie = async () => {
-      const res = await fetch( `${MD_BASE_URL}${MD_API_KEY}${MD_LAN}`);
+      const res = await fetch( `${MD_BASE_URL_NO_SORT}${urlSort}?${MD_API_KEY}${MD_LAN}`);
       let data = await res.json();
-      console.log(data);
+      //console.log(data.results);
       setMovies(data.results.splice(0,20));
   }
 
   fetchMovie();
+  
 
-  }, [] );
+  }, [sort] );
 
 function movieGrid(arr) {
+  console.log(arr);
   return arr.map((movie, i) => {
     return (
       <section key={i} className="index-movie-container">  
@@ -66,17 +98,32 @@ function movieGrid(arr) {
     return (
       <main>
         <div className="line"> </div>
-          <form className="form-select-group">
+        {/* 
+        
+        <form className="form-select-group">
             <div className="input-group input-select-group">
-              {/* <label htmlFor="">Movies</label> */}
-                <select id="selectChart" name="selectChart" className="selection">
-                <option value="popular" defaultValue>Popular</option>
-                  <option value="top-rated"><Link to={"/top-rated"}> Top Rated</Link></option>
+      
+                 
                   <option value="now-playing">Now Playing</option>
                   <option value="upcoming">Upcoming</option>
                 </select>  
             </div>  
           </form>
+        
+        
+        
+        
+        
+        */}
+  {/* */ }
+        <nav className="movie-sort-nav">
+          <ul>
+            <li><NavLink to={'/sort/popular'}>Popular</NavLink></li>
+            <li><NavLink to={'/sort/top-rated'}>Top Rated</NavLink></li>
+            <li><NavLink to={'/sort/upcoming'}>Upcoming</NavLink></li>
+          </ul>
+        </nav>
+          
         <div className="desktop-grid">
           {movies !== null && movieGrid(movies)}
         </div>  
