@@ -16,9 +16,7 @@ const SingleMovie = () => {
   let { id } = useParams()
 
   const [movie, setMovie] = useState(null);
-  // /const res = await fetch( `https://api.themoviedb.org/3/movie/${id}?api_key=${MD_API_KEY_ONLY}${MD_LAN}`);
- // https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US&append_to_response=credits
-    const fetchMovie = async () => {
+     const fetchMovie = async () => {
       window.scrollTo(0,0);
       const res = await fetch( `https://api.themoviedb.org/3/movie/${id}?api_key=${MD_API_KEY_ONLY}${MD_LAN}&append_to_response=credits`); 
       //const res = await fetch( `https://api.themoviedb.org/3/movie/${id}?api_key=${MD_API_KEY_ONLY}${MD_LAN}`);
@@ -27,31 +25,22 @@ const SingleMovie = () => {
       
       setMovie(data);
     };
-/*
-  const [cast, setCast] = useState(null);
-
-   const fetchCast = async () =>{
-    const res = await fetch ( `https://api.themoviedb.org/3/movie/${id}?api_key=${MD_API_KEY_ONLY}${MD_LAN}`);
-    let data = await res.json();
-    if (cast !== null) {
-      console.log(cast);
-    }
-    // console.log(cast);
-    //setCast(data);
-   }
-   */
-
 
   useEffect( () => {
-    //console.log('hello')
+    
    
   fetchMovie();
-  //fetchCast();
+ 
   }, [] );
 
   const makeGenres = (genres) => {
     return genres.map((genre, i) => <span key={i}>{genre.name}</span>);
   }
+
+  // const createCasts = (casts) => {
+  //   return casts.map((cast, i) => <span key={i}>{cast.name}</span>);
+  // }
+
 
     return (
       <main>
@@ -104,7 +93,7 @@ const SingleMovie = () => {
             </div> 
 
             <div className="movie-info">          
-              <p>{formatDate(movie.release_date)} | {timeConvert(movie.runtime)} | {makeGenres(movie.genres)}</p>
+              <p>{formatDate(movie.release_date)} | {timeConvert(movie.runtime)} | {makeGenres(movie.genres)} | </p>
             </div>
             
             </div>
