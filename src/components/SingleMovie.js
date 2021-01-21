@@ -29,7 +29,7 @@ const SingleMovie = () => {
       let data = await res.json();
       console.log(data);
       //console.log('API Call: ', `https://api.themoviedb.org/3/movie/${id}&api_key=25f11b1e22143258eab2e1001edc3432${MD_LAN}`);
-      setMovie(data.results);
+      setMovie(data);
   }
 
   fetchMovie();
@@ -38,6 +38,7 @@ const SingleMovie = () => {
 
 
 //function SingleMovie() {
+  //const {genres, title} = SingleMovie
     return (
       <main>
         <section className="single-movie-cont" >
@@ -96,7 +97,7 @@ const SingleMovie = () => {
           </div>
           </div>
           
-          <h2> Movie Title</h2>
+          <h2> {movie.title}</h2>
 
           <div className="movie-summary">
             <h3>Overview</h3>
