@@ -45,10 +45,10 @@ const SingleMovie = () => {
 
           <div className="poster-section" >
              
-            <div className="single-bg" style={{ backgroundImage: `url(${background})`}} >  
+            <div className="single-bg" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`}} >  
             </div>
             <div className="poster-single">
-              <img src={poster} alt="Die hard movie poster" />
+              <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
             </div>
          </div>  
 
@@ -93,10 +93,11 @@ const SingleMovie = () => {
 
 
           <div className="movie-info">
+            
         <p>{formatDate(movie.release_date)} (IE) | {timeConvert(movie.runtime)} | </p>
           </div>
           </div>
-          
+          {/* {genres.map(genre=>{returns <li>{genre}</li>})} */}
         <h2> {movie.title}</h2>
 
           <div className="movie-summary">
