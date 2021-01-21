@@ -19,3 +19,21 @@ export function timeConvert (num) {
   var minutes = num % 60;
   return `${hours + "hr" + " " + minutes + "m" }`;         
 };
+
+
+
+// export const fetchTopRated = async () => {
+//    const res = await fetch( `${MD_TOP_URL}api_key=${MD_API_KEY_ONLY}${MD_LAN}`);
+//      let data = await res.json();
+//      console.log(data);
+//      setMovies(data.results.splice(0,20));
+
+//      useEffect( () => {
+//       fetchTopRated();
+
+//    }, [] );
+//    return function movieTop(arr) {
+//       return arr.map((movie, i) => {
+//          {movies !== null && movieTop(movies)}
+
+//       };

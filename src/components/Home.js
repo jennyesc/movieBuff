@@ -1,7 +1,7 @@
 // Home
-
+import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { MD_BASE_URL, MD_API_KEY, MD_LAN } from '../globals/variables';
+import { MD_BASE_URL, MD_API_KEY, MD_LAN, MD_TOP_URL, MD_API_KEY_ONLY } from '../globals/variables';
 import { Link } from 'react-router-dom';
 import formatDate from '../utilities/dateMaker';
 import {shortenPars, percentNumber} from '../utilities/movieMaker';
@@ -70,8 +70,8 @@ function movieGrid(arr) {
             <div className="input-group input-select-group">
               {/* <label htmlFor="">Movies</label> */}
                 <select id="selectChart" name="selectChart" className="selection">
-                  <option value="popular" selected><Link to={"/popular"}> Popular </Link></option>
-                  <option value="top-rated"><Link to={"/top-rated"} Top Rated></Link></option>
+                <option value="popular" defaultValue><NavLink to={`${MD_TOP_URL}api_key=${MD_API_KEY_ONLY}${MD_LAN}`}> Popular </NavLink></option>
+                  <option value="top-rated"><Link to={"/top-rated"}> Top Rated</Link></option>
                   <option value="now-playing">Now Playing</option>
                   <option value="upcoming">Upcoming</option>
                 </select>  
