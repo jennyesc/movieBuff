@@ -37,13 +37,14 @@ const SingleMovie = () => {
     return genres.map((genre, i) => <span key={i}>{genre.name}</span>);
   }
 
-  // const createCasts = (casts) => {
-  //   return casts.map((cast, i) => <span key={i}>{cast.name}</span>);
-  // }
+ const createCasts = (casts) => {
+    return casts.splice(0, 5).map((cast, i) => <img key={i} src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} alt={cast.name} />
+    );
+  }
 
 
     return (
-      <main>
+      <main>_
        
         {movie !== null && 
           <section className="single-movie-cont" > 
@@ -93,7 +94,7 @@ const SingleMovie = () => {
             </div> 
 
             <div className="movie-info">          
-              <p>{formatDate(movie.release_date)} | {timeConvert(movie.runtime)} | {makeGenres(movie.genres)} | </p>
+        <p>{formatDate(movie.release_date)} | {timeConvert(movie.runtime)} | {makeGenres(movie.genres)} | </p>
             </div>
             
             </div>
@@ -112,8 +113,8 @@ const SingleMovie = () => {
               
               {/* container for headshot */}
               <div className="cast-head">
+              {createCasts(movie.credits.cast)}
               
-                {/* <p>{cast}</p> */}
             </div>
               
             </section> {/* cast container end */}
