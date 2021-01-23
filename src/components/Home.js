@@ -59,7 +59,7 @@ const Home = () => {
   return (
       <main>
         <div className="line"> </div>
-        
+
         <nav className="movie-sort-nav">
           <ul>
             <li><NavLink to={'/sort/popular'}>Popular</NavLink></li>
@@ -71,6 +71,7 @@ const Home = () => {
         <div className="desktop-grid">
           {movies !== null && <Movies movies={movies} /> }
         </div>  
+        
       </main>
     );
   }

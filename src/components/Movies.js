@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import formatDate from '../utilities/dateMaker';
 import {shortenPars, percentNumber} from '../utilities/movieMaker';
 import faveIcon from '../images/fav-heart.png';
+import FavouriteButton from './FavouriteButton';
 
 function Movies( {movies} ){
      function makeMovies(movies){
@@ -30,8 +31,8 @@ function Movies( {movies} ){
         
                 </div>
                 <div className="fav-heart-icon">
-                <Link to={`/favourites/`}><img className="heart-icon" src={faveIcon} alt="fav heart icon" /></Link> 
-        
+                {/* <Link to={`/favourites/`}><img className="heart-icon" src={faveIcon} alt="fav heart icon" /></Link>  */}
+                <FavouriteButton movie={movie}/>
                 </div>
               </section>
             );
