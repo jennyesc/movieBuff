@@ -212,9 +212,30 @@
             left: 39%;
             margin-top: 2px;
 
-            img{
-                width: 10%;
-                opacity: 0.7;
+            // img{
+            //     width: 10%;
+            //     opacity: 0.7;
+            // }
+
+            .btn-favourite {
+                display: block;
+                width: 50px;
+                height: auto;
+                background: none;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+            }
+            
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0,0,0,0);
+                border: 0;
             }
             
             @media (min-width: $tabletSmall){
