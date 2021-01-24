@@ -3,9 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useGlobal from '../store/globalAppState';
 import Movies from './Movies';
-import poster from '../images/diehard.jpg';
 import '../globals/fontawesome';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
@@ -26,11 +24,7 @@ function Favourites() {
         <div className="line"> </div>
         <section className="fav-movie-heading">
             <h2>My Favourites</h2>
-            <ul>
-              <li>Movies (3)</li>
-              <li>TV (0)</li>
-
-            </ul>
+            
         </section>
         <div className="desktop-fav-container">
           
