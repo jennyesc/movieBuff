@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useParams} from 'react-router-dom';
 import {percentNumber, timeConvert } from '../utilities/movieMaker';
 import formatDate from '../utilities/dateMaker';
+import FavouriteButton from './FavouriteButton';
+
 
 
 
@@ -55,7 +57,7 @@ const SingleMovie = () => {
 
 
     return (
-      <main>_
+      <main>
        
         {movie !== null && 
           <section className="single-movie-cont" > 
@@ -76,8 +78,9 @@ const SingleMovie = () => {
                     
               </div> 
 
-              <div className=" icon fav-icon">  
-                    <i className="fa"> <FontAwesomeIcon icon="heart" /> </i>
+              <div className=" icon fav-icon">
+              <FavouriteButton movie={movie}/>  
+                    {/* <i className="fa"> <FontAwesomeIcon icon="heart" /> </i> */}
                     
               </div> 
               <div className="icon bookmark-icon">  

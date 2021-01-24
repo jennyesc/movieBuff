@@ -2,7 +2,7 @@
 import { Link } from 'react-router-dom';
 import formatDate from '../utilities/dateMaker';
 import {shortenPars, percentNumber} from '../utilities/movieMaker';
-import faveIcon from '../images/fav-heart.png';
+// import faveIcon from '../images/fav-heart.png';
 import FavouriteButton from './FavouriteButton';
 
 function Movies( {movies} ){

@@ -1,7 +1,7 @@
 // Home
 import { NavLink, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { MD_BASE_URL_NO_SORT, MD_API_KEY, MD_LAN, MD_TOP_URL, MD_API_KEY_ONLY } from '../globals/variables';
+import { MD_BASE_URL_NO_SORT, MD_API_KEY, MD_LAN } from '../globals/variables';
 import Movies from './Movies';
 
 

@@ -34,4 +34,5 @@ function FavouriteButton({ movie }) {
         </div>
     );
 }
+
 export default FavouriteButton;
