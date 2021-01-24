@@ -5,23 +5,13 @@
 @use '../utilities/mixins' as *;
 
 
-.movie-sort-nav{
-    display: inline;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    padding-top: 20px;
-    padding-bottom: 20px;
 
-<<<<<<< Updated upstream
-=======
 .movie-sort-nav {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     height: 40px;
-    border-radius: 10px;
     margin-top: 20px;
   
     .nav-container{
@@ -47,68 +37,24 @@
                 &:hover, &:focus, &:active{
                     color: $hoverColor;
                     transition: 0.04s;
-                    
                 }
             }
         }
 
-    }
->>>>>>> Stashed changes
 
-    li{
-        align-items: justify;
-        padding-top: 15px;
-        display: inline;
-        margin-left: 5px;
-        margin-right: 5px;
-        text-align: center;
-            
-    
-        a{
-            text-decoration: none;
-            font-weight: $fontBold;
-            font-size: 0.9rem;
-                
-            &:hover, &:focus, &:active{
-                color: $hoverColor;
-                transition: 0.04s;
-            }
-    
-            @media (min-width: $desktopSmall){
-                font-size: 1rem;
-            }
-                
-        }   
-            
-        @media (min-width: $desktopSmall){
-            margin-left: 25px;
-            margin-right: 25px;  
-        }
-            
-    }
-        
-    @media (min-width: $desktopSmall){
-        @include mc;   
-        max-width: $siteWidth;
-<<<<<<< Updated upstream
-        justify-content: center;
-    }
-    
-}// End movie-sort-nav
-=======
-        width: 100%;
-        margin: 25px auto;
-        justify-content: center;
-        align-items: center;
-
-        .nav-container{
-            width: 55%;
+        @media (min-width: $tabletSmall){
+            @include mc;
+            width: 50%;
+            margin-bottom: 15px;
             font-size: 0.875rem;
-        }
-    } 
-}
+        }    
+    }
 
->>>>>>> Stashed changes
+    
+
+
+
+}
 
 .desktop-grid{
     
@@ -171,7 +117,7 @@
                 align-items: center;
                 justify-content: flex-end;
                 padding-right: 10px;
-                border-top-left-radius: 10px;
+                border-top-left-radius: 3px;
 
                 @media (min-width: $tabletSmall){
                     width: 65%;
@@ -200,6 +146,7 @@
                 width: 100%; 
                 @media (min-width: $tabletSmall){
                     padding: 15px 5px 10px 5px;
+                    line-height: 1.25rem;
                 }
             }
 
@@ -274,6 +221,7 @@
                         width: 100%;
                         height: 20px;
                         line-height: 0.5rem;
+                        margin-left: -5px;
                     }//end media
                 }
 
