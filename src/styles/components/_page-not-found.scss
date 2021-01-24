@@ -3,12 +3,12 @@
 @use '../base/type' as *;
 @use '../utilities/mixins' as *;
 
-main{
-    // display: block;
-    border: 3px solid green;
-    @media (min-width: $tabletSmall){
-        @include mc;    
-    }
+// main{
+//     // display: block;
+//     border: 3px solid green;
+//     @media (min-width: $tabletSmall){
+//         @include mc;    
+//     }
 
     .page-container{
         //margin-top: 20px;
@@ -65,4 +65,4 @@ main{
             } // page-container  
         }// Page-bg   
     }      
-}// Main                     
+// }// Main                     
