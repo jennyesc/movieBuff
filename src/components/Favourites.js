@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useGlobal from '../store/globalAppState';
 import Movies from './Movies';
-import poster from '../images/diehard.jpg';
+// import poster from '../images/diehard.jpg';
 import '../globals/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
