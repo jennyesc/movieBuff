@@ -22,8 +22,9 @@ function Movies( {movies} ){
                 <div className="movie-description">
                 <h2>{movie.title}</h2>
                     <div className="dt-movie-infobox">
+                    <Link to={`/single-movie/${movie.id}`} className="dt-more-infolink"> More Info</Link>
                       <h3>Release Date: <span className="date-break"> <br /> </span>{formatDate(movie.release_date)}</h3>
-                      <Link to={`/single-movie/${movie.id}`} className="dt-more-infolink"> More Info</Link>
+                     
                       {/* <Link to="/singleMovie">About</Link> */}
                     
                         <p>{shortenPars(movie.overview)}...</p>

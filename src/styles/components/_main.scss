@@ -13,6 +13,47 @@
     padding-top: 20px;
     padding-bottom: 20px;
 
+<<<<<<< Updated upstream
+=======
+.movie-sort-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+  
+    .nav-container{
+        display: flex;
+        padding-right: 5px;
+        padding-bottom: 15px;
+        font-size: 0.80rem;
+        font-weight: $fontSemi;
+        width: 100%;
+        border-bottom: solid 1px $purple;
+ 
+        li{
+            display: inline;
+            width: 33%;
+            margin: auto;
+            text-align: center;
+            padding: 5px;
+            
+            a{
+                text-decoration: none;
+                color: #fdaad2;
+
+                &:hover, &:focus, &:active{
+                    color: $hoverColor;
+                    transition: 0.04s;
+                    
+                }
+            }
+        }
+
+    }
+>>>>>>> Stashed changes
 
     li{
         align-items: justify;
@@ -49,10 +90,25 @@
     @media (min-width: $desktopSmall){
         @include mc;   
         max-width: $siteWidth;
+<<<<<<< Updated upstream
         justify-content: center;
     }
     
 }// End movie-sort-nav
+=======
+        width: 100%;
+        margin: 25px auto;
+        justify-content: center;
+        align-items: center;
+
+        .nav-container{
+            width: 55%;
+            font-size: 0.875rem;
+        }
+    } 
+}
+
+>>>>>>> Stashed changes
 
 .desktop-grid{
     
@@ -77,12 +133,11 @@
         @media (min-width: $tabletSmall){
             @include mc;
             width: 200px;
-            height: 440px;
-            padding: 0;
+            height: 450px;
+            padding: 3px;
             position: relative;
             display: flex;
             align-items: flex-end;
-        
         } //end media
 
         
@@ -139,13 +194,12 @@
         
         .movie-description{
             padding: 15px;
-    
             h2{
-                font-size: 1.25rem;
+                font-size: 1rem;
+                line-height: 1.2rem;
                 width: 100%; 
                 @media (min-width: $tabletSmall){
-                    font-size: 1rem;
-                    padding: 10px;
+                    padding: 15px 5px 10px 5px;
                 }
             }
 
@@ -154,10 +208,11 @@
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
-                height: 32%;
+                height: 155px;
                 width: 100%;
                 text-align: center;
                 padding: 2px;
+
             }//end media
         
 
@@ -166,51 +221,59 @@
                 @media (min-width: $tabletSmall){
                     display: flex;
                     flex-wrap: wrap;
+                    height: 60px;
                     width: 100%;
                     padding: 0;
                     position: absolute;
                     bottom: 0;
-                    padding-bottom: 10px; 
+                    padding-bottom: 5px; 
+                    margin-top: 50px;
                 }//end media
                
                 h3{
                 font-size: 0.85rem;
-                padding-bottom: 10px;
                 width: 100%;
-                line-height: 1.2rem;
-                margin-bottom: 5px;
+                line-height: 1.10rem;
                 margin-top: 10px;
 
-                .date-break{
-                   
-                    @media (min-width: $tabletSmall){
-                        display: block;
-                        margin: 0;
-                        line-height: 0;
+                    .date-break{
+                            display: block;
+                            margin: 0;
+                            line-height: 0;
                     }
-                }
                 
-              
-                @media (min-width: $tabletSmall){
-                    font-size: .75rem;
+                    @media (min-width: $tabletSmall){
+                    font-size: .875rem;
                     padding: 0;
                     margin: 0;
+                    margin-bottom: 3px;
                     text-align: center;
-                }
-            }
+                    }
+                
+                @media (min-width: $tabletSmall){
+                    line-height: 1.2rem;
+                    font-size: 0.8rem;
+                    padding-bottom: 5px;
+                    position: absolute;
+                    left: -5px;
+                    top: 17px;
+                }// h3 @media
+
+            }//end .dt-movie-infobox
 
                 .dt-more-infolink{
                     display: none;
 
                     @media (min-width: $tabletSmall){
                         display: block;
-                        padding: 5px;
+                        padding: 2px;
                         color: $iconColor;
                         font-size: .875rem;
                         font-weight: $fontSemi;
                         text-decoration: none; 
-                        margin-top: 5px;
                         width: 100%;
+                        height: 20px;
+                        line-height: 0.5rem;
                     }//end media
                 }
 
@@ -218,8 +281,7 @@
                     font-size: 0.75rem;
                     line-height: 1.25;
                     padding-top: 50px;
-                    
-                    
+          
                     @media (min-width: $tabletSmall){
                     display: none;
                     }//end media
@@ -232,17 +294,13 @@
         .fav-heart-icon{
             position: absolute;
             top: 100;
-            left: 39%;
-            margin-top: 2px;
+            left: 38%;
+            margin-top: -1px;
 
-            // img{
-            //     width: 10%;
-            //     opacity: 0.7;
-            // }
 
             .btn-favourite {
                 display: block;
-                width: 50px;
+                width: 30px;
                 height: auto;
                 background: none;
                 border: none;
@@ -263,8 +321,12 @@
             
             @media (min-width: $tabletSmall){
                 top: 0;
-                left: 78%;
-                padding-top: 3px;
+                left: 72px;
+                padding-top: 5px;
+
+                .btn-favourite{
+                    width: 50px;
+                }
 
                 img{
                     width: 65%;
