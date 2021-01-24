@@ -1,0 +1,68 @@
+// Page Not Found
+@use '../base/settings' as *;
+@use '../base/type' as *;
+@use '../utilities/mixins' as *;
+
+main{
+    // display: block;
+    border: 3px solid green;
+    @media (min-width: $tabletSmall){
+        @include mc;    
+    }
+
+    .page-container{
+        //margin-top: 20px;
+        border: 2px solid orange;
+        
+        .page-background{
+            width: auto;            
+           
+            .image{
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                // border: 2px solid red;
+                @media (min-width: $tabletSmall){
+                    @include mc;
+                }
+                
+                
+            }// img
+            
+
+            .page-container{
+                @media (min-width: $tabletSmall){
+                    max-width: 670px;
+                    @include mc;
+                    
+                }
+                
+                .align{
+                    text-align: center;
+                    color: red;
+                    border: 2px solid green;
+                    font-size: 0.40rem;
+                    padding: 30px 0px 30px 0px;
+                }
+    
+                .p{
+                    text-align: right;
+                    padding: 0px 15px 20px 15px;
+                    font-weight: $fontMed;
+                    font-size: 0.95rem;
+                    line-height: 1.25;
+                    
+                    a{
+                        text-decoration: none;
+                        color: $iconColor;
+                    }
+                    
+                    @media (min-width: $desktopSmall){
+                        font-size: $fontDesktop;
+                        }   
+                }
+                    
+            } // page-container  
+        }// Page-bg   
+    }      
+}// Main                     
