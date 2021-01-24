@@ -67,11 +67,7 @@ const Home = () => {
           <ul className="nav-container">
             <li><NavLink to={'/sort/popular'}>Popular</NavLink></li>
             <li><NavLink to={'/sort/top-rated'}>Top Rated</NavLink></li>
-<<<<<<< Updated upstream
-            <li><NavLink to={'/sort/now-plating'}>Now Playing</NavLink></li>
-=======
             <li><NavLink to={'/sort/now-playing'}>Now Playing</NavLink></li>
->>>>>>> Stashed changes
             <li><NavLink to={'/sort/upcoming'}>Upcoming</NavLink></li>
 
           </ul>
