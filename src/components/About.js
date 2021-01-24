@@ -1,5 +1,6 @@
 //About
 import background from '../images/about-bg.jpg';
+import logo from '../images/tmdb-logo.png';
 
 function About () {
     return (
@@ -24,6 +25,13 @@ function About () {
                                             movie and TV database community. Word spread and here we are with 
                                             over 10,000 memebers and growing every day.
                                         </p>
+                                        <p className="italic">    
+                                            This product uses the <span className="tmbd">TMDb</span> API but is not endorsed or certified by 
+                                            <span className="tmbd"> TMDb</span>
+                                        </p>
+                                        <p>
+                                            <img className="logo" src={logo} alt="The Movie Database logo"></img>
+                                        </p> 
                                     </div>
                                         <h5 className="align-two">How it works</h5>
                                     

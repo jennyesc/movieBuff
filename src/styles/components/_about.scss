@@ -67,6 +67,26 @@ main{
                         @media (min-width: $desktopSmall){
                             font-size: $fontDesktop;
                         }
+                        
+                        .italic{
+                            padding-top: 20px;
+                            font-style: italic;
+
+                            .tmbd{
+                                color: #77D1F5;
+                            }
+
+                        }
+                        
+                            .logo{
+                                max-width: 40px; 
+                                padding-top: 10px;
+                                
+                                @media (min-width: $desktopSmall){
+                                    max-width: 60px; 
+                                }// End of Media
+                            }   
+
                     }
     
                     .align-two{
