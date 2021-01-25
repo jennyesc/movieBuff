@@ -242,7 +242,7 @@
         width: 100%;
         margin: 10px 0 20px 0;
         width: 100%;
-        border: solid green 1px;
+        padding: 10px 0 10px 20px;
     }
     
 .cast-container{
@@ -250,28 +250,43 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     flex-direction: row;
-
-    .cast-members{
+    
+    .cast{
         font-size: 0.75rem;
         line-height: 1rem;
-        border: 2px solid blue;
         display: flex;
         flex-wrap: wrap;
         width: 40%;
+        margin: 15px;
+        background: $bgColor;
+        border-radius: 5px;
+        box-shadow: $boxShadow;
+        text-align: center;
+        
+        
         
         .cast-photo{
             height:auto;
             width: 100%;
-            padding: 0;
+            padding: 0;  
+            border-radius: 5px 5px 0 0;
             
         }
 
 
         .cast-name{
-            font-size: 1.25rem;
+            font-size: 0.875rem;
+            padding: 5px;
+            color: $footerText;
+            font-weight: $fontBold;
+            width: 100%;
         }
 
         .cast-character{
+            font-size: 0.875rem;
+            font-weight: $fontMed;
+            color: $footerText;
+            padding-bottom: 5px;
             
         }
 
