@@ -10,7 +10,7 @@ function PageNotFound () {
 				<div className="page-container">
 						<div className="page-background">
 							<div className="image" style={{ backgroundImage: `url(${background})`}}>
-								<div className="page-container">
+								<div className="text-container">
 									<h2 className="align">404...Page Not Found</h2>
 									<div className="p">
 										<p>Please go to the <Link to={'/'}>home</Link> page.</p>

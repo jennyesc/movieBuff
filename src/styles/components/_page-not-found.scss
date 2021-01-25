@@ -13,6 +13,7 @@
     .page-container{
         //margin-top: 20px;
         // border: 2px solid orange;
+    
         
         .page-background{
             width: auto;            
@@ -30,10 +31,15 @@
             }// img
             
 
-            .page-container{
+            .text-container{
+                height: 300px;
+                padding-top: 50px;
                 @media (min-width: $tabletSmall){
                     max-width: 670px;
                     @include mc;
+                    height: 500px;
+                    padding-top: 100px;
+                    
                     
                 }
                 
