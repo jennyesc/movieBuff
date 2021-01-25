@@ -10,6 +10,7 @@ import {percentNumber, timeConvert } from '../utilities/movieMaker';
 import formatDate from '../utilities/dateMaker';
 import FavouriteButton from './FavouriteButton';
 import placeholder from '../images/profPlaceholder.jpg';
+import noPoster from '../images/poster-placeholder.jpg';
 
 
 
@@ -45,7 +46,7 @@ const SingleMovie = () => {
       return (
         <div className="cast"> 
           { cast.profile_path !== null ? <img className="cast-photo" key={i} src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} alt={cast.name} /> :
-         <img scr={placeholder} alt="profile placeholder" />
+         <img src={placeholder} alt="profile placeholder" />
           }
           <div className="cast-info"> 
             <p className="cast-name">{cast.name}</p>
@@ -69,8 +70,11 @@ const SingleMovie = () => {
               <div className="single-bg" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`}} >  
               </div>
               <div className="poster-single">
-                <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
-              </div>
+                {movie.poster_path !== null ?
+                  <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />:
+                  <img src={noPoster} alt="No Movie Poster Available" />
+                }
+                </div>
             </div>  
           
           <div className="icon-container">
@@ -131,7 +135,7 @@ const SingleMovie = () => {
               
               {/* container for headshot */}
               <div className="cast-members">
-
+                
               {createCasts(movie.credits.cast)}
               
             </div>
