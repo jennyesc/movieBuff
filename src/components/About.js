@@ -27,7 +27,7 @@ function About () {
                                         </p>
                                         <p className="italic">    
                                             This product uses the <span className="tmbd">TMDb</span> API but is not endorsed or certified by 
-                                            <span className="tmbd"> TMDb</span>
+                                            <span className="tmbd"> TMDb</span>.
                                         </p>
                                         <p>
                                             <img className="logo" src={logo} alt="The Movie Database logo"></img>
