@@ -141,6 +141,9 @@
         text-align: center;
         border: solid 2px green;
         
+        .make-genres-arr{
+            padding: 3px;
+        }
         
         @media (min-width: $desktopSmall){
             margin-top: 0;

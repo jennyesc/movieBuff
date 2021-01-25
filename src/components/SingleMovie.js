@@ -37,7 +37,7 @@ const SingleMovie = () => {
   }, [] );
 
   const makeGenres = (genres) => {
-    return genres.map((genre, i) => <span key={i}>{genre.name}</span>);
+    return genres.map((genre, i) => <span className="make-genres-arr" key={i}>{genre.name} </span>);
   }
 
  const createCasts = (casts) => {
@@ -110,7 +110,7 @@ const SingleMovie = () => {
             </div> 
 
             <div className="movie-info">          
-        <p>{formatDate(movie.release_date)} | {timeConvert(movie.runtime)} | {makeGenres(movie.genres)} | </p>
+        <p>{formatDate(movie.release_date)} | {timeConvert(movie.runtime)} | {makeGenres(movie.genres)}  </p>
             </div>
             
             </div>
