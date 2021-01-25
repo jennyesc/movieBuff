@@ -3,16 +3,16 @@
 @use '../base/type' as *;
 @use '../utilities/mixins' as *;
 
-// main{
-//     // display: block;
-//     border: 3px solid green;
-//     @media (min-width: $tabletSmall){
-//         @include mc;    
-//     }
+ main{
+    display: block;
+    // border: 3px solid green;
+    @media (min-width: $tabletSmall){
+    @include mc;    
+    }
 
     .page-container{
         //margin-top: 20px;
-        border: 2px solid orange;
+        // border: 2px solid orange;
         
         .page-background{
             width: auto;            
@@ -21,7 +21,7 @@
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
-                // border: 2px solid red;
+               
                 @media (min-width: $tabletSmall){
                     @include mc;
                 }
@@ -39,14 +39,14 @@
                 
                 .align{
                     text-align: center;
-                    color: red;
-                    border: 2px solid green;
-                    font-size: 0.40rem;
+                    color: $fontColor;
+                    // border: 2px solid green;
+                    font-size: 0.85rem;
                     padding: 30px 0px 30px 0px;
                 }
     
                 .p{
-                    text-align: right;
+                    text-align: center;
                     padding: 0px 15px 20px 15px;
                     font-weight: $fontMed;
                     font-size: 0.95rem;
@@ -65,4 +65,4 @@
             } // page-container  
         }// Page-bg   
     }      
-// }// Main                     
+}// Main                     
