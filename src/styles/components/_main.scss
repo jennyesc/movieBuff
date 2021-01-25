@@ -105,6 +105,52 @@
                 object-fit: cover;
             }
 
+            .fav-heart-icon{
+                position: absolute;
+                top: 0;
+                right: 0;
+    
+                .btn-favourite {
+                    display: block;
+                    width: 35px;
+                    height: auto;
+                    background: none;
+                    border: none;
+                    padding: 0;
+                    opacity: 0.9;
+                    cursor: pointer;
+                }
+                
+                .sr-only {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0,0,0,0);
+                    border: 0;
+                }
+                
+                @media (min-width: $tabletSmall){
+                    padding-top: 2px;
+                    
+                    .btn-favourite{
+                        width: 45px;
+                        margin-right: -3px;
+                       
+                    }
+                    img{
+                    width: 35px;
+                    }
+                }//end media
+            
+            
+            }//fav-movie-icon
+
+
+
+
             .movie-rating{
                 background: $darkPurpleRGB;
                 width: 70%;
@@ -140,6 +186,7 @@
         
         .movie-description{
             padding: 15px;
+           
             h2{
                 font-size: 1rem;
                 line-height: 1.2rem;
@@ -160,7 +207,7 @@
                 text-align: center;
                 padding: 2px;
 
-            }//end media
+            }//end media for movie-description
         
 
             .dt-movie-infobox{
@@ -239,50 +286,7 @@
            
         }
 
-        .fav-heart-icon{
-            position: absolute;
-            top: 100;
-            left: 38%;
-            margin-top: -1px;
-
-
-            .btn-favourite {
-                display: block;
-                width: 30px;
-                height: auto;
-                background: none;
-                border: none;
-                padding: 0;
-                cursor: pointer;
-            }
-            
-            .sr-only {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                padding: 0;
-                margin: -1px;
-                overflow: hidden;
-                clip: rect(0,0,0,0);
-                border: 0;
-            }
-            
-            @media (min-width: $tabletSmall){
-                top: 0;
-                left: 72px;
-                padding-top: 5px;
-
-                .btn-favourite{
-                    width: 50px;
-                }
-
-                img{
-                    width: 65%;
-                }
-            }//end media
         
-        
-        }
     }// index movie container
     
 }

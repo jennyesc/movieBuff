@@ -13,7 +13,11 @@ function Movies( {movies} ){
         
                 <div className="movie-poster">
                     <Link to={`/single-movie/${movie.id}`}><img className="poster-image" src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} /></Link> 
-                  
+      
+                    <div className="fav-heart-icon">
+                      <FavouriteButton movie={movie}/>
+                    </div>
+          
                     <div className="movie-rating">
                       <p>{percentNumber(movie.vote_average)}%</p>
                     </div>
@@ -31,10 +35,7 @@ function Movies( {movies} ){
                     </div>
         
                 </div>
-                <div className="fav-heart-icon">
-                {/* <Link to={`/favourites/`}><img className="heart-icon" src={faveIcon} alt="fav heart icon" /></Link>  */}
-                <FavouriteButton movie={movie}/>
-                </div>
+                
               </section>
             );
         
