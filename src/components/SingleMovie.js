@@ -9,6 +9,7 @@ import { useParams} from 'react-router-dom';
 import {percentNumber, timeConvert } from '../utilities/movieMaker';
 import formatDate from '../utilities/dateMaker';
 import FavouriteButton from './FavouriteButton';
+import placeholder from '../images/profPlaceholder.jpg';
 
 
 
@@ -43,11 +44,12 @@ const SingleMovie = () => {
     return casts.splice(0, 5).map((cast, i) => {  
       return (
         <div className="cast"> 
-          { cast.profile_path !== null ? <img key={i} src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} alt={cast.name} /> :
-          <p>No picture available</p> }
+          { cast.profile_path !== null ? <img className="cast-photo" key={i} src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} alt={cast.name} /> :
+         <img scr={placeholder} alt="profile placeholder" />
+          }
           <div className="cast-info"> 
-            <p>{cast.name}</p>
-            <p>{cast.character}</p>
+            <p className="cast-name">{cast.name}</p>
+            <p className="cast-character">{cast.character}</p>
           </div>
         </div> 
     
@@ -122,8 +124,10 @@ const SingleMovie = () => {
         
             </div> {/* movie info container end */}
 
+            <h3 className="cast-heading">Top Billed Cast</h3>
+
             <section className="cast-container">
-              <h3>Top Billed Cast</h3>
+           
               
               {/* container for headshot */}
               <div className="cast-members">

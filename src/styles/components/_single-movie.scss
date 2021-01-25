@@ -235,34 +235,46 @@
         }
     }
 
-    .cast-container{
-        padding: 15px 20px;
+    .cast-heading{
+        display: block;
+        font-size: 1rem;
+        font-weight: $fontBold;
+        width: 100%;
+        margin: 10px 0 20px 0;
+        width: 100%;
+        border: solid green 1px;
+    }
+    
+.cast-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    .cast-members{
         font-size: 0.75rem;
         line-height: 1rem;
-        //border: 2px solid blue;
+        border: 2px solid blue;
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
+        width: 40%;
         
-
-        h3{
-            font-size: 1rem;
-            font-weight: $fontBold;
+        .cast-photo{
+            height:auto;
             width: 100%;
-            margin: 10px 0 20px 0;
-        }
-        .cast-head{
-            // background-color: $purple;
-            width: 150px;
-            height: 200px;
+            padding: 0;
             
-            // border-radius: 30px;
-            // margin: auto;
-            // margin-bottom: 20px;
-            display: flex;
-
         }
-    
+
+
+        .cast-name{
+            font-size: 1.25rem;
+        }
+
+        .cast-character{
+            
+        }
+
         @media (min-width: $desktopSmall){
             @include mc;
                 max-width: $siteWidth;
@@ -272,8 +284,8 @@
     
     }
 
+    }
 }
-
 
 
 
