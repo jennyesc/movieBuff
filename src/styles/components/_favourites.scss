@@ -26,7 +26,7 @@
     
 .fav-container{
     
-    height: 300px;
+    height: 100%;
     padding-top: 50px;
 
     .align-text{
@@ -44,9 +44,9 @@
     
                 
     @media (min-width: $tabletSmall){
-        max-width: 670px;
+        max-width: $siteWidth;
         @include mc;
-        height: 70vh;
+        height: 100%;
         padding-top: 100px;
     }    
 
