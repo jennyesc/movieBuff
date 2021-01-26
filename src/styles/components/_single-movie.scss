@@ -66,8 +66,8 @@
 
     .icon-container{
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        display: flex;
+        justify-content: center;
         margin-bottom: 15px;
 
         .percentage-icon{
@@ -78,18 +78,17 @@
         .icon{
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 5px;
-            padding: 15px 0 15px 10px;
-            
+            justify-content: center;          
+            margin-right: 15px;
+
             
             .fa{
-            margin-right: 8px;
             border-radius: 50%;
             padding: 10px;
             background-color: $darkPurple;
             font-size: 1.25rem;
-            border: 1px $fontColor solid;
+            border: 1px $iconColor solid;
+            color: $iconColor;
             }
 
             .rating{
@@ -139,17 +138,20 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        border: solid 2px green;
+        
         
         .make-genres-arr{
             padding: 3px;
+            line-height: 1.15rem;
+        
         }
         
         @media (min-width: $desktopSmall){
             margin-top: 0;
             width: 100%;
             margin: auto;  
-            margin-bottom: 20px;     
+            margin-bottom: 20px;   
+            border: solid 2px green;  
         }
        
         .rating-icon{
@@ -164,7 +166,6 @@
             p{
                 display: inline;
                 width: 75px;
-                border: solid 2px red;
             }
 
             @media (min-width: $desktopSmall){
@@ -206,6 +207,7 @@
         font-style: italic;
         padding-left: 20px;
         margin-top: 20px;
+        font-size: 0.875rem;
 
         @media (min-width: $desktopSmall){
             text-align: center;
@@ -224,6 +226,7 @@
             font-size: 1rem;
             font-weight: $fontBold;
             margin: 10px 0;
+
             @media (min-width: $desktopSmall){
             font-size: 1.25rem;
             margin: 20px 0;
@@ -237,35 +240,35 @@
                 line-height: 1.2rem;
         }
     }
-
+.cast-container{
+//PICK UP HERE!???
     .cast-heading{
         display: block;
         font-size: 1rem;
         font-weight: $fontBold;
         width: 100%;
         margin: 10px 0 20px 0;
-        width: 100%;
         padding: 10px 0 10px 20px;
     }
+}
     
-.cast-container{
+    
+.cast-members{
     display: flex;
-    flex-wrap: nowrap;
     justify-content: flex-start;
-    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 10px;
+   
     
     .cast{
         font-size: 0.75rem;
         line-height: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        width: 40%;
-        margin: 15px;
+        width: 44%;
+        margin: 10px auto;
         background: $bgColor;
         border-radius: 5px;
         box-shadow: $boxShadow;
         text-align: center;
-        
         
         
         .cast-photo{
@@ -278,28 +281,34 @@
 
 
         .cast-name{
-            font-size: 0.875rem;
-            padding: 5px;
+            padding: 8px;
             color: $footerText;
             font-weight: $fontBold;
             width: 100%;
         }
 
         .cast-character{
-            font-size: 0.875rem;
             font-weight: $fontMed;
             color: $footerText;
-            padding-bottom: 5px;
+            padding: 5px 5px 15px 5px;
             
         }
+    
+    
+    }
 
-        @media (min-width: $desktopSmall){
-            @include mc;
-                max-width: $siteWidth;
-                padding: 0 100px 25px 100px;   
-        }
-    
-    
+    @media (min-width: $desktopSmall){
+        @include mc;
+            max-width: $siteWidth;
+            border: solid 2px red;
+            flex-wrap: nowrap;
+            width: 100%;
+
+            .cast{
+                border: blue 2px solid;
+                margin-right: 8px;
+            }
+            
     }
 
     }

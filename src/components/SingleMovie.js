@@ -42,7 +42,7 @@ const SingleMovie = () => {
   }
 
  const createCasts = (casts) => {
-    return casts.splice(0, 5).map((cast, i) => {  
+    return casts.splice(0, 4).map((cast, i) => {  
       return (
         <div className="cast"> 
           { cast.profile_path !== null ? <img className="cast-photo" key={i} src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} alt={cast.name} /> :
@@ -89,15 +89,12 @@ const SingleMovie = () => {
                     {/* <i className="fa"> <FontAwesomeIcon icon="heart" /> </i> */}
                     
               </div> 
-              <div className="icon bookmark-icon">  
-                    <i className="fa"> <FontAwesomeIcon icon="bookmark" /> </i>
-                    
-              </div> 
+             
 
-              <div className="icon star-icon">  
+              {/* <div className="icon star-icon">  
                     <i className="fa"> <FontAwesomeIcon icon="star" /> </i>
                     
-              </div> 
+              </div>  */}
 
               <div className=" icon play-icon">
                   <i className="fa"> <FontAwesomeIcon icon="play-circle" /> </i>
@@ -114,7 +111,8 @@ const SingleMovie = () => {
             </div> 
 
             <div className="movie-info">          
-        <p>{formatDate(movie.release_date)} | {timeConvert(movie.runtime)} | {makeGenres(movie.genres)}  </p>
+        <p>{formatDate(movie.release_date)} | {timeConvert(movie.runtime)} </p>
+          <p> {makeGenres(movie.genres)}  </p>
             </div>
             
             </div>
@@ -128,10 +126,10 @@ const SingleMovie = () => {
         
             </div> {/* movie info container end */}
 
-            <h3 className="cast-heading">Top Billed Cast</h3>
+           
 
             <section className="cast-container">
-           
+            <h3 className="cast-heading">Top Billed Cast</h3>
               
               {/* container for headshot */}
               <div className="cast-members">
