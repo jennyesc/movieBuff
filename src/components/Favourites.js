@@ -26,10 +26,10 @@ function Favourites() {
             <h2>My Favourites</h2>
             
         </section>
-        <div className="desktop-fav-container">
+        <div className="fav-container">
           
           {globalState.favs.length === 0 ?
-          <p>No favourited movies. Please visit the <Link to={'/'}>home page</Link> to favourite a movie.</p> :
+          <p className="align-text">No favourited movies. Please visit the <Link to={'/'}>home page</Link> to favourite a movie.</p> :
           (ready && <Movies movies={globalState.favs} checkFav={true} />)
         }
             {/* /* <section className="fav-movie-container">

@@ -9,6 +9,7 @@
     padding-top: 20px;
     margin-top: 20px;
     
+    
     @media (min-width: $tabletSmall){
         @include mc;
         max-width: $siteWidth;
@@ -23,8 +24,33 @@
     }  
 }
     
-// .desktop-fav-container{
-//     //border: solid red 2px;
+.fav-container{
+    
+    height: 300px;
+    padding-top: 50px;
+
+    .align-text{
+        text-align: center;
+
+        a{
+            text-decoration: none;
+            color: $iconColor;
+            font-weight: $fontExtra;
+            font-size: 1.1rem;
+
+        }
+    }
+
+    
+                
+    @media (min-width: $tabletSmall){
+        max-width: 670px;
+        @include mc;
+        height: 70vh;
+        padding-top: 100px;
+    }    
+
+}
     
 
 //    .fav-movie-container{
@@ -316,16 +342,4 @@
 //         }
         
 //     }
-//     //desktop-fav-container media
-//     @media (min-width: $tabletSmall){
-//         @include mc;
-//             display: flex;
-//             flex-wrap: wrap;
-//             max-width: $siteWidth;
-//             height: 300px;
-//             position: relative;
-            
-            
-//     }
-
-// }//end desktop container
+//     

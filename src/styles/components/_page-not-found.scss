@@ -5,7 +5,7 @@
 
  main{
     display: block;
-    // border: 3px solid green;
+    
     @media (min-width: $tabletSmall){
     @include mc;    
     }
