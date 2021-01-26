@@ -11,10 +11,7 @@
     }
 
     .page-container{
-        //margin-top: 20px;
-        // border: 2px solid orange;
-    
-        
+         
         .page-background{
             width: auto;            
            
@@ -22,6 +19,7 @@
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
+                
                
                 @media (min-width: $tabletSmall){
                     @include mc;
@@ -37,7 +35,7 @@
                 @media (min-width: $tabletSmall){
                     max-width: 670px;
                     @include mc;
-                    height: 500px;
+                    height: 70vh;
                     padding-top: 100px;
                     
                     
@@ -45,22 +43,33 @@
                 
                 .align{
                     text-align: center;
-                    color: $fontColor;
-                    // border: 2px solid green;
-                    font-size: 0.85rem;
+                    color: $fontColorRGBA;
+                    font-size: 4.5rem;
                     padding: 30px 0px 30px 0px;
                 }
     
                 .p{
                     text-align: center;
                     padding: 0px 15px 20px 15px;
-                    font-weight: $fontMed;
-                    font-size: 0.95rem;
-                    line-height: 1.25;
+                    font-weight: $fontSemi;
+                    font-size: 0.875rem;
+                    line-height: 1.55;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                    box-shadow: $boxShadow;
+                                     
                     
-                    a{
-                        text-decoration: none;
-                        color: $iconColor;
+                    .homelink{
+                        margin: 15px 0 20px 0;
+
+                        a{
+                            text-decoration: none;
+                            color: $iconColor;
+                            font-weight: $fontExtra;
+                            font-size: 1.2rem;
+    
+                        }
+
                     }
                     
                     @media (min-width: $desktopSmall){

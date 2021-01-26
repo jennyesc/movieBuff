@@ -1,7 +1,7 @@
 // Page Not Found
 
 import { Link } from 'react-router-dom';
-import background from '../images/about-bg.jpg';
+import background from '../images/404-bg.jpg';
 
 function PageNotFound () {
 	return (
@@ -11,9 +11,11 @@ function PageNotFound () {
 						<div className="page-background">
 							<div className="image" style={{ backgroundImage: `url(${background})`}}>
 								<div className="text-container">
-									<h2 className="align">404...Page Not Found</h2>
+									<h2 className="align">404</h2>
 									<div className="p">
-										<p>Please go to the <Link to={'/'}>home</Link> page.</p>
+										<p>I guess you aren't ready for that page yet...</p>
+										<p>but your kids are gonna love it. </p>
+										<p className="homelink"><Link to={'/'}>back home</Link></p>
 									</div>
 								</div>	
 							</div>
