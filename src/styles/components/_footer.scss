@@ -13,15 +13,9 @@ footer{
         flex-direction: column;
         
         .logo-container{
-            
-            
             .logo{
                 max-width: 170px;  
                 margin-top: 10px;
-
-                @media (min-width: $desktopSmall){
-                    max-width: 220px;
-                }
             }
         }
 
@@ -37,22 +31,10 @@ footer{
             width: 150px;
             margin: 10px 0;
 
-            @media (min-width: $desktopSmall){
-                font-size: 0.75rem;
-                width: 180px;
-                margin-left: 10px; 
-            }
-
             a{
                 text-decoration: none;   
             }
-            
         }
-    
-        @media (min-width: $desktopSmall){
-        width: 25%;
-        }
-    
     }
     
     .footer-menu-container{
@@ -62,8 +44,6 @@ footer{
         line-height: normal;
         padding: 10px;
 
-        
-        
         .footer-menu{
             padding: 10px;
             
@@ -97,18 +77,8 @@ footer{
         .colFive{
             grid-area: colFive;
         }
-        
-        @media (min-width: $tabletSmall){
-          
-            width: 75%;
-            display: grid;
-            grid-template-columns: auto;
-            grid-template-rows: auto;
-            grid-template-areas:
-            "colOne colTwo colThree colFour colFive";
-           
-        }
     }
+    
     p{
         
         font-weight: $fontReg;
@@ -127,12 +97,10 @@ footer{
         }
         
         .footer-break{
-        
             @media (min-width: $tabletSmall){
                 display: none;
             } 
         }
-    
     }
 
     span{ 
@@ -141,9 +109,32 @@ footer{
         }
     }
 
+    //footer @media
     @media (min-width: $tabletSmall){
     display: flex;
     flex-wrap: wrap;
-    }
 
+        .footer-top-row{
+            width: 25%;
+            .logo-container{
+                .logo{
+                    max-width: 220px;
+                }
+            }
+            .btn{
+                font-size: 0.75rem;
+                width: 180px;
+                margin-left: 10px; 
+            }
+        }
+
+        .footer-menu-container{
+            width: 75%;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+            grid-template-areas:
+            "colOne colTwo colThree colFour colFive";
+        }
+    }
 }

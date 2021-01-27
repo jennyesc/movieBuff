@@ -53,11 +53,9 @@ const SingleMovie = () => {
     return top6.map((cast, i) => {  
       return (
         <div className="cast" key={i}> 
-          { cast.profile_path !== null ? <img className="cast-photo" key={i} src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} alt={cast.name} /> :
-        
-          <img className="placeholder-photo" src={placeholder} alt="profile placeholder" />
+          { cast.profile_path !== null ? <img className="cast-photo" key={i} src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} alt={cast.name} /> :          <img className="placeholder-photo" src={placeholder} alt="profile placeholder" />
           }
-          <div className="cast-info"> 
+          <div> 
             <p className="cast-name">{cast.name}</p>
             <p className="cast-character">{cast.character}</p>
           </div>
@@ -70,7 +68,7 @@ const SingleMovie = () => {
        
         {movie !== null && 
           <section className="single-movie-cont" > 
-            <div className="wrappertwo">
+          
               <div className="poster-section" > 
                 <div className="single-bg" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`}} >  
                 </div>
@@ -94,15 +92,15 @@ const SingleMovie = () => {
               </div>
             </div>
 
-          <div className="movie-info-container">
-            <div className="rating-icon">   
-                <p>{movie.adult === true ? "Rated-R" : "PG-13"}</p>
-            </div> 
-            <div className="movie-info">          
-               <p>{formatDate(movie.release_date)} | {timeConvert(movie.runtime)} </p>
-               <p className="genre-mob"> {makeGenres(movie.genres)}  </p>
+            <div className="movie-info-container">
+              <div className="rating-icon">   
+                  <p>{movie.adult === true ? "Rated-R" : "PG-13"}</p>
+              </div> 
+              <div className="movie-info">          
+                <p>{formatDate(movie.release_date)} | {timeConvert(movie.runtime)} </p>
+                <p className="genre-mob"> {makeGenres(movie.genres)}  </p>
+              </div>
             </div>
-          </div>
           
           <h2> {movie.title}</h2>
           
@@ -120,9 +118,9 @@ const SingleMovie = () => {
                   {createCasts(movie.credits.cast)}
                 </div> 
               </section> {/* cast container end */}
-            
-  </div> {/*wrapper-two*/}
-          </section>
+          </section>  // single movie container end
+          
+          
         } 
       </main>
     );

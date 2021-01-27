@@ -40,8 +40,6 @@
                 }
             }
         }
-
-
         @media (min-width: $tabletSmall){
             @include mc;
             width: 50%;
@@ -49,11 +47,6 @@
             font-size: 0.875rem;
         }    
     }
-
-    
-
-
-
 }
 
 .desktop-grid{
@@ -63,13 +56,11 @@
     @media (min-width: $tabletSmall){
         @include mc;
         max-width: $headerMaxWidth;
-        //border: solid 2px orange;
         display: flex;
         flex-wrap: wrap;
         grid-gap: 28px;     
     }
    
-    
     .index-movie-container{
         background: $bgGradient;
         display: grid;
@@ -143,13 +134,8 @@
                     img{
                     width: 35px;
                     }
-                }//end media
-            
-            
+                }//end media     
             }//fav-movie-icon
-
-
-
 
             .movie-rating{
                 background: $darkPurpleRGB;
@@ -164,25 +150,22 @@
                 justify-content: flex-end;
                 padding-right: 10px;
                 border-top-left-radius: 3px;
-
+                           
+                p{
+                    font-weight: $fontExtra;
+                    font-size: 1.80rem;
+                    color: $iconColor;
+                    
+                    @media (min-width: $tabletSmall){
+                        padding-right: 20px;
+                    }//end media
+                }
                 @media (min-width: $tabletSmall){
                     width: 65%;
                     left: 90px;
-                    
                 }//end media
-
-            p{
-                font-weight: $fontExtra;
-                font-size: 1.80rem;
-                color: $iconColor;
-                
-                @media (min-width: $tabletSmall){
-                    padding-right: 20px;
-                }//end media
-
-            }
-        }
-    }
+            } //movie rating
+        } //movie poster
         
         .movie-description{
             padding: 15px;
@@ -207,11 +190,9 @@
                 text-align: center;
                 padding: 2px;
 
-            }//end media for movie-description
+        }//end media for movie-description
         
-
-            .dt-movie-infobox{
-                
+            .dt-movie-infobox{        
                 @media (min-width: $tabletSmall){
                     display: flex;
                     flex-wrap: wrap;
@@ -222,7 +203,7 @@
                     bottom: 0;
                     padding-bottom: 5px; 
                     margin-top: 50px;
-                }//end media
+                }
                
                 h3{
                 font-size: 0.85rem;
@@ -236,22 +217,17 @@
                             line-height: 0;
                     }
                 
-                    @media (min-width: $tabletSmall){
-                    font-size: .875rem;
-                    padding: 0;
+                @media (min-width: $tabletSmall){
                     margin: 0;
                     margin-bottom: 3px;
-                    text-align: center;
-                    }
-                
-                @media (min-width: $tabletSmall){
                     line-height: 1.2rem;
                     font-size: 0.8rem;
                     padding-bottom: 5px;
                     position: absolute;
                     left: -5px;
                     top: 17px;
-                }// h3 @media
+                    text-align: center;
+                }
 
             }//end .dt-movie-infobox
 
@@ -279,14 +255,9 @@
           
                     @media (min-width: $tabletSmall){
                     display: none;
-                    }//end media
-                
+                    }
                 }  
             }
-           
         }
-
-        
     }// index movie container
-    
 }

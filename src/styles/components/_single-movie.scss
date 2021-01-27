@@ -13,11 +13,6 @@
     width: auto;
     
 
-    @media (min-width: $tabletSmall){
-        @include mc;
-        
-    }
-
     .poster-section{
        height: 250px;
        position: relative;
@@ -44,28 +39,24 @@
             z-index: 300;           
             box-shadow: $boxShadow;
             
-            
             img{
                 display: block;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
-
-            @media (min-width: $tabletSmall){
-               width: 265px; 
-                
-                
-            }
         }//poster-single end
 
-
-
+        // poster section @media
         @media (min-width: $tabletSmall){
             height: 400px;
 
             .single-bg{
                 background-attachment: fixed;
+            }
+
+            .poster-single{   
+                    width: 265px;     
             }
         }
     }//poster-section end
@@ -113,18 +104,7 @@
                 border: none;
                 padding: 0;
                 cursor: pointer;
-            }
-           
-
-            @media (min-width: $desktopSmall){
-                padding: 10px 0 0 0;    
-                width: 100px;
-
-                .fa{
-                    font-size: 1rem;
-                }
-                    
-            }    
+            }  
         }
 
         //media for icon-container
@@ -132,12 +112,18 @@
             width: 60%;
             margin: auto;
             margin-bottom: 20px;
-            
+
+            .icon{
+                padding: 10px 0 0 0;    
+                width: 100px;
+
+                .fa{
+                    font-size: 1rem;
+                }
+            }
         }
-        
     }
 
-    
     .movie-info-container{
         margin-top: 15px;
         padding: 10px;
@@ -173,7 +159,6 @@
                 line-height: 1.2rem;
             }  //movie-info-container end
 
-        
             @media (min-width: $desktopSmall){
                 margin-top: 0;
                 width: 100%;
@@ -197,28 +182,27 @@
                     }
                 }
 
-
                 .movie-info{
                     width: 25%;
                     font-size: 1rem;
                     line-height: 1.4rem;
                 }
             }        
-     }
+        } //movie info container end
    
-     h2{
-        font-size: 1.4rem;
-        padding-left: 20px;
-        height: 25px;
-        margin-top: 20px;
+    h2{
+       font-size: 1.4rem;
+       padding-left: 20px;
+       height: 25px;
+       margin-top: 20px;
         
-        @media (min-width: $desktopSmall){
-            @include mc;
-            max-width: $siteWidth;
-            font-size: 1.875rem;
-            height: 40px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+       @media (min-width: $desktopSmall){
+           @include mc;
+           max-width: $siteWidth;
+           font-size: 1.875rem;
+           height: 40px;
+           margin-top: 10px;
+           margin-bottom: 10px;
         }
     }
 
@@ -230,14 +214,13 @@
 
         @media (min-width: $desktopSmall){
             @include mc;
+            font-size: 1rem;
             max-width: $siteWidth;
             margin-top: 30px;
             margin-bottom: 15px;
-            
         }
     }
    
-
     .movie-summary {
         padding: 15px 20px;
         font-size: 0.85rem;
@@ -261,83 +244,79 @@
                 }
         }
     }
-.cast-container{
-    @media(min-width: $desktopSmall){
-        @include mc;
-        max-width: $siteWidth;
-        display: flex;
-        flex-wrap: wrap;       
-    }
 
-    .cast-heading{
-        display: block;
-        font-size: 1rem;
-        font-weight: $fontBold;
-        width: 100%;
-        margin: 10px 0 20px 0;
-        padding: 10px 0 10px 20px;
-
-        @media(min-width: $desktopSmall){
-            font-size: 1.15rem;
+    .cast-container{
+        
+        .cast-heading{
+            display: block;
+            font-size: 1rem;
+            font-weight: $fontBold;
             width: 100%;
+            margin: 10px 0 20px 0;
+            padding: 10px 0 10px 20px;
         }
-    }
-   
-    .cast-members{
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        padding: 0 10px;
+    
+        .cast-members{
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            padding: 0 10px;
 
-       
 
-        .cast{
-            font-size: 0.75rem;
-            line-height: 1rem;
-            width: 44%;
-            margin: 10px auto;
-            background: $bgColor;
-            border-radius: 5px;
-            box-shadow: $boxShadow;
-            text-align: center;
-            
-            .cast-photo, .placeholder-photo{ 
-                height:auto;
-                width: 100%;
-                padding: 0;  
-                border-radius: 5px 5px 0 0;  
-            }
-
-            .cast-name{
-                padding: 8px;
-                color: $footerText;
-                font-weight: $fontBold;
-                width: 100%;
-            }
-
-            .cast-character{
-                font-weight: $fontMed;
-                color: $footerText;
-                padding: 5px 5px 15px 5px;
+            .cast{
+                font-size: 0.75rem;
+                line-height: 1rem;
+                width: 44%;
+                margin: 10px auto;
+                background: $bgColor;
+                border-radius: 5px;
+                box-shadow: $boxShadow;
+                text-align: center;
                 
+                .cast-photo, .placeholder-photo{ 
+                    height:auto;
+                    width: 100%;
+                    padding: 0;  
+                    border-radius: 5px 5px 0 0;  
+                }
+
+                .cast-name{
+                    padding: 8px;
+                    color: $footerText;
+                    font-weight: $fontBold;
+                    width: 100%;
+                }
+
+                .cast-character{
+                    font-weight: $fontMed;
+                    color: $footerText;
+                    padding: 5px 5px 15px 5px;
+                    
+                }
             }
-        
-        
         }
-        //cast members media
-        @media (min-width: $desktopSmall){
+        
+        @media(min-width: $desktopSmall){
             @include mc;
-                max-width: $siteWidth;
+            max-width: $siteWidth;
+            display: flex;
+            flex-wrap: wrap;   
+            
+            .cast-heading{
+                font-size: 1.15rem;
+                width: 100%;
+            }
+
+            .cast-members{
                 flex-wrap: nowrap;
                 column-gap: 15px;
-                
+                    
                 .cast{
                 font-size: 0.875rem;
                 }
+            }
         }
-
-    }
-}
+    } //cast-container end
 }
 
 

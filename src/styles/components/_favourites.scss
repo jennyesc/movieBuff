@@ -8,24 +8,22 @@
 .fav-movie-heading{
     padding-top: 20px;
     margin-top: 20px;
-    
-    
+       
+    h2{
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        padding-left: 15px;
+    }
     @media (min-width: $tabletSmall){
         @include mc;
         max-width: $siteWidth;
         display: flex;
         padding-bottom: 20px;
         margin-bottom: 40px;
-    }    
-    h2{
-        font-size: 0.875rem;
-        text-transform: uppercase;
-        padding-left: 15px;
     }  
 }
-    
+
 .fav-container{
-    
     height: 100%;
     padding-top: 25px;
 
@@ -41,19 +39,14 @@
         }
     }
 
-    
-                
     @media (min-width: $tabletSmall){
         max-width: $siteWidth;
         @include mc;
         height: 100%;
         padding-top: 0;
-        
 
         .no-fav-par{
             height: 60vh;
-        
-            
         }
     }    
 

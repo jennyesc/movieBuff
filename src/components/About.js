@@ -9,7 +9,6 @@ function About () {
                 <div className="page-info-container">
                     <div className="page-bg">
                         <div className="img" style={{ backgroundImage: `url(${background})`}}>
-                        
                             <div className="about-container">
                                 <div className="about-text">
                                     <h1 className="align-one">Hello!</h1>

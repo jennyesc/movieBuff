@@ -5,39 +5,22 @@
 @use '../utilities/mixins' as *;
 
 main{
-    @media (min-width: $tabletSmall){
-        @include mc;
-        
-    }
+   
 
     .page-info-container{
         margin-top: 20px;
-        
-        
-    
+  
         .page-bg{
             width: auto;
-            
-                        
-           
+
             .img{
                 background-position: center;
                 background-size: cover;
-                background-repeat: no-repeat;
-                @media (min-width: $tabletSmall){
-                    @include mc;
-                }
-                
-                
+                background-repeat: no-repeat;   
             }
             
-
             .about-container{
-                @media (min-width: $tabletSmall){
-                    max-width: 670px;
-                    @include mc;
-                    
-                }
+               
                 .about-text{
                     .align-one{
                         text-align: center;
@@ -51,11 +34,6 @@ main{
                         font-weight: $fontMed;
                         font-size: 0.95rem;
                         line-height: 1.25;
-                        @media (min-width: $desktopSmall){
-                            font-size: $fontDesktop;
-                        }
-    
-                        
                     }
     
                     .p-two{
@@ -64,10 +42,7 @@ main{
                         font-weight: $fontMed;
                         font-size: 0.95rem;
                         line-height: 1.25;
-                        @media (min-width: $desktopSmall){
-                            font-size: $fontDesktop;
-                        }
-                        
+    
                         .italic{
                             padding-top: 20px;
                             font-style: italic;
@@ -75,18 +50,12 @@ main{
                             .tmbd{
                                 color: #77D1F5;
                             }
-
                         }
                         
-                            .logo{
-                                max-width: 40px; 
-                                padding-top: 10px;
-                                
-                                @media (min-width: $desktopSmall){
-                                    max-width: 60px; 
-                                }// End of Media
-                            }   
-
+                        .logo{
+                            max-width: 40px; 
+                            padding-top: 10px;
+                        }
                     }
     
                     .align-two{
@@ -97,9 +66,7 @@ main{
                     }
     
                     .btn-container{
-                        
-                        padding: 20px 15px 0 15px;
-                                         
+                        padding: 20px 15px 0 15px;         
                        
                         .btn-one, .btn-two, .btn-three, .btn-four {
                             display: flex;
@@ -116,9 +83,6 @@ main{
                                 text-align: center;
                                 font-weight: $fontBold;
                                 font-size: 1.87rem;
-                            
-                                //in the larger media size, the width and height needs to be changed
-    
                             }
         
                             .btn{
@@ -132,26 +96,48 @@ main{
                                 border: solid 2px $iconColor;
                                 padding: 8px;
                                 width: 100%;
-                                //margin: 10px 0;
                                
                                 .color{
                                     color: $iconColor;
                                     
                                 }
                             }
-    
-                        
                         }
-                        
                     }
-                    
                 }// End about-text
-
             }//End .about-container
-            
         }// End page-bg
     }
-    @media (min-width: 700px){
 
-    }// End of Media
+    @media (min-width: $tabletSmall){
+        @include mc;
+
+        .page-info-container{
+            min-width: 700px;
+
+            .page-bg{
+                .about-container{
+                    max-width: 670px;
+                    @include mc;
+
+                    .about-text{
+                        p{
+                            font-size: $fontDesktop;
+                        }
+
+                        .p-two{
+                        
+                            .logo{
+                                max-width: 60px; 
+                            }
+                        }
+                    }   
+                }
+                
+            }
+            
+        }
+        
+    }
+
 }// End of main
