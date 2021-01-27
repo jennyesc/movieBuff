@@ -17,7 +17,6 @@ function Header (){
 
                 <div className="header-top-row">
                 
-
                     <picture className="logo-container">
                         <Link to={'/'}><img className="logo" src={logo} alt="The Movie Buff Logo"></img></Link>
                     </picture>
@@ -55,9 +54,8 @@ function Header (){
                 </div>     
                 <div className="mobile-menu">
                     <Nav />
-                </div>
-                
-          
+                </div> 
+                     
         </header> 
     );       
 }

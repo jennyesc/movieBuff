@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { MD_API_KEY_ONLY, MD_LAN } from '../globals/variables';
-//import { Link, Redirect, useParams} from 'react-router-dom';
 import '../globals/fontawesome';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useParams} from 'react-router-dom';
@@ -23,7 +22,6 @@ const SingleMovie = () => {
      const fetchMovie = async () => {
       window.scrollTo(0,0);
       const res = await fetch( `https://api.themoviedb.org/3/movie/${id}?api_key=${MD_API_KEY_ONLY}${MD_LAN}&append_to_response=credits,videos`); 
-      //const res = await fetch( `https://api.themoviedb.org/3/movie/${id}?api_key=${MD_API_KEY_ONLY}${MD_LAN}`);
       let data = await res.json();
       console.log(data);
       

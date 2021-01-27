@@ -9,9 +9,6 @@ import Movies from './Movies';
 const Home = () => {
 
   const {sort} = useParams();
-  
-
-  const [sortType, setSortType] = useState(null);
       
   const [movies, setMovies] = useState(null);
 
@@ -47,7 +44,7 @@ const Home = () => {
     const fetchMovie = async () => {
       const res = await fetch( `${MD_BASE_URL_NO_SORT}${urlSort}?${MD_API_KEY}${MD_LAN}`);
       let data = await res.json();
-      //console.log(data.results);
+      
       setMovies(data.results.splice(0,20));
   }
 

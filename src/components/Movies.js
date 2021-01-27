@@ -2,7 +2,6 @@
 import { Link } from 'react-router-dom';
 import formatDate from '../utilities/dateMaker';
 import {shortenPars, percentNumber} from '../utilities/movieMaker';
-// import faveIcon from '../images/fav-heart.png';
 import FavouriteButton from './FavouriteButton';
 
 function Movies( {movies} ){
@@ -24,14 +23,13 @@ function Movies( {movies} ){
                 </div>
                 
                 <div className="movie-description">
-                <h2>{movie.title}</h2>
+                  <h2>{movie.title}</h2>
                     <div className="dt-movie-infobox">
-                    <Link to={`/single-movie/${movie.id}`} className="dt-more-infolink"> More Info</Link>
+
+                      <Link to={`/single-movie/${movie.id}`} className="dt-more-infolink"> More Info</Link>
                       <h3>Release Date: <span className="date-break"> <br /> </span>{formatDate(movie.release_date)}</h3>
-                     
-                      {/* <Link to="/singleMovie">About</Link> */}
+                      <p>{shortenPars(movie.overview)}...</p>
                     
-                        <p>{shortenPars(movie.overview)}...</p>
                     </div>
         
                 </div>
@@ -41,15 +39,10 @@ function Movies( {movies} ){
         
           });
         } 
-
-    
-    
     return( 
         <div className="desktop-grid">
           { makeMovies(movies) }
         </div>  
-
-
     );
 
 }

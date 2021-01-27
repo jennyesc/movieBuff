@@ -36,14 +36,12 @@ header {
                 display: none;
 
                 @media (min-width: $desktopSmall){
-  //                  border: 2px solid blue;
                     width: 500px;
                     display: flex;
                     align-items: flex-end;
                     margin-bottom: 25px;
                     
                     .desktop-nav{
-//                        border: solid 2px orange;
                         display: flex;
                         justify-content: space-around;
                         width: 100%;
@@ -158,15 +156,7 @@ header {
                         
                     }// End of Media
 
-                }
-                    
-
-               
-        
-
-            
-
-            
+                }   
             
             
         }// End of Header-top-row

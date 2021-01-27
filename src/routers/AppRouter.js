@@ -33,14 +33,6 @@ function AppRouter() {
                 <Route path={'/about'}><About /></Route>
                 <Route path={'/favourites'}><Favourites /></Route>
                 <Route path={'/single-movie/:id'}><SingleMovie /></Route> 
-                
-                {/* <Route path="/top-rated" component={WHAT GOES HERE}/> */}
-
-                {/* <Route path = "/popular" component={Popular}/>
-                <Route path="/top-rated" component={TopRated}/>
-                <Route path="/now-playing" component={NowPlaying}/> */}
-                
-
                 <Route><PageNotFound /></Route> 
             </Switch>
             </main>
