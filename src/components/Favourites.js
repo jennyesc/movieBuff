@@ -15,7 +15,6 @@ function Favourites() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    console.log('hello');
     globalActions.setFavs();
     setReady(true);
   }, [globalActions]);
