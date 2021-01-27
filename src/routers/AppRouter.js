@@ -13,16 +13,14 @@ import About from '../components/About';
 import Favourites from '../components/Favourites';
 import SingleMovie from '../components/SingleMovie';
 import PageNotFound from '../components/PageNotFound';
+import { APP_FOLDER_NAME } from '../globals/variables';
 
-//import createHistory from 'history/createBrowserHistory';
-
-//export const history = createHistory();
 
 
 
 function AppRouter() {
   return (
-    <Router>
+    <Router basename={ APP_FOLDER_NAME }>
       <div className="wrapper">
         <Header />
           <main>
