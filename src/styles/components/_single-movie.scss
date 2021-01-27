@@ -143,22 +143,20 @@
         padding: 10px;
         background: $bgGradientDark;
         width: 100%;
+        height: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
         
-
-        
         .make-genres-arr{
             padding: 3px;
-            line-height: 1.15rem;
-        
+            line-height: 1.15rem;       
         }
         
         .rating-icon{
             width: 75px;
-            
+            margin-right: 25px;
             border: solid 1px $iconBgColor;
             border-radius: 3px;
             padding: 10px;
@@ -168,16 +166,14 @@
             p{
                 display: inline;
             }
-
-
+        }
             .movie-info{
-                margin-left: 15px;
-                width: 90%;
-                font-size: 0.875rem;
-                line-height: 1.3rem;
+                width: 65%;
+                font-size: 0.8rem;
+                line-height: 1.2rem;
             }  //movie-info-container end
 
-        }
+        
             @media (min-width: $desktopSmall){
                 margin-top: 0;
                 width: 100%;
@@ -192,8 +188,20 @@
                 
                 }
 
+                .rating-icon{
+                    border: solid 2px $iconBgColor;
+
+                    p{
+                        font-size: 1rem;
+                        font-weight: $fontBold;
+                    }
+                }
+
+
                 .movie-info{
-                    width: 20%;
+                    width: 25%;
+                    font-size: 1rem;
+                    line-height: 1.4rem;
                 }
             }        
      }
@@ -232,8 +240,8 @@
 
     .movie-summary {
         padding: 15px 20px;
-        font-size: 0.75rem;
-        line-height: 1rem;     
+        font-size: 0.85rem;
+        line-height: 1.2rem;     
 
         h3{
             font-size: 1rem;
@@ -245,7 +253,7 @@
             @include mc;
                 max-width: $siteWidth;
                  margin-bottom: 5px;
-                font-size: 1rem;
+                font-size: .875rem;
                 line-height: 1.2rem;
 
                 h3{
