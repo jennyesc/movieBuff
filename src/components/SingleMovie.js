@@ -54,7 +54,8 @@ const SingleMovie = () => {
       return (
         <div className="cast" key={i}> 
           { cast.profile_path !== null ? <img className="cast-photo" key={i} src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} alt={cast.name} /> :
-         <img src={placeholder} alt="profile placeholder" />
+        
+          <img className="placeholder-photo" src={placeholder} alt="profile placeholder" />
           }
           <div className="cast-info"> 
             <p className="cast-name">{cast.name}</p>
@@ -99,7 +100,7 @@ const SingleMovie = () => {
             </div> 
             <div className="movie-info">          
                <p>{formatDate(movie.release_date)} | {timeConvert(movie.runtime)} </p>
-               <p> {makeGenres(movie.genres)}  </p>
+               <p className="genre-mob"> {makeGenres(movie.genres)}  </p>
             </div>
           </div>
           
