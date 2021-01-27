@@ -2,7 +2,6 @@
 
 // Development Components
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import {   MD_TOP_URL} from '../globals/variables';
 
 // Components
 import Header from '../components/Header';
