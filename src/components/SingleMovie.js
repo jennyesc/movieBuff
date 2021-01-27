@@ -22,7 +22,7 @@ const SingleMovie = () => {
   const [movie, setMovie] = useState(null);
      const fetchMovie = async () => {
       window.scrollTo(0,0);
-      const res = await fetch( `https://api.themoviedb.org/3/movie/${id}?api_key=${MD_API_KEY_ONLY}${MD_LAN}&append_to_response=credits`); 
+      const res = await fetch( `https://api.themoviedb.org/3/movie/${id}?api_key=${MD_API_KEY_ONLY}${MD_LAN}&append_to_response=credits,videos`); 
       //const res = await fetch( `https://api.themoviedb.org/3/movie/${id}?api_key=${MD_API_KEY_ONLY}${MD_LAN}`);
       let data = await res.json();
       console.log(data);
@@ -38,13 +38,23 @@ const SingleMovie = () => {
   }, [] );
 
   const makeGenres = (genres) => {
-    return genres.map((genre, i) => <span className="make-genres-arr" key={i}>{genre.name} </span>);
+    return genres.map((genre, i, arr) => {
+     if(i === arr.length - 1){
+       return (<span className="make-genres-arr" key={i}>{genre.name}</span>);
+     }else {
+       return (<span className="make-genres-arr" key={i}>{genre.name}, </span>);
+     }
+    });
   }
 
  const createCasts = (casts) => {
-    return casts.splice(0, 4).map((cast, i) => {  
+
+
+    const top6 = casts.filter(cast => cast.order < 6);
+
+    return top6.map((cast, i) => {  
       return (
-        <div className="cast"> 
+        <div className="cast" key={i}> 
           { cast.profile_path !== null ? <img className="cast-photo" key={i} src={`https://image.tmdb.org/t/p/original/${cast.profile_path}`} alt={cast.name} /> :
          <img src={placeholder} alt="profile placeholder" />
           }
@@ -52,96 +62,67 @@ const SingleMovie = () => {
             <p className="cast-name">{cast.name}</p>
             <p className="cast-character">{cast.character}</p>
           </div>
-        </div> 
-    
+        </div>    
     ) }
     );
   }
-
-
     return (
       <main>
        
         {movie !== null && 
           <section className="single-movie-cont" > 
-<div className="wrappertwo">
-            <div className="poster-section" >
-              
-              <div className="single-bg" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`}} >  
-              </div>
-              <div className="poster-single">
+            <div className="wrappertwo">
+              <div className="poster-section" > 
+                <div className="single-bg" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`}} >  
+                </div>
+                <div className="poster-single">
                 {movie.poster_path !== null ?
                   <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />:
                   <img src={noPoster} alt="No Movie Poster Available" />
                 }
                 </div>
-            </div>  
-          
-          <div className="icon-container">
-              
-              <div className="icon percentage-icon">  
-                    <i className="rating">{percentNumber(movie.vote_average)}%</i>
-                    
-              </div> 
-
-              <div className=" icon fav-icon">
-              <FavouriteButton movie={movie}/>  
-                    {/* <i className="fa"> <FontAwesomeIcon icon="heart" /> </i> */}
-                    
-              </div> 
-             
-
-              {/* <div className="icon star-icon">  
-                    <i className="fa"> <FontAwesomeIcon icon="star" /> </i>
-                    
-              </div>  */}
-
-              <div className=" icon play-icon">
-                  <i className="fa"> <FontAwesomeIcon icon="play-circle" /> </i>
-                  
+            </div>    
+              <div className="icon-container">
+                <div className="icon percentage-icon">  
+                      <i className="rating">{percentNumber(movie.vote_average)}%</i>         
+                </div>
+                <div className=" icon fav-icon">
+                  <FavouriteButton movie={movie}/>  
+                </div> 
+                <div className=" icon play-icon">
+                    <i className="fa"> <FontAwesomeIcon icon="play-circle" /> </i>
+                    {console.log(movie.videos)}
               </div>
-
-
             </div>
 
           <div className="movie-info-container">
-
             <div className="rating-icon">   
                 <p>{movie.adult === true ? "Rated-R" : "PG-13"}</p>
             </div> 
-
             <div className="movie-info">          
-        <p>{formatDate(movie.release_date)} | {timeConvert(movie.runtime)} </p>
-          <p> {makeGenres(movie.genres)}  </p>
+               <p>{formatDate(movie.release_date)} | {timeConvert(movie.runtime)} </p>
+               <p> {makeGenres(movie.genres)}  </p>
             </div>
-            
-            </div>
-            <h2> {movie.title}</h2>
-            <h3 className="tag-line"> {movie.tagline}</h3>
-
-            <div className="movie-summary">
-              <h3>Overview</h3>
-              
-              <p>{movie.overview}</p>
-        
-            </div> {/* movie info container end */}
-
-           
-
-            <section className="cast-container">
-            <h3 className="cast-heading">Top Billed Cast</h3>
-              
-              {/* container for headshot */}
-              <div className="cast-members">
-                
-              {createCasts(movie.credits.cast)}
-              
-            </div>
-              
-            </section> {/* cast container end */}
-            
-            </div>
+          </div>
           
+          <h2> {movie.title}</h2>
+          
+          <h3 className="tag-line"> {movie.tagline}</h3>
+
+          <div className="movie-summary">
+            <h3>Overview</h3>   
+            <p>{movie.overview}</p>
+        
+          </div> {/* movie summary container end */}
+
+              <section className="cast-container">
+                <h3 className="cast-heading">Top Billed Cast</h3>
+                <div className="cast-members"> 
+                  {createCasts(movie.credits.cast)}
+                </div> 
+              </section> {/* cast container end */}
+            
+  </div> {/*wrapper-two*/}
           </section>
         } 
       </main>

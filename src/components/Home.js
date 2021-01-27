@@ -40,7 +40,7 @@ const Home = () => {
 
   useEffect( () => {
 
-    //setSortType(sort);
+    
     const urlSort = setURLSort(sort)
     console.log(urlSort);
     

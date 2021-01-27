@@ -23,23 +23,12 @@ function Header (){
                     </picture>
 
                     <nav className="main-nav" >
-                            <ul className="desktop-nav">
-                                <li><NavLink to={'/'}>Home</NavLink></li>
-                                <li><NavLink to={'/about'}>About</NavLink></li>
-                                <li><NavLink to={'/favourites'}>Favourites</NavLink> </li>
-                                {/* <li><NavLink to={'/singleMovie'}>Single</NavLink> </li> */}
-                            </ul>
-
-                            
-
-                            {/* <DropdownButton id="dropdown-basic-button" title="Dropdown button"> */}
-                                    {/* <Dropdown.Item href="#/action-1">Now Playing</Dropdown.Item> */}
-                                    {/* <Dropdown.Item href="#/action-2">Popular</Dropdown.Item> */}
-                                    {/* <Dropdown.Item href="#/action-3">Top rated</Dropdown.Item> */}
-                                    {/* <Dropdown.Item href="#/action-4">Upcoming</Dropdown.Item> */}
-                                {/* </DropdownButton> */}
-                            
-                        </nav>
+                        <ul className="desktop-nav">
+                            <li><NavLink to={'/'}>Home</NavLink></li>
+                            <li><NavLink to={'/about'}>About</NavLink></li>
+                            <li><NavLink to={'/favourites'}>Favourites</NavLink> </li>
+                        </ul>
+                    </nav>
 
                     <div className="right-nav">                        
                         <div className="icons">   

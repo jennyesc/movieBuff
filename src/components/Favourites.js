@@ -7,6 +7,7 @@ import '../globals/fontawesome';
 
 
 
+
 function Favourites() {
 
   const [globalState, globalActions] = useGlobal();
