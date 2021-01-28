@@ -105,6 +105,61 @@
                 cursor: pointer;
             }  
         }
+        .pop-up-overlay{
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            top: 50.2%;
+            bottom: 39%;
+            left: 0;
+            right: 0;
+            height: 85px;
+            background: rgba(35, 14, 24, .9);
+            transition: 0.4s ease;
+            visibility: hidden;
+            color: visible;
+            opacity: 1;
+            z-index: 999;
+            
+            @media (min-width: $desktopSmall){
+                top: 65.7%;
+                // bottom: 25%;
+                height: 95px;
+            }
+
+            
+            &:target{
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .pop-up{
+                text-align: center;
+
+                h4{
+                    margin: 5% 10% 0 10%;
+                    color: $hoverColor;
+                    font-weight: $fontSemi;
+                    font-size: 1.15rem;
+                }
+
+                a{
+                    position: absolute;
+                    color: $iconColor;
+                    text-decoration: none;
+                    font-size: 250%;
+                    top: 2%;
+                    right: 40%;
+                }
+            }
+        }
+
+        
+        
+
+
 
         //media for icon-container
         @media (min-width: $desktopSmall){
