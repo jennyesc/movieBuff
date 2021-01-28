@@ -12,57 +12,48 @@ function About () {
                             <div className="about-container">
                                 <div className="about-text">
                                     <h1 className="align-one">Hello!</h1>
-                                    <div className="p-one">   
-                                        <p>Welcome to The Movie Buff movie and TV database world. We are a 
-                                            community of Movie Buffs, who love to share their opinion on movies and TV shows. 
-                                            We pride ourselves in running one of the
-                                            most diverse movie and TV database to date.
+                                    
+                                        <p>Welcome to The Movie Buff movie database world. We are a 
+                                            community of movie buffs, who love to share their opinion on movies. 
+                                            We pride ourselves in running one of the most diverse movie database to date.
                                         </p>
-                                    </div> 
-                                    <div className="p-two">
-                                        <p>The Movie Buff started in 2014 when there was a need for a people
-                                            movie and TV database community. Word spread and here we are with 
-                                            over 10,000 memebers and growing every day.
+                                    
+                                        <p>The Movie Buff uses the <span className="tmbd">TMDb</span> API but is 
+                                        not endorsed or certified by <span className="tmbd"> TMDb</span>.
                                         </p>
-                                        <p className="italic">    
-                                            This product uses the <span className="tmbd">TMDb</span> API but is not endorsed or certified by 
-                                            <span className="tmbd"> TMDb</span>.
-                                        </p>
+                                        
                                         <p>
                                             <img className="logo" src={logo} alt="The Movie Database logo"></img>
                                         </p> 
-                                    </div>
+                                    
                                         <h5 className="align-two">How it works</h5>
                                     
                                     <div className="btn-container">
-                                        <div className="btn-one">
+                                        <div className="single-btn">
                                             <p className="circle">1</p> 
-                                            <button className="btn"> 
-                                                <p>Join the community by
-                                                <span className="color"> creating an account.</span></p>
-                                            </button>
+                                            <div className="btn"> 
+                                                <p>On the home page, view the top 20 movies listed for each category 
+                                                <span className="ie"> (ie. Popular, Top Rated, Now Playing and Upcoming).</span></p>
+                                            </div>
                                         </div>
-                                        <div className="btn-two">
+                                        <div className="single-btn">
                                             <p className="circle">2</p> 
-                                            <button className="btn">
-                                                <p>Customize your profile and read the 
-                                                <span className="color">  Community Guidelines. </span></p>
-                                            </button>
+                                            <div className="btn">
+                                                <p>Select a movie and view the details, such as overview, ratings and top cast.</p>
+                                            </div>
                                         </div>
-                                        <div className="btn-three">
+                                        <div className="single-btn">
                                             <p className="circle">3</p> 
-                                            <button className="btn"> 
-                                                <p>Browse for movies and TV shows. When you find one you like,
-                                                    you can rate them, add to your favourites and leave a review.</p>
-                                            </button>
+                                            <div className="btn"> 
+                                                <p>When you find one you like, you can add them to your favourites.</p>
+                                            </div>
                                         </div>
-                                        <div className="btn-four">
+                                        <div className="single-btn">
                                             <p className="circle">4</p> 
-                                            <button className="btn"> 
-                                                <p>Join the
-                                                <span className="color"> forums </span>
-                                                and talk to other Movie Buffs about the latest</p>
-                                            </button>
+                                            <div className="btn"> 
+                                                <p> Keep an eye on the Movie Buff, as it will continue to expand and grow 
+                                                 its functionality.</p>
+                                            </div>
                                         </div>
 
                                     </div> 
