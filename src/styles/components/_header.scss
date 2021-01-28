@@ -101,6 +101,11 @@ header {
                     .fa{
                         padding: 0 5px;
                         margin-right: 8px;
+                        transition: 0.1s ease;
+
+                        &:hover{
+                            opacity: 0;
+                        }
                     }
 
                     @media (min-width: $tabletSmall){

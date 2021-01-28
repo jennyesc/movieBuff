@@ -86,20 +86,11 @@ const SingleMovie = () => {
                 <div className=" icon fav-icon">
                   <FavouriteButton movie={movie}/>  
                 </div> 
-
-
-                <div className=" icon pop-up-button play-icon">
-                    <a className="fa pop-up-button" href="#pop-up-one"> <FontAwesomeIcon icon="play-circle" /> </a>
-             
-
-              <div id="pop-up-one" className="pop-up-overlay">
-                <div className="pop-up"><h4> Video coming soon...</h4>
-                <a class="close" href="#/">&times;</a>
-              </div>
-
+                <div className=" icon play-icon">
+                    <i className="fa"> <FontAwesomeIcon icon="play-circle" /> </i>
               </div>
             </div>
-            </div>
+
             <div className="movie-info-container">
               <div className="rating-icon">   
                   <p>{movie.adult === true ? "Rated-R" : "PG-13"}</p>
