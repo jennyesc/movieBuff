@@ -14,10 +14,7 @@ function Footer() {
           <picture className="logo-container">
             <Link to={'/'}><img className="logo" src={logo} alt="The Movie Buff Logo"></img></Link>
           </picture>
-          
-          <button className="btn">
-            <Link to={'/About'}>Join the Community</Link>
-          </button>
+  
       </div>
       
           <div className="footer-menu-container">
