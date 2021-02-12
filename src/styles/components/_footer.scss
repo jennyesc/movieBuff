@@ -80,7 +80,7 @@ footer{
         }
         
         .footer-break{
-            @media (min-width: $tabletSmall){
+            @media (min-width: $footerBreak){
                 display: none;
             } 
         }
@@ -93,7 +93,7 @@ footer{
     }
 
     //footer @media
-    @media (min-width: $tabletSmall){
+    @media (min-width: $footerBreak){
     display: flex;
     flex-wrap: wrap;
 
@@ -112,12 +112,16 @@ footer{
         }
 
         .footer-menu-container{
-            width: 75%;
+            width: 100%;
             display: grid;
             grid-template-columns: auto;
             grid-template-rows: auto;
             grid-template-areas:
             "colOne colTwo colThree colFour colFive";
+
+            @media (min-width: $footerBreakTwo){
+                width: 75%;
+            }
         }
     }
 }
